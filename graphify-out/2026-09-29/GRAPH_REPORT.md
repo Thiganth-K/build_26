@@ -1,14 +1,19 @@
 # Graph Report - build_26  (2026-09-29)
 
 ## Corpus Check
-- 86 files · ~361,260 words
+- 86 files · ~362,150 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .pptx 2, .example 1)
+- Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 412 nodes · 1090 edges · 32 communities (23 shown, 9 thin omitted)
+- 414 nodes · 1090 edges · 29 communities (20 shown, 9 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `e3026141`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - AI-Native Build
@@ -37,16 +42,13 @@
 - workflows/graphify.md
 - next-env.d.ts
 - postcss.config.mjs
-- lucide-react
-- badge.tsx
-- react
-- participant/page.tsx
-- ProgressBar
+- admin/page.tsx
+- login/page.tsx
 - app/layout.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `connectToDatabase()` - 67 edges
-2. `Badge()` - 60 edges
+2. `Badge()` - 59 edges
 3. `Button` - 50 edges
 4. `react` - 49 edges
 5. `lucide-react` - 39 edges
@@ -74,19 +76,19 @@
 ## Hyperedges (group relationships)
 - **BUILD26 End-to-End Delivery Pipeline** — docs_build26_real_problems, docs_build26_ai_native_build, docs_build26_deploy_stage, docs_build26_demo_day [EXTRACTED 0.95]
 
-## Communities (32 total, 9 thin omitted)
+## Communities (29 total, 9 thin omitted)
 
 ### Community 0 - "AI-Native Build"
 Cohesion: 0.15
 Nodes (14): AI-Native Build, Daily Evidence, Demo Day, Deploy Stage, AI, APIs and Emerging Tech, Product Backlog, Product Pitch+, 8 Real Problems (+6 more)
 
 ### Community 1 - "Badge"
-Cohesion: 0.19
-Nodes (18): AnnouncementsPage(), MentorsPage(), ParticipantsPage(), ProblemStatementsPage(), ProgressPage(), SchedulePage(), SettingsPage(), TeamsListPage() (+10 more)
+Cohesion: 0.10
+Nodes (53): AnalyticsPage(), AnnouncementsPage(), EvaluationPage(), FeedbackPage(), MentorsPage(), ParticipantsPage(), ProblemStatementsPage(), ProgressPage() (+45 more)
 
 ### Community 3 - "cn"
-Cohesion: 0.16
-Nodes (15): AdminLayout(), ParticipantLayout(), AdminSidebar(), AdminSidebarProps, KpiCard(), KpiCardProps, ParticipantSidebar(), ParticipantSidebarProps (+7 more)
+Cohesion: 0.19
+Nodes (13): AdminLayout(), ParticipantLayout(), AdminSidebar(), AdminSidebarProps, ParticipantSidebar(), ParticipantSidebarProps, Card(), CardContent() (+5 more)
 
 ### Community 4 - "models/index.ts"
 Cohesion: 0.06
@@ -148,45 +150,33 @@ Nodes (3): GET(), POST(), Evaluation
 Cohesion: 0.07
 Nodes (26): 1. Executive Summary, 2. Platform Architecture & Workflow, 3. Implemented Routes & Capabilities, 4. Technology Stack, 5. Environment Variables (`.env.local`), 6. Getting Started & Running Locally, 8. Docker Setup & Operations, Admin Application (`/admin`) (+18 more)
 
-### Community 26 - "lucide-react"
-Cohesion: 0.18
-Nodes (16): AdminDashboardPage(), ActivityFeed(), ActivityFeedProps, AdminHeader(), BootcampPhaseTimeline(), PHASES, PhaseTimelineProps, DeadlinePanel() (+8 more)
+### Community 26 - "admin/page.tsx"
+Cohesion: 0.23
+Nodes (11): AdminDashboardPage(), ActivityFeed(), AdminHeader(), DeadlinePanel(), DeadlinePanelProps, GlobalSearch(), GlobalSearchProps, KpiCard() (+3 more)
 
-### Community 27 - "badge.tsx"
-Cohesion: 0.24
-Nodes (10): FeedbackPage(), ShowcasePage(), TeamDetailPage(), WorkLogsPage(), ParticipantFeedbackPage(), AdminHeaderProps, Avatar(), AvatarProps (+2 more)
-
-### Community 28 - "react"
-Cohesion: 0.28
-Nodes (9): EvaluationPage(), SubmissionsPage(), ParticipantSubmissionsPage(), ParticipantTasksPage(), SubmissionModal(), SubmissionModalProps, Modal(), ModalProps (+1 more)
-
-### Community 29 - "participant/page.tsx"
-Cohesion: 0.33
-Nodes (6): ParticipantDashboardPage(), ParticipantWorklogsPage(), ParticipantHeader(), ParticipantHeaderProps, WorkLogModal(), WorkLogModalProps
-
-### Community 30 - "ProgressBar"
-Cohesion: 0.36
-Nodes (4): AnalyticsPage(), ParticipantTeamPage(), ProgressBar(), ProgressProps
+### Community 27 - "login/page.tsx"
+Cohesion: 0.50
+Nodes (3): DEPARTMENTS, LoginPage(), YEARS
 
 ## Knowledge Gaps
-- **157 isolated node(s):** `dynamic`, `metadata`, `ActivityFeedProps`, `AdminHeaderProps`, `AdminSidebarProps` (+152 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 172 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **159 isolated node(s):** `dynamic`, `metadata`, `DEPARTMENTS`, `YEARS`, `ActivityFeedProps` (+154 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 174 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `next` to `Badge`, `cn`, `types/index.ts`, `connectToDatabase`, `db.ts`, `package.json`, `getSessionFromRequest`, `seed/route.ts`, `bootcamp/route.ts`, `evaluations/route.ts`, `lucide-react`, `badge.tsx`, `participant/page.tsx`, `app/layout.tsx`?**
-  _High betweenness centrality (0.310) - this node is a cross-community bridge._
+- **Why does `next` connect `next` to `Badge`, `cn`, `types/index.ts`, `connectToDatabase`, `db.ts`, `package.json`, `getSessionFromRequest`, `seed/route.ts`, `bootcamp/route.ts`, `evaluations/route.ts`, `admin/page.tsx`, `login/page.tsx`, `app/layout.tsx`?**
+  _High betweenness centrality (0.312) - this node is a cross-community bridge._
 - **Why does `7. Database Models (`/models/index.ts`)` connect `types/index.ts` to `8. Docker Setup & Operations`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
-- **What connects `dynamic`, `metadata`, `ActivityFeedProps` to the rest of the system?**
-  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.108) - this node is a cross-community bridge._
+- **What connects `dynamic`, `metadata`, `DEPARTMENTS` to the rest of the system?**
+  _159 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Badge` be split into smaller, more focused modules?**
+  _Cohesion score 0.09608785175017158 - nodes in this community are weakly interconnected._
 - **Should `models/index.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
 - **Should `types/index.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.11052631578947368 - nodes in this community are weakly interconnected._
 - **Should `db.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.13043478260869565 - nodes in this community are weakly interconnected._
-- **Should `next` be split into smaller, more focused modules?**
-  _Cohesion score 0.14130434782608695 - nodes in this community are weakly interconnected._

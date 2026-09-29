@@ -480,9 +480,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1790686848.6705549,
-    "seen": 1790687425.681234,
-    "ast_hash": "239fe154cecf6df2534819394fcd815f",
+    "mtime": 1790696312.0982187,
+    "seen": 1790696377.7741623,
+    "ast_hash": "81851ac3f4d438bb4ba16c8a793629c6",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -537,6 +537,12 @@
     "mtime": 1790686184.187099,
     "seen": 1790687425.6812432,
     "ast_hash": "45e908bd4ca8e912873ec81dbdd9415b",
+    "semantic_hash": ""
+  },
+  "scripts/check-db.mjs": {
+    "mtime": 1790696350.8083682,
+    "seen": 1790696377.774165,
+    "ast_hash": "6e87c0573ea0105f5663155bc196b546",
     "semantic_hash": ""
   }
 }
