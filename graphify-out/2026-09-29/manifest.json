@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "app/api/auth/me/route.ts": {
-    "mtime": 1790663552.4265857,
-    "seen": 1790685195.1687446,
-    "ast_hash": "70294ed20c89d6c3973ba2afb6057435",
+    "mtime": 1790696744.3517313,
+    "seen": 1790696985.9365175,
+    "ast_hash": "75993ae9f529de853fb33dc7680e3aed",
     "semantic_hash": ""
   },
   "app/api/bootcamp/route.ts": {
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "app/api/teams/route.ts": {
-    "mtime": 1790663587.3254137,
-    "seen": 1790685195.1687531,
-    "ast_hash": "3dde4797665fb36568ed2b54f8597a07",
+    "mtime": 1790696929.1580296,
+    "seen": 1790696985.936535,
+    "ast_hash": "696988e36afd77fac8768e6c685a33e9",
     "semantic_hash": ""
   },
   "app/api/worklogs/route.ts": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "app/participant/page.tsx": {
-    "mtime": 1790683927.8272836,
-    "seen": 1790685195.1687582,
-    "ast_hash": "9defa6015cad6bc53a1ce789cf53d8d6",
+    "mtime": 1790696809.882312,
+    "seen": 1790696985.9365423,
+    "ast_hash": "b68b1bbb925ec6b6fbcae743175318e0",
     "semantic_hash": ""
   },
   "app/participant/schedule/page.tsx": {
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "app/participant/team/page.tsx": {
-    "mtime": 1790684763.9343908,
-    "seen": 1790685195.168761,
-    "ast_hash": "3e4da0debf6d600c817b0534c03aa12e",
+    "mtime": 1790696843.4413154,
+    "seen": 1790696985.9365463,
+    "ast_hash": "08c30fe3cff81ccb449530ef2825a48f",
     "semantic_hash": ""
   },
   "app/participant/worklogs/page.tsx": {
@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "components/participant/ParticipantSidebar.tsx": {
-    "mtime": 1790683860.410007,
-    "seen": 1790685195.16877,
-    "ast_hash": "a96c2e1081c5722514a58f39baec9b36",
+    "mtime": 1790696831.1745138,
+    "seen": 1790696985.9365597,
+    "ast_hash": "e5f4fa349aef25ca1800047fa1792198",
     "semantic_hash": ""
   },
   "components/participant/SubmissionModal.tsx": {
@@ -543,6 +543,18 @@
     "mtime": 1790696350.8083682,
     "seen": 1790696377.774165,
     "ast_hash": "6e87c0573ea0105f5663155bc196b546",
+    "semantic_hash": ""
+  },
+  "app/api/teams/join/route.ts": {
+    "mtime": 1790696770.2890763,
+    "seen": 1790696985.9365335,
+    "ast_hash": "a8b6fe5bae60f7e3bfb9272e426f465c",
+    "semantic_hash": ""
+  },
+  "components/participant/TeamOnboardingView.tsx": {
+    "mtime": 1790696788.9544764,
+    "seen": 1790696985.936561,
+    "ast_hash": "7d7690812105b1e33a2f75f1a0e273f7",
     "semantic_hash": ""
   }
 }

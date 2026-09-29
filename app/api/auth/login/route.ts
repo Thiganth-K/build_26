@@ -2,23 +2,27 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db";
 import { User, Participant, Mentor, Team } from "@/models";
 import { signToken, setSessionCookie, SessionUser } from "@/lib/auth";
+import bcrypt from "bcryptjs";
 
 export async function POST(req: NextRequest) {
   try {
     await connectToDatabase();
     const body = await req.json();
     const {
-      role,
+      identifier,
       email,
+      password,
+      // In case signup payload was posted here
       name,
       admissionNumber,
       yearOfStudy,
       department,
       mobileNumber,
+      mode,
     } = body;
 
-    // 1. PARTICIPANT LOGIN & ONBOARDING DATA COLLECTION
-    if (role === "PARTICIPANT" || (!role && admissionNumber)) {
+    // 1. IF FULL SIGNUP PAYLOAD IS POSTED
+    if (mode === "SIGNUP" || (name && admissionNumber && department)) {
       if (!name || !email || !admissionNumber || !yearOfStudy || !department || !mobileNumber) {
         return NextResponse.json(
           {
@@ -30,63 +34,62 @@ export async function POST(req: NextRequest) {
       }
 
       const cleanEmail = email.trim().toLowerCase();
-      const cleanName = name.trim();
       const cleanAdmission = admissionNumber.trim().toUpperCase();
-      const cleanMobile = mobileNumber.trim();
-      const cleanDepartment = department.trim();
-      const cleanYear = yearOfStudy.trim();
 
-      // Find or create User
-      let user = await User.findOne({ email: cleanEmail });
-      if (!user) {
-        user = await User.create({
-          name: cleanName,
-          email: cleanEmail,
-          role: "PARTICIPANT",
-          avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
-            cleanName
-          )}&backgroundColor=5e56e7&textColor=ffffff`,
-        });
-      } else {
-        user.name = cleanName;
-        user.role = "PARTICIPANT";
-        await user.save();
+      // Check if already exists
+      const existingUser = await User.findOne({ email: cleanEmail });
+      if (existingUser) {
+        return NextResponse.json(
+          {
+            error: `An account with email "${cleanEmail}" already exists. Please sign in instead.`,
+            accountExists: true,
+          },
+          { status: 409 }
+        );
       }
 
-      // Find or create Participant profile
-      let participant = await Participant.findOne({
-        $or: [{ email: cleanEmail }, { user: user._id }],
+      const existingParticipant = await Participant.findOne({
+        $or: [{ admissionNumber: cleanAdmission }, { email: cleanEmail }],
+      });
+      if (existingParticipant) {
+        return NextResponse.json(
+          {
+            error: `An account with this email or admission number already exists. Please sign in instead.`,
+            accountExists: true,
+          },
+          { status: 409 }
+        );
+      }
+
+      const hashedPassword = password && password.trim() ? await bcrypt.hash(password.trim(), 10) : undefined;
+      const cleanName = name.trim();
+
+      const user = await User.create({
+        name: cleanName,
+        email: cleanEmail,
+        password: hashedPassword,
+        role: "PARTICIPANT",
+        avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+          cleanName
+        )}&backgroundColor=5e56e7&textColor=ffffff`,
       });
 
-      if (!participant) {
-        participant = await Participant.create({
-          user: user._id,
-          name: cleanName,
-          email: cleanEmail,
-          admissionNumber: cleanAdmission,
-          yearOfStudy: cleanYear,
-          year: cleanYear,
-          department: cleanDepartment,
-          mobileNumber: cleanMobile,
-          roleInTeam: "Participant",
-          skills: ["Web Development", "Prototyping"],
-          contributionScore: 85,
-          attendance: "Present",
-          status: "ACTIVE",
-          avatar: user.avatar,
-        });
-      } else {
-        // Update with collected details
-        participant.name = cleanName;
-        participant.email = cleanEmail;
-        participant.admissionNumber = cleanAdmission;
-        participant.yearOfStudy = cleanYear;
-        participant.year = cleanYear;
-        participant.department = cleanDepartment;
-        participant.mobileNumber = cleanMobile;
-        participant.user = user._id;
-        await participant.save();
-      }
+      const participant = await Participant.create({
+        user: user._id,
+        name: cleanName,
+        email: cleanEmail,
+        admissionNumber: cleanAdmission,
+        yearOfStudy: yearOfStudy.trim(),
+        year: yearOfStudy.trim(),
+        department: department.trim(),
+        mobileNumber: mobileNumber.trim(),
+        roleInTeam: "Participant",
+        skills: ["Web Development"],
+        contributionScore: 85,
+        attendance: "Present",
+        status: "ACTIVE",
+        avatar: user.avatar,
+      });
 
       user.participantId = participant._id;
       await user.save();
@@ -97,7 +100,6 @@ export async function POST(req: NextRequest) {
         email: user.email,
         role: "PARTICIPANT",
         participantId: participant._id.toString(),
-        teamId: participant.team ? participant.team.toString() : undefined,
         department: participant.department,
         avatar: user.avatar,
       };
@@ -105,6 +107,7 @@ export async function POST(req: NextRequest) {
       const token = signToken(sessionPayload);
       const response = NextResponse.json({
         success: true,
+        message: "Sign up successful!",
         user: sessionPayload,
         redirectUrl: "/participant",
       });
@@ -113,33 +116,78 @@ export async function POST(req: NextRequest) {
       return response;
     }
 
-    // 2. ADMIN / MENTOR / STAFF LOGIN WITH REGISTERED EMAIL
-    if (!email) {
-      return NextResponse.json({ error: "Email address is required." }, { status: 400 });
+    // 2. SIGN IN WITH EMAIL OR ADMISSION NUMBER
+    const rawIdentifier = (identifier || email || "").trim();
+    if (!rawIdentifier) {
+      return NextResponse.json(
+        { error: "Please enter your registered email address or admission number." },
+        { status: 400 }
+      );
     }
 
-    const cleanEmail = email.trim().toLowerCase();
-    const user = await User.findOne({ email: cleanEmail });
+    let user = null;
+    let participantDoc = null;
 
+    // A. Check if identifier is an email
+    if (rawIdentifier.includes("@")) {
+      user = await User.findOne({ email: rawIdentifier.toLowerCase() });
+      if (!user) {
+        participantDoc = await Participant.findOne({ email: rawIdentifier.toLowerCase() });
+        if (participantDoc && participantDoc.user) {
+          user = await User.findById(participantDoc.user);
+        }
+      }
+    } else {
+      // B. Check if identifier is an Admission Number
+      participantDoc = await Participant.findOne({
+        admissionNumber: { $regex: `^${rawIdentifier}$`, $options: "i" },
+      });
+      if (participantDoc) {
+        user = await User.findOne({
+          $or: [{ _id: participantDoc.user }, { email: participantDoc.email.toLowerCase() }],
+        });
+      }
+    }
+
+    // Fallback: search both user and participant by identifier string
+    if (!user) {
+      user = await User.findOne({
+        $or: [{ email: rawIdentifier.toLowerCase() }],
+      });
+    }
+
+    // If user does not exist in database:
     if (!user) {
       return NextResponse.json(
         {
-          error:
-            "No registered user found for this email. Please check your credentials or register as a participant.",
+          error: `No registered account found for "${rawIdentifier}". Please check your inputs or sign up to create your account.`,
+          notFound: true,
         },
         { status: 404 }
       );
     }
 
+    // C. Password check if user has a hashed password
+    if (user.password && password) {
+      const isMatch = await bcrypt.compare(password.trim(), user.password);
+      if (!isMatch) {
+        return NextResponse.json(
+          { error: "Incorrect password. Please verify and try again." },
+          { status: 401 }
+        );
+      }
+    }
+
+    // D. Attach participant / team info
     let participantId: string | undefined;
     let teamId: string | undefined;
     let mentorId: string | undefined;
 
     if (user.role === "PARTICIPANT") {
-      const p = await Participant.findOne({ user: user._id });
+      const p = participantDoc || (await Participant.findOne({ user: user._id }));
       if (p) {
         participantId = p._id.toString();
-        teamId = p.team?.toString();
+        teamId = p.team ? p.team.toString() : undefined;
       }
     } else if (user.role === "MENTOR") {
       const m = await Mentor.findOne({ email: user.email });
@@ -164,6 +212,7 @@ export async function POST(req: NextRequest) {
 
     const response = NextResponse.json({
       success: true,
+      message: `Welcome back, ${user.name}!`,
       user: sessionPayload,
       redirectUrl,
     });
@@ -171,7 +220,7 @@ export async function POST(req: NextRequest) {
     setSessionCookie(response.headers, token);
     return response;
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : "Internal server error";
+    const message = error instanceof Error ? error.message : "Internal server error during authentication";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
