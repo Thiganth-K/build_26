@@ -7,26 +7,58 @@ import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress";
 import { Avatar } from "@/components/ui/avatar";
 
+import Link from "next/link";
+
 export default function ParticipantTeamPage() {
   const [data, setData] = React.useState<any>(null);
+  const [hasTeam, setHasTeam] = React.useState<boolean | null>(null);
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch("/api/teams")
+    fetch("/api/auth/me")
       .then((r) => r.json())
-      .then((res) => {
-        const team = res.teams?.[0];
-        if (team) {
-          fetch(`/api/teams/${team._id}`)
-            .then((r) => r.json())
-            .then((detail) => setData(detail));
+      .then((meRes) => {
+        const teamId = meRes.team?._id || meRes.user?.teamId || meRes.participant?.team;
+        if (!teamId) {
+          setHasTeam(false);
+          setLoading(false);
+          return;
         }
+
+        setHasTeam(true);
+        fetch(`/api/teams/${teamId}`)
+          .then((r) => r.json())
+          .then((detail) => setData(detail))
+          .finally(() => setLoading(false));
       })
-      .finally(() => setLoading(false));
+      .catch((err) => {
+        console.error("Error loading team space:", err);
+        setLoading(false);
+      });
   }, []);
 
-  if (loading || !data?.team) {
+  if (loading) {
     return <div className="p-8 text-center text-xs text-secondary">Loading team space...</div>;
+  }
+
+  if (hasTeam === false) {
+    return (
+      <div className="p-10 max-w-xl mx-auto text-center space-y-4">
+        <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs">
+          <div className="font-bold text-sm mb-1">Team Setup Required</div>
+          <div>You must create a team or join an existing team by code to view team collaboration tools.</div>
+        </div>
+        <Link href="/participant">
+          <Button variant="primary" size="md">
+            Go to Team Setup Onboarding
+          </Button>
+        </Link>
+      </div>
+    );
+  }
+
+  if (!data?.team) {
+    return <div className="p-8 text-center text-xs text-secondary">Could not find team details.</div>;
   }
 
   const { team } = data;

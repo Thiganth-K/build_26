@@ -26,11 +26,34 @@ interface ParticipantSidebarProps {
 }
 
 export function ParticipantSidebar({
-  participantName = "Thiganth K.",
-  teamName = "Team Alpha",
-  teamCode = "B26-ALPHA",
+  participantName: initialName = "Participant",
+  teamName: initialTeamName = "Loading...",
+  teamCode: initialTeamCode = "...",
 }: ParticipantSidebarProps) {
   const pathname = usePathname();
+  const [profile, setProfile] = React.useState<any>(null);
+
+  React.useEffect(() => {
+    fetch("/api/auth/me")
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.user) {
+          setProfile({
+            name: data.participant?.name || data.user.name,
+            teamName: data.team?.name || (data.hasTeam ? "My Team" : "No Team Assigned"),
+            teamCode: data.team?.code || (data.hasTeam ? "ASSIGNED" : "UNASSIGNED"),
+            role: data.participant?.roleInTeam || "Participant",
+            hasTeam: data.hasTeam,
+          });
+        }
+      })
+      .catch((err) => console.error("Error loading sidebar profile:", err));
+  }, [pathname]);
+
+  const participantName = profile?.name || initialName;
+  const teamName = profile ? profile.teamName : initialTeamName;
+  const teamCode = profile ? profile.teamCode : initialTeamCode;
+  const hasTeam = profile ? profile.hasTeam : true;
 
   const navItems = [
     { label: "Overview", href: "/participant", icon: LayoutDashboard },
@@ -66,8 +89,15 @@ export function ParticipantSidebar({
       <div className="mx-3 mt-4 p-3 rounded-xl bg-surface-subtle/70 border border-border space-y-1">
         <div className="text-[10px] uppercase font-bold text-secondary">My Assigned Team</div>
         <div className="text-xs font-bold text-[#111111] flex items-center justify-between">
-          <span>{teamName}</span>
-          <span className="text-[10px] font-mono-num text-accent bg-accent/10 px-1.5 py-0.5 rounded">
+          <span className="truncate max-w-[130px]">{teamName}</span>
+          <span
+            className={cn(
+              "text-[10px] font-mono-num px-1.5 py-0.5 rounded",
+              hasTeam
+                ? "text-accent bg-accent/10"
+                : "text-amber-700 bg-amber-50 border border-amber-200"
+            )}
+          >
             {teamCode}
           </span>
         </div>

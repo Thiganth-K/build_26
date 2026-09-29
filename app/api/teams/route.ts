@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db";
-import { Team, Activity, ProblemStatement } from "@/models";
+import { Team, Activity, ProblemStatement, Participant } from "@/models";
 import { getSessionFromRequest } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
@@ -48,34 +48,85 @@ export async function POST(req: NextRequest) {
 
     const { name, code, problemStatementId, solutionTitle, solutionDescription, techStack } = body;
 
-    if (!name) {
+    if (!name || !name.trim()) {
       return NextResponse.json({ error: "Team name is required" }, { status: 400 });
     }
 
-    const generatedCode = code || `B26-${name.substring(0, 4).toUpperCase()}-${Math.floor(100 + Math.random() * 900)}`;
+    // Identify participant if session exists
+    let participant: any = null;
+    if (session) {
+      if (session.participantId) {
+        participant = await Participant.findById(session.participantId);
+      }
+      if (!participant) {
+        participant = await Participant.findOne({
+          $or: [{ user: session.id }, { email: session.email.toLowerCase() }],
+        });
+      }
+
+      // Check if participant already has a team
+      if (participant && participant.team) {
+        const existingTeam = await Team.findById(participant.team);
+        if (existingTeam) {
+          return NextResponse.json(
+            {
+              error: `You are already a member of "${existingTeam.name}" (${existingTeam.code}). You cannot create another team.`,
+            },
+            { status: 400 }
+          );
+        }
+      }
+    }
+
+    const cleanTeamName = name.trim();
+    const cleanPrefix = cleanTeamName
+      .replace(/[^a-zA-Z0-9]/g, "")
+      .substring(0, 5)
+      .toUpperCase();
+    const generatedCode =
+      code || `B26-${cleanPrefix || "TEAM"}-${Math.floor(100 + Math.random() * 900)}`;
+
+    const memberList = participant
+      ? [
+          {
+            participant: participant._id,
+            name: participant.name,
+            email: participant.email,
+            role: "Team Lead",
+            isLeader: true,
+          },
+        ]
+      : session
+      ? [
+          {
+            participant: session.participantId || session.id,
+            name: session.name,
+            email: session.email,
+            role: "Team Lead",
+            isLeader: true,
+          },
+        ]
+      : [];
 
     const newTeam = await Team.create({
-      name,
+      name: cleanTeamName,
       code: generatedCode,
       problemStatement: problemStatementId || undefined,
       solutionTitle: solutionTitle || "",
       solutionDescription: solutionDescription || "",
-      techStack: techStack || ["Next.js", "TypeScript"],
-      members: session
-        ? [
-            {
-              participant: session.participantId || session.id,
-              name: session.name,
-              email: session.email,
-              role: "Team Lead",
-              isLeader: true,
-            },
-          ]
-        : [],
+      techStack: Array.isArray(techStack) ? techStack : ["Next.js", "TypeScript"],
+      members: memberList,
       currentPhase: "Problem Understanding",
       progress: 10,
       status: "ACTIVE",
     });
+
+    // Link team to participant
+    if (participant) {
+      participant.team = newTeam._id;
+      participant.roleInTeam = "Team Lead";
+      await participant.save();
+    }
 
     if (problemStatementId) {
       await ProblemStatement.findByIdAndUpdate(problemStatementId, {
@@ -85,11 +136,11 @@ export async function POST(req: NextRequest) {
 
     await Activity.create({
       type: "TEAM_CREATED",
-      title: `${name} was formed`,
+      title: `${cleanTeamName} was formed`,
       description: `New team registered with code ${generatedCode}`,
       teamId: newTeam._id,
-      teamName: name,
-      participantName: session?.name || "Organizer",
+      teamName: cleanTeamName,
+      participantName: participant?.name || session?.name || "Participant",
     });
 
     return NextResponse.json({ success: true, team: newTeam });

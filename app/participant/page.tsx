@@ -23,34 +23,50 @@ import { ProgressBar } from "@/components/ui/progress";
 import { Avatar } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 
+import { TeamOnboardingView } from "@/components/participant/TeamOnboardingView";
+
 export default function ParticipantDashboardPage() {
   const [data, setData] = React.useState<any>(null);
+  const [userProfile, setUserProfile] = React.useState<any>(null);
+  const [hasTeam, setHasTeam] = React.useState<boolean | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [isWorkLogOpen, setIsWorkLogOpen] = React.useState(false);
   const [isSubmissionOpen, setIsSubmissionOpen] = React.useState(false);
 
   const fetchDashboard = React.useCallback(async () => {
     try {
-      // Find Team Alpha (or first team)
-      const teamsRes = await fetch("/api/teams").then((r) => r.json());
-      const teamAlpha = teamsRes.teams?.[0];
-      if (teamAlpha) {
-        const teamDetailRes = await fetch(`/api/teams/${teamAlpha._id}`).then((r) => r.json());
-        const annRes = await fetch("/api/announcements").then((r) => r.json());
-        const schedRes = await fetch("/api/schedule?day=1").then((r) => r.json());
+      setLoading(true);
+      // 1. Verify authenticated user and check team status
+      const meRes = await fetch("/api/auth/me").then((r) => r.json());
+      const currentUser = meRes.participant || meRes.user;
+      setUserProfile(currentUser);
 
-        setData({
-          team: teamDetailRes.team,
-          workLogs: teamDetailRes.workLogs || [],
-          tasks: teamDetailRes.tasks || [],
-          submissions: teamDetailRes.submissions || [],
-          feedback: teamDetailRes.feedback || [],
-          announcements: annRes.announcements?.slice(0, 3) || [],
-          deadlines: schedRes.events || [],
-        });
+      const teamId = meRes.team?._id || meRes.user?.teamId || meRes.participant?.team;
+
+      if (!teamId) {
+        setHasTeam(false);
+        setLoading(false);
+        return;
       }
+
+      setHasTeam(true);
+
+      // 2. Fetch team details and bootcamp events
+      const teamDetailRes = await fetch(`/api/teams/${teamId}`).then((r) => r.json());
+      const annRes = await fetch("/api/announcements").then((r) => r.json());
+      const schedRes = await fetch("/api/schedule?day=1").then((r) => r.json());
+
+      setData({
+        team: teamDetailRes.team,
+        workLogs: teamDetailRes.workLogs || [],
+        tasks: teamDetailRes.tasks || [],
+        submissions: teamDetailRes.submissions || [],
+        feedback: teamDetailRes.feedback || [],
+        announcements: annRes.announcements?.slice(0, 3) || [],
+        deadlines: schedRes.events || [],
+      });
     } catch (err) {
-      console.error(err);
+      console.error("Error loading participant workspace:", err);
     } finally {
       setLoading(false);
     }
@@ -60,10 +76,34 @@ export default function ParticipantDashboardPage() {
     fetchDashboard();
   }, [fetchDashboard]);
 
-  if (loading || !data?.team) {
+  if (loading) {
+    return (
+      <div className="p-12 text-center text-xs text-secondary flex flex-col items-center justify-center min-h-[50vh] space-y-2">
+        <div className="h-6 w-6 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+        <div>Verifying participant team membership...</div>
+      </div>
+    );
+  }
+
+  // If participant is NOT in a team, show ONLY the Team Onboarding (Create / Join Team)
+  if (hasTeam === false) {
+    return (
+      <div className="min-h-screen bg-background pb-16">
+        <TeamOnboardingView
+          participant={userProfile || { name: "Participant", email: "" }}
+          onTeamAssigned={(newTeam) => {
+            setHasTeam(true);
+            fetchDashboard();
+          }}
+        />
+      </div>
+    );
+  }
+
+  if (!data?.team) {
     return (
       <div className="p-8 text-center text-xs text-secondary">
-        Initializing participant workspace...
+        Could not load team workspace. Please refresh or contact administrator.
       </div>
     );
   }
@@ -75,7 +115,7 @@ export default function ParticipantDashboardPage() {
   return (
     <div className="min-h-screen bg-background pb-16">
       <ParticipantHeader
-        participantName="Thiganth K."
+        participantName={userProfile?.name || "Participant"}
         currentPhase={team.currentPhase}
         onOpenWorkLog={() => setIsWorkLogOpen(true)}
         onSubmitMilestone={() => setIsSubmissionOpen(true)}
