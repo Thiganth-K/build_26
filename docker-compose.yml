@@ -1,0 +1,62 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: build26-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: build26
+    volumes:
+      - build26_mongodb_data:/data/db
+    networks:
+      - build26-network
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --eval 'db.adminCommand({ ping: 1 }).ok'"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "27017:27017"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: build26-app
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      MONGODB_URI: mongodb://mongodb:27017/build26
+      JWT_SECRET: ${JWT_SECRET:-build26_production_secret_key_college_bootcamp_2026}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+    ports:
+      - "3000:3000"
+    networks:
+      - build26-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider",
+          "http://localhost:3000/api/health"
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+networks:
+  build26-network:
+    driver: bridge
+
+volumes:
+  build26_mongodb_data:
