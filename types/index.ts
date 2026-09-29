@@ -15,8 +15,11 @@ export interface Participant {
   user?: string;
   name: string;
   email: string;
+  admissionNumber?: string;
+  yearOfStudy?: string;
   department: string;
   year: string;
+  mobileNumber?: string;
   team?: {
     _id: string;
     name: string;

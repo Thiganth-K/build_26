@@ -35,8 +35,11 @@ export interface IParticipant extends Document {
   user: mongoose.Types.ObjectId;
   name: string;
   email: string;
+  admissionNumber?: string;
+  yearOfStudy?: string;
   department: string;
   year: string;
+  mobileNumber?: string;
   team?: mongoose.Types.ObjectId;
   roleInTeam: string; // Team Lead, Product, UI/UX, Frontend, Backend, AI/ML, Research, Marketing
   skills: string[];
@@ -53,8 +56,11 @@ const ParticipantSchema = new Schema<IParticipant>(
     user: { type: Schema.Types.ObjectId, ref: "User" },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true },
+    admissionNumber: { type: String, trim: true },
+    yearOfStudy: { type: String, default: "3rd Year" },
     department: { type: String, default: "Computer Science" },
     year: { type: String, default: "3rd Year" },
+    mobileNumber: { type: String, trim: true },
     team: { type: Schema.Types.ObjectId, ref: "Team" },
     roleInTeam: { type: String, default: "Frontend Developer" },
     skills: [{ type: String }],

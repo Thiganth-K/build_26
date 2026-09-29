@@ -450,9 +450,9 @@
     "semantic_hash": ""
   },
   "lib/db.ts": {
-    "mtime": 1790663403.364946,
-    "seen": 1790685195.168778,
-    "ast_hash": "5496aa365588c3c9ab13be052b34e26b",
+    "mtime": 1790687003.8448198,
+    "seen": 1790687425.6812289,
+    "ast_hash": "d3d7f189a84c93ab83cae972a462a4eb",
     "semantic_hash": ""
   },
   "lib/utils.ts": {
@@ -474,15 +474,15 @@
     "semantic_hash": ""
   },
   "next.config.mjs": {
-    "mtime": 1790663357.805675,
-    "seen": 1790685195.1687808,
-    "ast_hash": "7ceaadcea1f5ff8d028e8cde96a48980",
+    "mtime": 1790686100.9988935,
+    "seen": 1790687425.6812332,
+    "ast_hash": "ee99cf178d493815396134891d4b8e70",
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1790663375.722361,
-    "seen": 1790685195.1687813,
-    "ast_hash": "0d60cbba8c8913d196431900c229a5e0",
+    "mtime": 1790686848.6705549,
+    "seen": 1790687425.681234,
+    "ast_hash": "239fe154cecf6df2534819394fcd815f",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "scripts/seed.mjs": {
-    "mtime": 1790663490.0753233,
-    "seen": 1790685195.1687827,
-    "ast_hash": "0e39c4c8c1e3261beca1f934dded7e93",
+    "mtime": 1790686129.6318822,
+    "seen": 1790687425.6812358,
+    "ast_hash": "759c3419b1360b19302fbe07572be08c",
     "semantic_hash": ""
   },
   "tailwind.config.ts": {
@@ -516,9 +516,27 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790685179.2188795,
-    "seen": 1790685195.1687994,
-    "ast_hash": "f69e7ad3813eda0d2ead03adffce0b49",
+    "mtime": 1790686760.6578667,
+    "seen": 1790687425.6812415,
+    "ast_hash": "bf8b83232cabc8e4314f1053d7b6d5ca",
+    "semantic_hash": ""
+  },
+  "app/api/health/route.ts": {
+    "mtime": 1790687021.9830923,
+    "seen": 1790687425.6811886,
+    "ast_hash": "54e2f23b84d6414feb59799fb34e3713",
+    "semantic_hash": ""
+  },
+  "docker-compose.prod.yml": {
+    "mtime": 1790686194.3411453,
+    "seen": 1790687425.6812425,
+    "ast_hash": "43b4acb6f5874697409edd4dd35d0627",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1790686184.187099,
+    "seen": 1790687425.6812432,
+    "ast_hash": "45e908bd4ca8e912873ec81dbdd9415b",
     "semantic_hash": ""
   }
 }

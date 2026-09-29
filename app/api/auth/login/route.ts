@@ -7,33 +7,130 @@ export async function POST(req: NextRequest) {
   try {
     await connectToDatabase();
     const body = await req.json();
-    const { email, role, demo } = body;
+    const {
+      role,
+      email,
+      name,
+      admissionNumber,
+      yearOfStudy,
+      department,
+      mobileNumber,
+    } = body;
 
-    let user;
-
-    if (demo) {
-      // One-click demo login switch
-      if (role === "SUPER_ADMIN" || role === "ADMIN") {
-        user = await User.findOne({ role: role === "SUPER_ADMIN" ? "SUPER_ADMIN" : "ADMIN" });
-      } else if (role === "MENTOR") {
-        user = await User.findOne({ role: "MENTOR" });
-      } else {
-        // Participant (default to Thiganth K. or first participant)
-        user = await User.findOne({ role: "PARTICIPANT" });
+    // 1. PARTICIPANT LOGIN & ONBOARDING DATA COLLECTION
+    if (role === "PARTICIPANT" || (!role && admissionNumber)) {
+      if (!name || !email || !admissionNumber || !yearOfStudy || !department || !mobileNumber) {
+        return NextResponse.json(
+          {
+            error:
+              "All fields are required: Full Name, Email, Admission Number, Year of Study, Department, and Mobile Number.",
+          },
+          { status: 400 }
+        );
       }
-    } else if (email) {
-      user = await User.findOne({ email: email.toLowerCase() });
+
+      const cleanEmail = email.trim().toLowerCase();
+      const cleanName = name.trim();
+      const cleanAdmission = admissionNumber.trim().toUpperCase();
+      const cleanMobile = mobileNumber.trim();
+      const cleanDepartment = department.trim();
+      const cleanYear = yearOfStudy.trim();
+
+      // Find or create User
+      let user = await User.findOne({ email: cleanEmail });
+      if (!user) {
+        user = await User.create({
+          name: cleanName,
+          email: cleanEmail,
+          role: "PARTICIPANT",
+          avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+            cleanName
+          )}&backgroundColor=5e56e7&textColor=ffffff`,
+        });
+      } else {
+        user.name = cleanName;
+        user.role = "PARTICIPANT";
+        await user.save();
+      }
+
+      // Find or create Participant profile
+      let participant = await Participant.findOne({
+        $or: [{ email: cleanEmail }, { user: user._id }],
+      });
+
+      if (!participant) {
+        participant = await Participant.create({
+          user: user._id,
+          name: cleanName,
+          email: cleanEmail,
+          admissionNumber: cleanAdmission,
+          yearOfStudy: cleanYear,
+          year: cleanYear,
+          department: cleanDepartment,
+          mobileNumber: cleanMobile,
+          roleInTeam: "Participant",
+          skills: ["Web Development", "Prototyping"],
+          contributionScore: 85,
+          attendance: "Present",
+          status: "ACTIVE",
+          avatar: user.avatar,
+        });
+      } else {
+        // Update with collected details
+        participant.name = cleanName;
+        participant.email = cleanEmail;
+        participant.admissionNumber = cleanAdmission;
+        participant.yearOfStudy = cleanYear;
+        participant.year = cleanYear;
+        participant.department = cleanDepartment;
+        participant.mobileNumber = cleanMobile;
+        participant.user = user._id;
+        await participant.save();
+      }
+
+      user.participantId = participant._id;
+      await user.save();
+
+      const sessionPayload: SessionUser = {
+        id: user._id.toString(),
+        name: user.name,
+        email: user.email,
+        role: "PARTICIPANT",
+        participantId: participant._id.toString(),
+        teamId: participant.team ? participant.team.toString() : undefined,
+        department: participant.department,
+        avatar: user.avatar,
+      };
+
+      const token = signToken(sessionPayload);
+      const response = NextResponse.json({
+        success: true,
+        user: sessionPayload,
+        redirectUrl: "/participant",
+      });
+
+      setSessionCookie(response.headers, token);
+      return response;
     }
+
+    // 2. ADMIN / MENTOR / STAFF LOGIN WITH REGISTERED EMAIL
+    if (!email) {
+      return NextResponse.json({ error: "Email address is required." }, { status: 400 });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const user = await User.findOne({ email: cleanEmail });
 
     if (!user) {
-      // Fallback: create or find first admin
-      user = await User.findOne({});
-      if (!user) {
-        return NextResponse.json({ error: "No users found. Please run database seed." }, { status: 404 });
-      }
+      return NextResponse.json(
+        {
+          error:
+            "No registered user found for this email. Please check your credentials or register as a participant.",
+        },
+        { status: 404 }
+      );
     }
 
-    // Look up participant / team info if participant
     let participantId: string | undefined;
     let teamId: string | undefined;
     let mentorId: string | undefined;
@@ -63,10 +160,12 @@ export async function POST(req: NextRequest) {
     };
 
     const token = signToken(sessionPayload);
+    const redirectUrl = user.role === "PARTICIPANT" ? "/participant" : "/admin";
 
     const response = NextResponse.json({
       success: true,
       user: sessionPayload,
+      redirectUrl,
     });
 
     setSessionCookie(response.headers, token);

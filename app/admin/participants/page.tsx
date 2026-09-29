@@ -33,10 +33,12 @@ export default function ParticipantsPage() {
 
   const filteredParticipants = participants.filter(
     (p) =>
-      p.name.toLowerCase().includes(search.toLowerCase()) ||
-      p.email.toLowerCase().includes(search.toLowerCase()) ||
-      p.department.toLowerCase().includes(search.toLowerCase()) ||
-      p.roleInTeam.toLowerCase().includes(search.toLowerCase())
+      p.name?.toLowerCase().includes(search.toLowerCase()) ||
+      p.email?.toLowerCase().includes(search.toLowerCase()) ||
+      p.admissionNumber?.toLowerCase().includes(search.toLowerCase()) ||
+      p.mobileNumber?.toLowerCase().includes(search.toLowerCase()) ||
+      p.department?.toLowerCase().includes(search.toLowerCase()) ||
+      p.roleInTeam?.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -107,7 +109,14 @@ export default function ParticipantsPage() {
                     <div className="flex items-center gap-2.5">
                       <Avatar name={p.name} src={p.avatar} size="sm" />
                       <div>
-                        <div className="font-semibold text-[#111111]">{p.name}</div>
+                        <div className="font-semibold text-[#111111] flex items-center gap-1.5">
+                          <span>{p.name}</span>
+                          {p.admissionNumber && (
+                            <span className="text-[10px] font-mono-num px-1 py-0.2 rounded bg-surface-subtle border border-border/60 text-secondary">
+                              {p.admissionNumber}
+                            </span>
+                          )}
+                        </div>
                         <div className="text-[10px] text-secondary">{p.email}</div>
                       </div>
                     </div>
@@ -199,6 +208,25 @@ export default function ParticipantsPage() {
             </div>
 
             <div className="mt-6 space-y-4 text-xs divide-y divide-border/60">
+              {selectedParticipant.admissionNumber && (
+                <div className="pt-3 flex justify-between items-center">
+                  <span className="text-secondary">Admission / Roll No:</span>
+                  <span className="font-mono-num font-bold text-[#111111] px-2 py-0.5 rounded bg-surface-subtle border border-border">
+                    {selectedParticipant.admissionNumber}
+                  </span>
+                </div>
+              )}
+              {selectedParticipant.mobileNumber && (
+                <div className="pt-3 flex justify-between items-center">
+                  <span className="text-secondary">Mobile Number:</span>
+                  <a
+                    href={`tel:${selectedParticipant.mobileNumber}`}
+                    className="font-mono-num font-semibold text-accent hover:underline"
+                  >
+                    {selectedParticipant.mobileNumber}
+                  </a>
+                </div>
+              )}
               <div className="pt-3 flex justify-between">
                 <span className="text-secondary">Department:</span>
                 <span className="font-semibold text-[#111111]">
@@ -208,7 +236,7 @@ export default function ParticipantsPage() {
               <div className="pt-3 flex justify-between">
                 <span className="text-secondary">Year of Study:</span>
                 <span className="font-semibold text-[#111111]">
-                  {selectedParticipant.year}
+                  {selectedParticipant.yearOfStudy || selectedParticipant.year}
                 </span>
               </div>
               <div className="pt-3 flex justify-between">

@@ -17,6 +17,8 @@ export async function GET(req: NextRequest) {
       filter.$or = [
         { name: { $regex: search, $options: "i" } },
         { email: { $regex: search, $options: "i" } },
+        { admissionNumber: { $regex: search, $options: "i" } },
+        { mobileNumber: { $regex: search, $options: "i" } },
         { roleInTeam: { $regex: search, $options: "i" } },
       ];
     }
@@ -45,7 +47,18 @@ export async function POST(req: NextRequest) {
     await connectToDatabase();
     const body = await req.json();
 
-    const { name, email, department, year, roleInTeam, skills, teamId } = body;
+    const {
+      name,
+      email,
+      admissionNumber,
+      yearOfStudy,
+      department,
+      year,
+      mobileNumber,
+      roleInTeam,
+      skills,
+      teamId,
+    } = body;
 
     if (!name || !email) {
       return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
@@ -66,8 +79,11 @@ export async function POST(req: NextRequest) {
       user: user._id,
       name,
       email: email.toLowerCase(),
+      admissionNumber: admissionNumber ? admissionNumber.trim().toUpperCase() : undefined,
+      yearOfStudy: yearOfStudy || year || "3rd Year",
       department: department || "Computer Science",
-      year: year || "3rd Year",
+      year: yearOfStudy || year || "3rd Year",
+      mobileNumber: mobileNumber ? mobileNumber.trim() : undefined,
       team: teamId || undefined,
       roleInTeam: roleInTeam || "Developer",
       skills: Array.isArray(skills) ? skills : (skills ? skills.split(",").map((s: string) => s.trim()) : ["Web Dev"]),

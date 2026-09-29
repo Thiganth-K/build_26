@@ -21,32 +21,6 @@
   },
   "nodes": [
     {
-      "id": "components_admin_adminheader_adminheaderprops",
-      "label": "AdminHeaderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "adminheaderprops",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "components_admin_deadlinepanel_deadlinepanelprops",
-      "label": "DeadlinePanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "deadlinepanelprops",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L8"
-    },
-    {
       "id": "components_admin_quickactionmodal_quickactionmodalprops",
       "label": "QuickActionModalProps",
       "_callable": true,
@@ -58,71 +32,6 @@
       "norm_label": "quickactionmodalprops",
       "source_file": "components/admin/QuickActionModal.tsx",
       "source_location": "L7"
-    },
-    {
-      "id": "components_participant_participantheader_participantheaderprops",
-      "label": "ParticipantHeaderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantheaderprops",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "components_participant_submissionmodal_submissionmodalprops",
-      "label": "SubmissionModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "submissionmodalprops",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "components_participant_worklogmodal_worklogmodalprops",
-      "label": "WorkLogModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "worklogmodalprops",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "components_ui_avatar_avatarprops",
-      "label": "AvatarProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "avatarprops",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "components_ui_badge_badgeprops",
-      "label": "BadgeProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "badgeprops",
-      "source_file": "components/ui/badge.tsx",
-      "source_location": "L4"
     },
     {
       "id": "components_ui_button_buttonprops",
@@ -151,30 +60,160 @@
       "source_location": "L5"
     },
     {
+      "id": "components_admin_activityfeed_activityfeedprops",
+      "label": "ActivityFeedProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "activityfeedprops",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_admin_bootcampphasetimeline_phasetimelineprops",
+      "label": "PhaseTimelineProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "phasetimelineprops",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "components_admin_deadlinepanel_deadlinepanelprops",
+      "label": "DeadlinePanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "deadlinepanelprops",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "components_admin_globalsearch_globalsearchprops",
+      "label": "GlobalSearchProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "globalsearchprops",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "components_admin_teamtable_teamtableprops",
+      "label": "TeamTableProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamtableprops",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "components_admin_adminheader_adminheaderprops",
+      "label": "AdminHeaderProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "adminheaderprops",
+      "source_file": "components/admin/AdminHeader.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_ui_avatar_avatarprops",
+      "label": "AvatarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatarprops",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_ui_badge_badgeprops",
+      "label": "BadgeProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "badgeprops",
+      "source_file": "components/ui/badge.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_participant_submissionmodal_submissionmodalprops",
+      "label": "SubmissionModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodalprops",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L7"
+    },
+    {
       "id": "components_ui_modal_modalprops",
       "label": "ModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
+      "community": 28,
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "modalprops",
       "source_file": "components/ui/modal.tsx",
       "source_location": "L7"
     },
     {
-      "id": "components_admin_activityfeed_activityfeedprops",
-      "label": "ActivityFeedProps",
+      "id": "components_participant_participantheader_participantheaderprops",
+      "label": "ParticipantHeaderProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 29,
+      "community_name": "participant/page.tsx",
       "file_type": "code",
-      "norm_label": "activityfeedprops",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L17"
+      "norm_label": "participantheaderprops",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_participant_worklogmodal_worklogmodalprops",
+      "label": "WorkLogModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "worklogmodalprops",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L7"
     },
     {
       "id": "components_admin_adminsidebar_adminsidebarprops",
@@ -190,32 +229,6 @@
       "source_location": "L30"
     },
     {
-      "id": "components_admin_bootcampphasetimeline_phasetimelineprops",
-      "label": "PhaseTimelineProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "phasetimelineprops",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "components_admin_globalsearch_globalsearchprops",
-      "label": "GlobalSearchProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "globalsearchprops",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L19"
-    },
-    {
       "id": "components_admin_kpicard_kpicardprops",
       "label": "KpiCardProps",
       "_callable": true,
@@ -227,32 +240,6 @@
       "norm_label": "kpicardprops",
       "source_file": "components/admin/KpiCard.tsx",
       "source_location": "L5"
-    },
-    {
-      "id": "components_admin_needsattentionpanel_needsattentionpanelprops",
-      "label": "NeedsAttentionPanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "needsattentionpanelprops",
-      "source_file": "components/admin/NeedsAttentionPanel.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "components_admin_teamtable_teamtableprops",
-      "label": "TeamTableProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "teamtableprops",
-      "source_file": "components/admin/TeamTable.tsx",
-      "source_location": "L21"
     },
     {
       "id": "components_participant_participantsidebar_participantsidebarprops",
@@ -273,25 +260,12 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 30,
+      "community_name": "ProgressBar",
       "file_type": "code",
       "norm_label": "progressprops",
       "source_file": "components/ui/progress.tsx",
       "source_location": "L4"
-    },
-    {
-      "id": "types_index_attentionitem",
-      "label": "AttentionItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "attentionitem",
-      "source_file": "types/index.ts",
-      "source_location": "L218"
     },
     {
       "id": "models_index_iactivity",
@@ -502,6 +476,19 @@
       "source_location": "L276"
     },
     {
+      "id": "components_admin_needsattentionpanel_needsattentionpanelprops",
+      "label": "NeedsAttentionPanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "types/index.ts",
+      "file_type": "code",
+      "norm_label": "needsattentionpanelprops",
+      "source_file": "components/admin/NeedsAttentionPanel.tsx",
+      "source_location": "L10"
+    },
+    {
       "id": "types_index_activityitem",
       "label": "ActivityItem",
       "_callable": true,
@@ -526,6 +513,19 @@
       "norm_label": "announcement",
       "source_file": "types/index.ts",
       "source_location": "L195"
+    },
+    {
+      "id": "types_index_attentionitem",
+      "label": "AttentionItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "types/index.ts",
+      "file_type": "code",
+      "norm_label": "attentionitem",
+      "source_file": "types/index.ts",
+      "source_location": "L218"
     },
     {
       "id": "types_index_bootcamp",
@@ -707,7 +707,7 @@
       "file_type": "code",
       "norm_label": "mongoosecache",
       "source_file": "lib/db.ts",
-      "source_location": "L9"
+      "source_location": "L3"
     },
     {
       "id": "lib_auth_sessionuser",
@@ -723,18 +723,6 @@
       "source_location": "L8"
     },
     {
-      "id": "app_admin_analytics_page_analyticspage",
-      "label": "AnalyticsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "analyticspage()",
-      "source_file": "app/admin/analytics/page.tsx",
-      "source_location": "L8"
-    },
-    {
       "id": "app_admin_announcements_page_announcementspage",
       "label": "AnnouncementsPage()",
       "_callable": true,
@@ -745,30 +733,6 @@
       "norm_label": "announcementspage()",
       "source_file": "app/admin/announcements/page.tsx",
       "source_location": "L10"
-    },
-    {
-      "id": "app_admin_evaluation_page_evaluationpage",
-      "label": "EvaluationPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "evaluationpage()",
-      "source_file": "app/admin/evaluation/page.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_admin_feedback_page_feedbackpage",
-      "label": "FeedbackPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "feedbackpage()",
-      "source_file": "app/admin/feedback/page.tsx",
-      "source_location": "L9"
     },
     {
       "id": "app_admin_mentors_page_mentorspage",
@@ -843,30 +807,6 @@
       "source_location": "L8"
     },
     {
-      "id": "app_admin_showcase_page_showcasepage",
-      "label": "ShowcasePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "showcasepage()",
-      "source_file": "app/admin/showcase/page.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_admin_submissions_page_submissionspage",
-      "label": "SubmissionsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "submissionspage()",
-      "source_file": "app/admin/submissions/page.tsx",
-      "source_location": "L10"
-    },
-    {
       "id": "app_admin_teams_page_teamslistpage",
       "label": "TeamsListPage()",
       "_callable": true,
@@ -877,30 +817,6 @@
       "norm_label": "teamslistpage()",
       "source_file": "app/admin/teams/page.tsx",
       "source_location": "L14"
-    },
-    {
-      "id": "app_admin_teams_teamid_page_teamdetailpage",
-      "label": "TeamDetailPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "teamdetailpage()",
-      "source_file": "app/admin/teams/[teamId]/page.tsx",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_admin_worklogs_page_worklogspage",
-      "label": "WorkLogsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "worklogspage()",
-      "source_file": "app/admin/worklogs/page.tsx",
-      "source_location": "L9"
     },
     {
       "id": "app_login_page_loginpage",
@@ -927,30 +843,6 @@
       "source_location": "L21"
     },
     {
-      "id": "app_participant_feedback_page_participantfeedbackpage",
-      "label": "ParticipantFeedbackPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantfeedbackpage()",
-      "source_file": "app/participant/feedback/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_participant_page_participantdashboardpage",
-      "label": "ParticipantDashboardPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantdashboardpage()",
-      "source_file": "app/participant/page.tsx",
-      "source_location": "L26"
-    },
-    {
       "id": "app_participant_schedule_page_participantschedulepage",
       "label": "ParticipantSchedulePage()",
       "_callable": true,
@@ -963,54 +855,6 @@
       "source_location": "L9"
     },
     {
-      "id": "app_participant_submissions_page_participantsubmissionspage",
-      "label": "ParticipantSubmissionsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantsubmissionspage()",
-      "source_file": "app/participant/submissions/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_participant_tasks_page_participanttaskspage",
-      "label": "ParticipantTasksPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participanttaskspage()",
-      "source_file": "app/participant/tasks/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_participant_team_page_participantteampage",
-      "label": "ParticipantTeamPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantteampage()",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_participant_worklogs_page_participantworklogspage",
-      "label": "ParticipantWorklogsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantworklogspage()",
-      "source_file": "app/participant/worklogs/page.tsx",
-      "source_location": "L10"
-    },
-    {
       "id": "components_admin_quickactionmodal_quickactionmodal",
       "label": "QuickActionModal()",
       "_callable": true,
@@ -1021,54 +865,6 @@
       "norm_label": "quickactionmodal()",
       "source_file": "components/admin/QuickActionModal.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "components_participant_participantheader_participantheader",
-      "label": "ParticipantHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantheader()",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_participant_submissionmodal_submissionmodal",
-      "label": "SubmissionModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "submissionmodal()",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "components_participant_worklogmodal_worklogmodal",
-      "label": "WorkLogModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "worklogmodal()",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "components_ui_avatar_avatar",
-      "label": "Avatar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "avatar()",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L10"
     },
     {
       "id": "components_ui_badge_badge",
@@ -1093,42 +889,6 @@
       "norm_label": "emptystate()",
       "source_file": "components/ui/empty-state.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "components_ui_modal_modal",
-      "label": "Modal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "modal()",
-      "source_file": "components/ui/modal.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_ui_progress_progressbar",
-      "label": "ProgressBar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "progressbar()",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "lib_utils_formatdate",
-      "label": "formatDate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "formatdate()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L8"
     },
     {
       "id": "app_api_announcements_route_delete",
@@ -1275,18 +1035,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_layout_rootlayout",
-      "label": "RootLayout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "seed/route.ts",
-      "file_type": "code",
-      "norm_label": "rootlayout()",
-      "source_file": "app/layout.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "app_api_bootcamp_route_get",
       "label": "GET()",
       "_callable": true,
@@ -1335,30 +1083,6 @@
       "source_location": "L28"
     },
     {
-      "id": "app_api_teams_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "teams/route.ts",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/teams/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "teams/route.ts",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/route.ts",
-      "source_location": "L43"
-    },
-    {
       "id": "scripts_seed_seed",
       "label": "seed()",
       "_callable": true,
@@ -1368,7 +1092,343 @@
       "file_type": "code",
       "norm_label": "seed()",
       "source_file": "scripts/seed.mjs",
-      "source_location": "L5"
+      "source_location": "L10"
+    },
+    {
+      "id": "app_admin_page_admindashboardpage",
+      "label": "AdminDashboardPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "admindashboardpage()",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "components_admin_activityfeed_activityfeed",
+      "label": "ActivityFeed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "activityfeed()",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "components_admin_adminheader_adminheader",
+      "label": "AdminHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "adminheader()",
+      "source_file": "components/admin/AdminHeader.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "components_admin_bootcampphasetimeline_bootcampphasetimeline",
+      "label": "BootcampPhaseTimeline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "bootcampphasetimeline()",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "components_admin_deadlinepanel_deadlinepanel",
+      "label": "DeadlinePanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "deadlinepanel()",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "components_admin_globalsearch_globalsearch",
+      "label": "GlobalSearch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "globalsearch()",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "components_admin_needsattentionpanel_needsattentionpanel",
+      "label": "NeedsAttentionPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "needsattentionpanel()",
+      "source_file": "components/admin/NeedsAttentionPanel.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "components_admin_teamtable_teamtable",
+      "label": "TeamTable()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamtable()",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "lib_utils_formatrelativetime",
+      "label": "formatRelativeTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "formatrelativetime()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_admin_feedback_page_feedbackpage",
+      "label": "FeedbackPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "feedbackpage()",
+      "source_file": "app/admin/feedback/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_admin_showcase_page_showcasepage",
+      "label": "ShowcasePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "showcasepage()",
+      "source_file": "app/admin/showcase/page.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_admin_teams_teamid_page_teamdetailpage",
+      "label": "TeamDetailPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "teamdetailpage()",
+      "source_file": "app/admin/teams/[teamId]/page.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "app_admin_worklogs_page_worklogspage",
+      "label": "WorkLogsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "worklogspage()",
+      "source_file": "app/admin/worklogs/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_participant_feedback_page_participantfeedbackpage",
+      "label": "ParticipantFeedbackPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "participantfeedbackpage()",
+      "source_file": "app/participant/feedback/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_ui_avatar_avatar",
+      "label": "Avatar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatar()",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "lib_utils_formatdate",
+      "label": "formatDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "formatdate()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "lib_utils_formattime",
+      "label": "formatTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "formattime()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "lib_utils_getstatusbadgevariant",
+      "label": "getStatusBadgeVariant()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "getstatusbadgevariant()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "app_admin_evaluation_page_evaluationpage",
+      "label": "EvaluationPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "evaluationpage()",
+      "source_file": "app/admin/evaluation/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_admin_submissions_page_submissionspage",
+      "label": "SubmissionsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionspage()",
+      "source_file": "app/admin/submissions/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_participant_submissions_page_participantsubmissionspage",
+      "label": "ParticipantSubmissionsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participantsubmissionspage()",
+      "source_file": "app/participant/submissions/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_participant_tasks_page_participanttaskspage",
+      "label": "ParticipantTasksPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participanttaskspage()",
+      "source_file": "app/participant/tasks/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_participant_submissionmodal_submissionmodal",
+      "label": "SubmissionModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodal()",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "components_ui_modal_modal",
+      "label": "Modal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "modal()",
+      "source_file": "components/ui/modal.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_participant_page_participantdashboardpage",
+      "label": "ParticipantDashboardPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participantdashboardpage()",
+      "source_file": "app/participant/page.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_participant_worklogs_page_participantworklogspage",
+      "label": "ParticipantWorklogsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participantworklogspage()",
+      "source_file": "app/participant/worklogs/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "components_participant_participantheader_participantheader",
+      "label": "ParticipantHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participantheader()",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "components_participant_worklogmodal_worklogmodal",
+      "label": "WorkLogModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "worklogmodal()",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L15"
     },
     {
       "id": "app_admin_layout_adminlayout",
@@ -1383,18 +1443,6 @@
       "source_location": "L4"
     },
     {
-      "id": "app_admin_page_admindashboardpage",
-      "label": "AdminDashboardPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "admindashboardpage()",
-      "source_file": "app/admin/page.tsx",
-      "source_location": "L30"
-    },
-    {
       "id": "app_participant_layout_participantlayout",
       "label": "ParticipantLayout()",
       "_callable": true,
@@ -1405,30 +1453,6 @@
       "norm_label": "participantlayout()",
       "source_file": "app/participant/layout.tsx",
       "source_location": "L4"
-    },
-    {
-      "id": "components_admin_activityfeed_activityfeed",
-      "label": "ActivityFeed()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "activityfeed()",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "components_admin_adminheader_adminheader",
-      "label": "AdminHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "adminheader()",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L27"
     },
     {
       "id": "components_admin_adminsidebar_adminsidebar",
@@ -1443,42 +1467,6 @@
       "source_location": "L37"
     },
     {
-      "id": "components_admin_bootcampphasetimeline_bootcampphasetimeline",
-      "label": "BootcampPhaseTimeline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "bootcampphasetimeline()",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "components_admin_deadlinepanel_deadlinepanel",
-      "label": "DeadlinePanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "deadlinepanel()",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "components_admin_globalsearch_globalsearch",
-      "label": "GlobalSearch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "globalsearch()",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L24"
-    },
-    {
       "id": "components_admin_kpicard_kpicard",
       "label": "KpiCard()",
       "_callable": true,
@@ -1489,30 +1477,6 @@
       "norm_label": "kpicard()",
       "source_file": "components/admin/KpiCard.tsx",
       "source_location": "L15"
-    },
-    {
-      "id": "components_admin_needsattentionpanel_needsattentionpanel",
-      "label": "NeedsAttentionPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "needsattentionpanel()",
-      "source_file": "components/admin/NeedsAttentionPanel.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "components_admin_teamtable_teamtable",
-      "label": "TeamTable()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "teamtable()",
-      "source_file": "components/admin/TeamTable.tsx",
-      "source_location": "L26"
     },
     {
       "id": "components_participant_participantsidebar_participantsidebar",
@@ -1599,18 +1563,6 @@
       "source_location": "L20"
     },
     {
-      "id": "components_ui_progress_progressring",
-      "label": "ProgressRing()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "progressring()",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L32"
-    },
-    {
       "id": "lib_utils_cn",
       "label": "cn()",
       "_callable": true,
@@ -1623,40 +1575,64 @@
       "source_location": "L4"
     },
     {
-      "id": "lib_utils_formatrelativetime",
-      "label": "formatRelativeTime()",
+      "id": "app_admin_analytics_page_analyticspage",
+      "label": "AnalyticsPage()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 30,
+      "community_name": "ProgressBar",
       "file_type": "code",
-      "norm_label": "formatrelativetime()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L28"
+      "norm_label": "analyticspage()",
+      "source_file": "app/admin/analytics/page.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "lib_utils_formattime",
-      "label": "formatTime()",
+      "id": "app_participant_team_page_participantteampage",
+      "label": "ParticipantTeamPage()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 30,
+      "community_name": "ProgressBar",
       "file_type": "code",
-      "norm_label": "formattime()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L18"
+      "norm_label": "participantteampage()",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L10"
     },
     {
-      "id": "lib_utils_getstatusbadgevariant",
-      "label": "getStatusBadgeVariant()",
+      "id": "components_ui_progress_progressbar",
+      "label": "ProgressBar()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 30,
+      "community_name": "ProgressBar",
       "file_type": "code",
-      "norm_label": "getstatusbadgevariant()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L41"
+      "norm_label": "progressbar()",
+      "source_file": "components/ui/progress.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_ui_progress_progressring",
+      "label": "ProgressRing()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "ProgressBar",
+      "file_type": "code",
+      "norm_label": "progressring()",
+      "source_file": "components/ui/progress.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "app_layout_rootlayout",
+      "label": "RootLayout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app/layout.tsx",
+      "file_type": "code",
+      "norm_label": "rootlayout()",
+      "source_file": "app/layout.tsx",
+      "source_location": "L9"
     },
     {
       "id": "app_api_activities_route_get",
@@ -1681,42 +1657,6 @@
       "norm_label": "post()",
       "source_file": "app/api/activities/route.ts",
       "source_location": "L23"
-    },
-    {
-      "id": "app_api_mentors_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/mentors/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_mentors_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/mentors/route.ts",
-      "source_location": "L79"
-    },
-    {
-      "id": "app_api_mentors_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/mentors/route.ts",
-      "source_location": "L21"
     },
     {
       "id": "app_api_participants_route_get",
@@ -1851,6 +1791,30 @@
       "source_location": "L26"
     },
     {
+      "id": "app_api_teams_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/teams/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/route.ts",
+      "source_location": "L43"
+    },
+    {
       "id": "lib_db_connecttodatabase",
       "label": "connectToDatabase()",
       "_callable": true,
@@ -1860,7 +1824,7 @@
       "file_type": "code",
       "norm_label": "connecttodatabase()",
       "source_file": "lib/db.ts",
-      "source_location": "L25"
+      "source_location": "L19"
     },
     {
       "id": "app_api_analytics_route_get",
@@ -1971,6 +1935,30 @@
       "source_location": "L45"
     },
     {
+      "id": "app_api_worklogs_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_worklogs_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L44"
+    },
+    {
       "id": "app_api_auth_login_route_post",
       "label": "POST()",
       "_callable": true,
@@ -2019,7 +2007,7 @@
       "source_location": "L30"
     },
     {
-      "id": "app_api_worklogs_route_get",
+      "id": "app_api_health_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
@@ -2027,11 +2015,35 @@
       "community_name": "next",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/worklogs/route.ts",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_api_mentors_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/mentors/route.ts",
       "source_location": "L6"
     },
     {
-      "id": "app_api_worklogs_route_post",
+      "id": "app_api_mentors_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/mentors/route.ts",
+      "source_location": "L79"
+    },
+    {
+      "id": "app_api_mentors_route_post",
       "label": "POST()",
       "_callable": true,
       "_origin": "ast",
@@ -2039,8 +2051,8 @@
       "community_name": "next",
       "file_type": "code",
       "norm_label": "post()",
-      "source_file": "app/api/worklogs/route.ts",
-      "source_location": "L44"
+      "source_file": "app/api/mentors/route.ts",
+      "source_location": "L21"
     },
     {
       "id": "lib_auth_clearsessioncookie",
@@ -2103,17 +2115,6 @@
       "source_location": "L24"
     },
     {
-      "id": "app_admin_analytics_page",
-      "label": "analytics/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "analytics/page.tsx",
-      "source_file": "app/admin/analytics/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_admin_announcements_page",
       "label": "announcements/page.tsx",
       "_origin": "ast",
@@ -2122,28 +2123,6 @@
       "file_type": "code",
       "norm_label": "announcements/page.tsx",
       "source_file": "app/admin/announcements/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_evaluation_page",
-      "label": "evaluation/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "evaluation/page.tsx",
-      "source_file": "app/admin/evaluation/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_feedback_page",
-      "label": "admin/feedback/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "admin/feedback/page.tsx",
-      "source_file": "app/admin/feedback/page.tsx",
       "source_location": "L1"
     },
     {
@@ -2213,28 +2192,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_admin_showcase_page",
-      "label": "showcase/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "showcase/page.tsx",
-      "source_file": "app/admin/showcase/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_submissions_page",
-      "label": "admin/submissions/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "admin/submissions/page.tsx",
-      "source_file": "app/admin/submissions/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_admin_teams_page",
       "label": "teams/page.tsx",
       "_origin": "ast",
@@ -2243,28 +2200,6 @@
       "file_type": "code",
       "norm_label": "teams/page.tsx",
       "source_file": "app/admin/teams/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_teams_teamid_page",
-      "label": "[teamId]/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "[teamid]/page.tsx",
-      "source_file": "app/admin/teams/[teamId]/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_worklogs_page",
-      "label": "admin/worklogs/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "admin/worklogs/page.tsx",
-      "source_file": "app/admin/worklogs/page.tsx",
       "source_location": "L1"
     },
     {
@@ -2290,28 +2225,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_participant_feedback_page",
-      "label": "participant/feedback/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participant/feedback/page.tsx",
-      "source_file": "app/participant/feedback/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_page",
-      "label": "participant/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participant/page.tsx",
-      "source_file": "app/participant/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_participant_schedule_page",
       "label": "participant/schedule/page.tsx",
       "_origin": "ast",
@@ -2323,72 +2236,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_participant_submissions_page",
-      "label": "participant/submissions/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participant/submissions/page.tsx",
-      "source_file": "app/participant/submissions/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_tasks_page",
-      "label": "tasks/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "tasks/page.tsx",
-      "source_file": "app/participant/tasks/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_team_page",
-      "label": "team/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "team/page.tsx",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_worklogs_page",
-      "label": "participant/worklogs/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participant/worklogs/page.tsx",
-      "source_file": "app/participant/worklogs/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_adminheader",
-      "label": "AdminHeader.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "adminheader.tsx",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_deadlinepanel",
-      "label": "DeadlinePanel.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "deadlinepanel.tsx",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_admin_quickactionmodal",
       "label": "QuickActionModal.tsx",
       "_origin": "ast",
@@ -2397,61 +2244,6 @@
       "file_type": "code",
       "norm_label": "quickactionmodal.tsx",
       "source_file": "components/admin/QuickActionModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_participantheader",
-      "label": "ParticipantHeader.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "participantheader.tsx",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_submissionmodal",
-      "label": "SubmissionModal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "submissionmodal.tsx",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_worklogmodal",
-      "label": "WorkLogModal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "worklogmodal.tsx",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_avatar",
-      "label": "avatar.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "avatar.tsx",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_badge",
-      "label": "badge.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "badge.tsx",
-      "source_file": "components/ui/badge.tsx",
       "source_location": "L1"
     },
     {
@@ -2486,39 +2278,6 @@
       "norm_label": "empty-state.tsx",
       "source_file": "components/ui/empty-state.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "components_ui_modal",
-      "label": "modal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "code",
-      "norm_label": "modal.tsx",
-      "source_file": "components/ui/modal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_lucide_react",
-      "label": "lucide-react",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "concept",
-      "norm_label": "lucide-react",
-      "source_file": "package.json",
-      "source_location": "L16"
-    },
-    {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Badge",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L19"
     },
     {
       "id": "tsconfig",
@@ -3071,28 +2830,6 @@
       "source_location": "L5"
     },
     {
-      "id": "app_layout",
-      "label": "app/layout.tsx",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "seed/route.ts",
-      "file_type": "code",
-      "norm_label": "app/layout.tsx",
-      "source_file": "app/layout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_layout_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "seed/route.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "app/layout.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "package_scripts",
       "label": "scripts",
       "_origin": "ast",
@@ -3203,26 +2940,328 @@
       "source_location": "L593"
     },
     {
-      "id": "app_api_teams_route",
-      "label": "teams/route.ts",
+      "id": "readme",
+      "label": "README.md",
       "_origin": "ast",
       "community": 18,
-      "community_name": "teams/route.ts",
-      "file_type": "code",
-      "norm_label": "teams/route.ts",
-      "source_file": "app/api/teams/route.ts",
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
       "source_location": "L1"
     },
     {
-      "id": "models_index_problemstatement",
-      "label": "ProblemStatement",
+      "id": "readme_1_executive_summary",
+      "label": "1. Executive Summary",
       "_origin": "ast",
       "community": 18,
-      "community_name": "teams/route.ts",
-      "file_type": "code",
-      "norm_label": "problemstatement",
-      "source_file": "models/index.ts",
-      "source_location": "L582"
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. executive summary",
+      "source_file": "README.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "readme_2_platform_architecture_workflow",
+      "label": "2. Platform Architecture & Workflow",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. platform architecture & workflow",
+      "source_file": "README.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "readme_3_implemented_routes_capabilities",
+      "label": "3. Implemented Routes & Capabilities",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. implemented routes & capabilities",
+      "source_file": "README.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "readme_4_technology_stack",
+      "label": "4. Technology Stack",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. technology stack",
+      "source_file": "README.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "readme_5_environment_variables_env_local",
+      "label": "5. Environment Variables (`.env.local`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. environment variables (`.env.local`)",
+      "source_file": "README.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "readme_6_getting_started_running_locally",
+      "label": "6. Getting Started & Running Locally",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. getting started & running locally",
+      "source_file": "README.md",
+      "source_location": "L112"
+    },
+    {
+      "id": "readme_8_docker_setup_operations",
+      "label": "8. Docker Setup & Operations",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. docker setup & operations",
+      "source_file": "README.md",
+      "source_location": "L163"
+    },
+    {
+      "id": "readme_admin_application_admin",
+      "label": "Admin Application (`/admin`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "admin application (`/admin`)",
+      "source_file": "README.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "readme_application_urls",
+      "label": "Application URLs",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "application urls",
+      "source_file": "README.md",
+      "source_location": "L216"
+    },
+    {
+      "id": "readme_architecture",
+      "label": "Architecture",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "architecture",
+      "source_file": "README.md",
+      "source_location": "L169"
+    },
+    {
+      "id": "readme_authentication_switcher_login",
+      "label": "Authentication & Switcher (`/login`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authentication & switcher (`/login`)",
+      "source_file": "README.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "readme_build26_admin_command_center_participant_management_platform",
+      "label": "BUILD26 \u2014 Admin Command Center & Participant Management Platform",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "build26 \u2014 admin command center & participant management platform",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_check_container_health_status",
+      "label": "Check Container Health & Status",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "check container health & status",
+      "source_file": "README.md",
+      "source_location": "L194"
+    },
+    {
+      "id": "readme_database_backup_restore",
+      "label": "Database Backup & Restore",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "database backup & restore",
+      "source_file": "README.md",
+      "source_location": "L243"
+    },
+    {
+      "id": "readme_full_reset_destructive",
+      "label": "Full Reset (Destructive)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "full reset (destructive)",
+      "source_file": "README.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "readme_participant_application_participant",
+      "label": "Participant Application (`/participant`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "participant application (`/participant`)",
+      "source_file": "README.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "readme_production_deployment_docker_compose_prod_yml",
+      "label": "Production Deployment (`docker-compose.prod.yml`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "production deployment (`docker-compose.prod.yml`)",
+      "source_file": "README.md",
+      "source_location": "L237"
+    },
+    {
+      "id": "readme_requirements",
+      "label": "Requirements",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirements",
+      "source_file": "README.md",
+      "source_location": "L165"
+    },
+    {
+      "id": "readme_seed_the_database_inside_container",
+      "label": "Seed the Database (Inside Container)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "seed the database (inside container)",
+      "source_file": "README.md",
+      "source_location": "L188"
+    },
+    {
+      "id": "readme_start_the_container_stack",
+      "label": "Start the Container Stack",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "start the container stack",
+      "source_file": "README.md",
+      "source_location": "L182"
+    },
+    {
+      "id": "readme_step_1_install_dependencies",
+      "label": "Step 1: Install Dependencies",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 1: install dependencies",
+      "source_file": "README.md",
+      "source_location": "L114"
+    },
+    {
+      "id": "readme_step_2_seed_the_database",
+      "label": "Step 2: Seed the Database",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 2: seed the database",
+      "source_file": "README.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "readme_step_3_run_the_development_server",
+      "label": "Step 3: Run the Development Server",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 3: run the development server",
+      "source_file": "README.md",
+      "source_location": "L125"
+    },
+    {
+      "id": "readme_step_4_build_for_production",
+      "label": "Step 4: Build for Production",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 4: build for production",
+      "source_file": "README.md",
+      "source_location": "L135"
+    },
+    {
+      "id": "readme_stop_the_containers",
+      "label": "Stop the Containers",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "stop the containers",
+      "source_file": "README.md",
+      "source_location": "L223"
+    },
+    {
+      "id": "readme_view_logs",
+      "label": "View Logs",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "view logs",
+      "source_file": "README.md",
+      "source_location": "L205"
     },
     {
       "id": "next",
@@ -3413,6 +3452,314 @@
       "source_location": "L1"
     },
     {
+      "id": "app_admin_page",
+      "label": "admin/page.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "admin/page.tsx",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_activityfeed",
+      "label": "ActivityFeed.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "activityfeed.tsx",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_bootcampphasetimeline",
+      "label": "BootcampPhaseTimeline.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "bootcampphasetimeline.tsx",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_bootcampphasetimeline_phases",
+      "label": "PHASES",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "phases",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "components_admin_deadlinepanel",
+      "label": "DeadlinePanel.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "deadlinepanel.tsx",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_globalsearch",
+      "label": "GlobalSearch.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "globalsearch.tsx",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_teamtable",
+      "label": "TeamTable.tsx",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamtable.tsx",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_lucide_react",
+      "label": "lucide-react",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "lucide-react",
+      "file_type": "concept",
+      "norm_label": "lucide-react",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_admin_feedback_page",
+      "label": "admin/feedback/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "admin/feedback/page.tsx",
+      "source_file": "app/admin/feedback/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_showcase_page",
+      "label": "showcase/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "showcase/page.tsx",
+      "source_file": "app/admin/showcase/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_teams_teamid_page",
+      "label": "[teamId]/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "[teamid]/page.tsx",
+      "source_file": "app/admin/teams/[teamId]/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_worklogs_page",
+      "label": "admin/worklogs/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "admin/worklogs/page.tsx",
+      "source_file": "app/admin/worklogs/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_feedback_page",
+      "label": "participant/feedback/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "participant/feedback/page.tsx",
+      "source_file": "app/participant/feedback/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_adminheader",
+      "label": "AdminHeader.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "adminheader.tsx",
+      "source_file": "components/admin/AdminHeader.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_avatar",
+      "label": "avatar.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatar.tsx",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_badge",
+      "label": "badge.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "badge.tsx",
+      "source_file": "components/ui/badge.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "lib_utils",
+      "label": "utils.ts",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "utils.ts",
+      "source_file": "lib/utils.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_evaluation_page",
+      "label": "evaluation/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "evaluation/page.tsx",
+      "source_file": "app/admin/evaluation/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_submissions_page",
+      "label": "admin/submissions/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "admin/submissions/page.tsx",
+      "source_file": "app/admin/submissions/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_submissions_page",
+      "label": "participant/submissions/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participant/submissions/page.tsx",
+      "source_file": "app/participant/submissions/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_tasks_page",
+      "label": "tasks/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "tasks/page.tsx",
+      "source_file": "app/participant/tasks/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_submissionmodal",
+      "label": "SubmissionModal.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodal.tsx",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_modal",
+      "label": "modal.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "modal.tsx",
+      "source_file": "components/ui/modal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "app_participant_page",
+      "label": "participant/page.tsx",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participant/page.tsx",
+      "source_file": "app/participant/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_worklogs_page",
+      "label": "participant/worklogs/page.tsx",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participant/worklogs/page.tsx",
+      "source_file": "app/participant/worklogs/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_participantheader",
+      "label": "ParticipantHeader.tsx",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "participantheader.tsx",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_worklogmodal",
+      "label": "WorkLogModal.tsx",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "participant/page.tsx",
+      "file_type": "code",
+      "norm_label": "worklogmodal.tsx",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "app_admin_layout",
       "label": "admin/layout.tsx",
       "_origin": "ast",
@@ -3421,17 +3768,6 @@
       "file_type": "code",
       "norm_label": "admin/layout.tsx",
       "source_file": "app/admin/layout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_page",
-      "label": "admin/page.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "admin/page.tsx",
-      "source_file": "app/admin/page.tsx",
       "source_location": "L1"
     },
     {
@@ -3446,17 +3782,6 @@
       "source_location": "L1"
     },
     {
-      "id": "components_admin_activityfeed",
-      "label": "ActivityFeed.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "activityfeed.tsx",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_admin_adminsidebar",
       "label": "AdminSidebar.tsx",
       "_origin": "ast",
@@ -3468,39 +3793,6 @@
       "source_location": "L1"
     },
     {
-      "id": "components_admin_bootcampphasetimeline",
-      "label": "BootcampPhaseTimeline.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "bootcampphasetimeline.tsx",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_bootcampphasetimeline_phases",
-      "label": "PHASES",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "phases",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_admin_globalsearch",
-      "label": "GlobalSearch.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "globalsearch.tsx",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_admin_kpicard",
       "label": "KpiCard.tsx",
       "_origin": "ast",
@@ -3509,28 +3801,6 @@
       "file_type": "code",
       "norm_label": "kpicard.tsx",
       "source_file": "components/admin/KpiCard.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_needsattentionpanel",
-      "label": "NeedsAttentionPanel.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "needsattentionpanel.tsx",
-      "source_file": "components/admin/NeedsAttentionPanel.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_teamtable",
-      "label": "TeamTable.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
-      "file_type": "code",
-      "norm_label": "teamtable.tsx",
-      "source_file": "components/admin/TeamTable.tsx",
       "source_location": "L1"
     },
     {
@@ -3556,26 +3826,59 @@
       "source_location": "L1"
     },
     {
+      "id": "app_admin_analytics_page",
+      "label": "analytics/page.tsx",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "ProgressBar",
+      "file_type": "code",
+      "norm_label": "analytics/page.tsx",
+      "source_file": "app/admin/analytics/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_team_page",
+      "label": "team/page.tsx",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "ProgressBar",
+      "file_type": "code",
+      "norm_label": "team/page.tsx",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_ui_progress",
       "label": "progress.tsx",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 30,
+      "community_name": "ProgressBar",
       "file_type": "code",
       "norm_label": "progress.tsx",
       "source_file": "components/ui/progress.tsx",
       "source_location": "L1"
     },
     {
-      "id": "lib_utils",
-      "label": "utils.ts",
+      "id": "app_layout",
+      "label": "app/layout.tsx",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "cn",
+      "community": 31,
+      "community_name": "app/layout.tsx",
       "file_type": "code",
-      "norm_label": "utils.ts",
-      "source_file": "lib/utils.ts",
+      "norm_label": "app/layout.tsx",
+      "source_file": "app/layout.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "app_layout_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app/layout.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "app/layout.tsx",
+      "source_location": "L4"
     },
     {
       "id": "models_index",
@@ -3754,6 +4057,17 @@
       "source_location": "L294"
     },
     {
+      "id": "components_admin_needsattentionpanel",
+      "label": "NeedsAttentionPanel.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "types/index.ts",
+      "file_type": "code",
+      "norm_label": "needsattentionpanel.tsx",
+      "source_file": "components/admin/NeedsAttentionPanel.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "types_index",
       "label": "types/index.ts",
       "_origin": "ast",
@@ -3763,90 +4077,6 @@
       "norm_label": "types/index.ts",
       "source_file": "types/index.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_1_executive_summary",
-      "label": "1. Executive Summary",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "README.md",
-      "source_location": "L8"
-    },
-    {
-      "id": "readme_2_platform_architecture_workflow",
-      "label": "2. Platform Architecture & Workflow",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. platform architecture & workflow",
-      "source_file": "README.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "readme_3_implemented_routes_capabilities",
-      "label": "3. Implemented Routes & Capabilities",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. implemented routes & capabilities",
-      "source_file": "README.md",
-      "source_location": "L47"
-    },
-    {
-      "id": "readme_4_technology_stack",
-      "label": "4. Technology Stack",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. technology stack",
-      "source_file": "README.md",
-      "source_location": "L89"
-    },
-    {
-      "id": "readme_5_environment_variables_env_local",
-      "label": "5. Environment Variables (`.env.local`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. environment variables (`.env.local`)",
-      "source_file": "README.md",
-      "source_location": "L101"
-    },
-    {
-      "id": "readme_6_getting_started_running_locally",
-      "label": "6. Getting Started & Running Locally",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. getting started & running locally",
-      "source_file": "README.md",
-      "source_location": "L112"
     },
     {
       "id": "readme_7_database_models_models_index_ts",
@@ -3861,102 +4091,6 @@
       "source_location": "L144"
     },
     {
-      "id": "readme_admin_application_admin",
-      "label": "Admin Application (`/admin`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "admin application (`/admin`)",
-      "source_file": "README.md",
-      "source_location": "L49"
-    },
-    {
-      "id": "readme_authentication_switcher_login",
-      "label": "Authentication & Switcher (`/login`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "authentication & switcher (`/login`)",
-      "source_file": "README.md",
-      "source_location": "L79"
-    },
-    {
-      "id": "readme_build26_admin_command_center_participant_management_platform",
-      "label": "BUILD26 \u2014 Admin Command Center & Participant Management Platform",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "build26 \u2014 admin command center & participant management platform",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_participant_application_participant",
-      "label": "Participant Application (`/participant`)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "participant application (`/participant`)",
-      "source_file": "README.md",
-      "source_location": "L68"
-    },
-    {
-      "id": "readme_step_1_install_dependencies",
-      "label": "Step 1: Install Dependencies",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 1: install dependencies",
-      "source_file": "README.md",
-      "source_location": "L114"
-    },
-    {
-      "id": "readme_step_2_seed_the_database",
-      "label": "Step 2: Seed the Database",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 2: seed the database",
-      "source_file": "README.md",
-      "source_location": "L119"
-    },
-    {
-      "id": "readme_step_3_run_the_development_server",
-      "label": "Step 3: Run the Development Server",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 3: run the development server",
-      "source_file": "README.md",
-      "source_location": "L125"
-    },
-    {
-      "id": "readme_step_4_build_for_production",
-      "label": "Step 4: Build for Production",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 4: build for production",
-      "source_file": "README.md",
-      "source_location": "L135"
-    },
-    {
       "id": "app_api_activities_route",
       "label": "activities/route.ts",
       "_origin": "ast",
@@ -3965,17 +4099,6 @@
       "file_type": "code",
       "norm_label": "activities/route.ts",
       "source_file": "app/api/activities/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_mentors_route",
-      "label": "mentors/route.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "mentors/route.ts",
-      "source_file": "app/api/mentors/route.ts",
       "source_location": "L1"
     },
     {
@@ -4012,6 +4135,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_teams_route",
+      "label": "teams/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "teams/route.ts",
+      "source_file": "app/api/teams/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "models_index_activity",
       "label": "Activity",
       "_origin": "ast",
@@ -4023,15 +4157,15 @@
       "source_location": "L594"
     },
     {
-      "id": "models_index_mentor",
-      "label": "Mentor",
+      "id": "models_index_problemstatement",
+      "label": "ProblemStatement",
       "_origin": "ast",
       "community": 6,
       "community_name": "connectToDatabase",
       "file_type": "code",
-      "norm_label": "mentor",
+      "norm_label": "problemstatement",
       "source_file": "models/index.ts",
-      "source_location": "L584"
+      "source_location": "L582"
     },
     {
       "id": "models_index_scheduleevent",
@@ -4043,17 +4177,6 @@
       "norm_label": "scheduleevent",
       "source_file": "models/index.ts",
       "source_location": "L586"
-    },
-    {
-      "id": "models_index_user",
-      "label": "User",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "user",
-      "source_file": "models/index.ts",
-      "source_location": "L580"
     },
     {
       "id": "app_api_analytics_route",
@@ -4100,6 +4223,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_worklogs_route",
+      "label": "worklogs/route.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "worklogs/route.ts",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "lib_db",
       "label": "db.ts",
       "_origin": "ast",
@@ -4109,6 +4243,17 @@
       "norm_label": "db.ts",
       "source_file": "lib/db.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "models_index_mentor",
+      "label": "Mentor",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "mentor",
+      "source_file": "models/index.ts",
+      "source_location": "L584"
     },
     {
       "id": "models_index_submission",
@@ -4188,14 +4333,36 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_worklogs_route",
-      "label": "worklogs/route.ts",
+      "id": "app_api_health_route",
+      "label": "health/route.ts",
       "_origin": "ast",
       "community": 8,
       "community_name": "next",
       "file_type": "code",
-      "norm_label": "worklogs/route.ts",
-      "source_file": "app/api/worklogs/route.ts",
+      "norm_label": "health/route.ts",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_health_route_dynamic",
+      "label": "dynamic",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "dynamic",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_api_mentors_route",
+      "label": "mentors/route.ts",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "mentors/route.ts",
+      "source_file": "app/api/mentors/route.ts",
       "source_location": "L1"
     },
     {
@@ -4219,6 +4386,17 @@
       "norm_label": "participant",
       "source_file": "models/index.ts",
       "source_location": "L581"
+    },
+    {
+      "id": "models_index_user",
+      "label": "User",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "user",
+      "source_file": "models/index.ts",
+      "source_location": "L580"
     },
     {
       "id": "ref_next",
@@ -4681,19 +4859,9 @@
       "source_url": null
     },
     {
-      "id": "app_globals",
-      "label": "app_globals",
-      "community": 14,
-      "community_name": "seed/route.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "app_globals",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_child_process",
       "label": "ref_child_process",
+      "_origin": "semantic",
       "community": 14,
       "community_name": "seed/route.ts",
       "external": true,
@@ -4705,11 +4873,24 @@
     {
       "id": "ref_util",
       "label": "ref_util",
+      "_origin": "semantic",
       "community": 14,
       "community_name": "seed/route.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_util",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "app_globals",
+      "label": "app_globals",
+      "_origin": "semantic",
+      "community": 31,
+      "community_name": "app/layout.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "app_globals",
       "source_file": "",
       "type": "external"
     }
@@ -5709,6 +5890,18 @@
       "context": "call",
       "source_file": "app/api/feedback/route.ts",
       "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_api_health_route_get",
+      "target": "lib_db_connecttodatabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -8469,6 +8662,18 @@
       "context": "import",
       "source_file": "app/api/feedback/route.ts",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_api_health_route",
+      "target": "lib_db_connecttodatabase",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -11868,6 +12073,42 @@
       "weight": 1.0
     },
     {
+      "source": "app_api_health_route",
+      "target": "ref_next",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_api_health_route",
+      "target": "lib_db",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_api_health_route",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_api_mentors_route",
       "target": "ref_next",
       "relation": "imports_from",
@@ -14498,6 +14739,28 @@
       "weight": 1.0
     },
     {
+      "source": "app_api_health_route",
+      "target": "app_api_health_route_dynamic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_api_health_route",
+      "target": "app_api_health_route_get",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "app_api_mentors_route",
       "target": "app_api_mentors_route_post",
       "relation": "contains",
@@ -15594,7 +15857,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/db.ts",
-      "source_location": "L25",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -15605,7 +15868,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/db.ts",
-      "source_location": "L9",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -16621,6 +16884,127 @@
       "weight": 1.0
     },
     {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_requirements",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_start_the_container_stack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_seed_the_database_inside_container",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_check_container_health_status",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_view_logs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_application_urls",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_stop_the_containers",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_full_reset_destructive",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_production_deployment_docker_compose_prod_yml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L237",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_8_docker_setup_operations",
+      "target": "readme_database_backup_restore",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L243",
+      "weight": 1.0
+    },
+    {
       "source": "readme_build26_admin_command_center_participant_management_platform",
       "target": "readme_5_environment_variables_env_local",
       "relation": "contains",
@@ -16651,6 +17035,17 @@
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_build26_admin_command_center_participant_management_platform",
+      "target": "readme_8_docker_setup_operations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -16705,7 +17100,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/seed.mjs",
-      "source_location": "L5",
+      "source_location": "L10",
       "weight": 1.0
     },
     {

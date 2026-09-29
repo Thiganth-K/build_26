@@ -578,13 +578,20 @@ async function seed() {
       createdUserIds.push(userId);
 
       // Create Participant record
+      const globalIndex = sliceStart + pIdx + 1;
+      const admissionNum = `26ADM${String(100 + globalIndex).padStart(4, "0")}`;
+      const mobileNum = `+91 98${String(76500000 + globalIndex * 1111).slice(0, 8)}`;
+
       const participantDoc = {
         _id: participantId,
         user: userId,
         name: p.name,
         email: email,
+        admissionNumber: admissionNum,
+        yearOfStudy: p.year,
         department: p.dept,
         year: p.year,
+        mobileNumber: mobileNum,
         team: teamId,
         roleInTeam: p.role,
         skills: p.skills,

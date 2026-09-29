@@ -17,12 +17,18 @@
   "15": "scripts",
   "16": "bootcamp/route.ts",
   "17": "evaluations/route.ts",
-  "18": "teams/route.ts",
+  "18": "8. Docker Setup & Operations",
   "19": "next.config.mjs",
   "20": "mongoose",
   "21": "tailwindcss",
   "22": "rules/graphify.md",
   "23": "workflows/graphify.md",
   "24": "next-env.d.ts",
-  "25": "postcss.config.mjs"
+  "25": "postcss.config.mjs",
+  "26": "lucide-react",
+  "27": "badge.tsx",
+  "28": "react",
+  "29": "participant/page.tsx",
+  "30": "ProgressBar",
+  "31": "app/layout.tsx"
 }
