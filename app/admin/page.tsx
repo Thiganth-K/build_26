@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   Users,
@@ -11,20 +12,20 @@ import {
   UploadCloud,
   FileCheck,
   TrendingUp,
-  Sparkles,
-  Zap,
+  Plus,
   ArrowRight,
   ShieldCheck,
+  Calendar,
+  Layers,
 } from "lucide-react";
 import { AdminHeader } from "@/components/admin/AdminHeader";
-import { KpiCard } from "@/components/admin/KpiCard";
-import { BootcampPhaseTimeline } from "@/components/admin/BootcampPhaseTimeline";
 import { TeamTable } from "@/components/admin/TeamTable";
 import { ActivityFeed } from "@/components/admin/ActivityFeed";
 import { NeedsAttentionPanel } from "@/components/admin/NeedsAttentionPanel";
 import { DeadlinePanel } from "@/components/admin/DeadlinePanel";
 import { GlobalSearch } from "@/components/admin/GlobalSearch";
 import { QuickActionModal } from "@/components/admin/QuickActionModal";
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function AdminDashboardPage() {
@@ -70,8 +71,6 @@ export default function AdminDashboardPage() {
 
   React.useEffect(() => {
     fetchData();
-
-    // Subtle 30-second live polling for real-time feel
     const interval = setInterval(fetchData, 30000);
     return () => clearInterval(interval);
   }, [fetchData]);
@@ -81,169 +80,156 @@ export default function AdminDashboardPage() {
     fetchData();
   };
 
-  const handleStatusChange = async (newStatus: "LIVE" | "UPCOMING" | "COMPLETED") => {
-    try {
-      await fetch("/api/bootcamp", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status: newStatus }),
-      });
-      fetchData();
-    } catch (err) {
-      console.error("Status update error:", err);
-    }
-  };
-
-  const handlePhaseSelect = async (newPhase: string) => {
-    try {
-      await fetch("/api/bootcamp", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ currentPhase: newPhase }),
-      });
-      fetchData();
-    } catch (err) {
-      console.error("Phase update error:", err);
-    }
-  };
-
   const kpis = data.kpis;
   const bootcamp = data.bootcamp;
 
+  // Wireframe Section 37: 6-day bootcamp progress bars
+  const dayProgressBars = [
+    { day: "DAY 01", percent: 100 },
+    { day: "DAY 02", percent: 100 },
+    { day: "DAY 03", percent: 65 },
+    { day: "DAY 04", percent: 0 },
+    { day: "DAY 05", percent: 0 },
+    { day: "DAY 06", percent: 0 },
+  ];
+
   return (
     <div className="min-h-screen bg-background pb-16">
-      {/* Header */}
       <AdminHeader
         adminName="Thiganth (Super Admin)"
         bootcampStatus={bootcamp.status || "LIVE"}
-        onStatusChange={handleStatusChange}
+        onStatusChange={() => {}}
         onOpenSearch={() => setIsSearchOpen(true)}
         onQuickAction={(action) => setQuickActionType(action)}
         onRefresh={handleRefresh}
         isRefreshing={refreshing}
       />
 
-      <main className="px-8 py-6 max-w-7xl mx-auto space-y-6">
-        {/* Command Center Banner */}
-        <div className="rounded-2xl border border-border bg-gradient-to-r from-surface via-surface to-accent/[0.04] p-6 shadow-soft relative overflow-hidden">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+      <main className="px-8 py-6 max-w-7xl mx-auto space-y-8">
+        {/* Wireframe Section 37: BOOTCAMP OVERVIEW */}
+        <section className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-border">
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span className="font-mono-num text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded">
-                  System Operational • Bootcamp Live
-                </span>
-                <span className="text-secondary text-xs">•</span>
-                <span className="text-xs text-secondary font-medium">BUILD26 2026</span>
-              </div>
-              <h2 className="text-2xl font-black tracking-tight text-[#111111]">
-                BUILD26 COMMAND CENTER
-              </h2>
-              <p className="text-xs text-secondary mt-1 max-w-xl leading-relaxed">
-                Central operating plane orchestrating 40+ engineering participants, 10 multidisciplinary teams, and 5 industry mentors through 6 rigorous product milestones.
+              <span className="text-[10px] font-mono-num font-bold text-accent uppercase tracking-widest">
+                SECTION 37 — ADMIN DASHBOARD
+              </span>
+              <h1 className="text-2xl font-black tracking-tight text-[#111111]">
+                BOOTCAMP OVERVIEW
+              </h1>
+              <p className="text-xs text-secondary mt-0.5">
+                Central control monitor for participants, teams, daily progress, and submissions.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 bg-surface p-3 rounded-xl border border-border/70 shadow-xs">
-              <div className="px-3 border-r border-border/70">
-                <div className="text-[10px] uppercase font-bold text-secondary">Current Phase</div>
-                <div className="text-sm font-bold text-accent font-mono-num">
-                  {bootcamp.currentPhase || "Ideation"}
-                </div>
+            {/* Quick Actions per Section 37 */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <Link href="/admin/problem-statements">
+                <Button variant="primary" size="sm" className="gap-1.5 text-xs font-bold bg-[#111111] hover:bg-black text-white">
+                  <Plus className="h-3 w-3" />
+                  <span>[ + ADD PROBLEM ]</span>
+                </Button>
+              </Link>
+              <Link href="/admin/milestones">
+                <Button variant="outline" size="sm" className="gap-1.5 text-xs font-bold">
+                  <Plus className="h-3 w-3" />
+                  <span>[ + CREATE MILESTONE ]</span>
+                </Button>
+              </Link>
+              <Link href="/admin/teams">
+                <Button variant="secondary" size="sm" className="gap-1.5 text-xs font-bold">
+                  <Briefcase className="h-3 w-3" />
+                  <span>[ VIEW TEAMS ]</span>
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Section 37: 4 Primary KPI Cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="rounded-2xl border-2 border-border bg-surface p-6 shadow-2xs space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
+                PARTICIPANTS
               </div>
-              <div className="px-3 border-r border-border/70">
-                <div className="text-[10px] uppercase font-bold text-secondary">Active Day</div>
-                <div className="text-sm font-bold text-[#111111] font-mono-num">
-                  Day 0{bootcamp.dayNumber || 1}
-                </div>
+              <div className="text-3xl font-black text-[#111111] font-mono-num">
+                {kpis.totalParticipants || 128}
               </div>
-              <div className="px-3">
-                <div className="text-[10px] uppercase font-bold text-secondary">Next Due Milestone</div>
-                <div className="text-sm font-bold text-rose-600 font-mono-num">
-                  PPT Due 06:00 PM
-                </div>
+              <div className="text-[11px] text-emerald-600 font-semibold">
+                ● Active enrollments
+              </div>
+            </div>
+
+            <div className="rounded-2xl border-2 border-border bg-surface p-6 shadow-2xs space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
+                TEAMS
+              </div>
+              <div className="text-3xl font-black text-[#111111] font-mono-num">
+                {kpis.totalTeams || 32}
+              </div>
+              <div className="text-[11px] text-accent font-semibold">
+                3 or 4 member teams
+              </div>
+            </div>
+
+            <div className="rounded-2xl border-2 border-border bg-surface p-6 shadow-2xs space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
+                SUBMISSIONS
+              </div>
+              <div className="text-3xl font-black text-[#111111] font-mono-num">
+                {kpis.completedSubmissions || 84}
+              </div>
+              <div className="text-[11px] text-secondary">
+                Milestone deliverable gates
+              </div>
+            </div>
+
+            <div className="rounded-2xl border-2 border-border bg-surface p-6 shadow-2xs space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
+                CURRENT DAY
+              </div>
+              <div className="text-3xl font-black text-[#111111] font-mono-num">
+                DAY 03
+              </div>
+              <div className="text-[11px] text-accent font-semibold">
+                Core Build & MVP Sprint
               </div>
             </div>
           </div>
-        </div>
 
-        {/* KPI Cards Row (8 Metric Points) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
-          <KpiCard
-            label="Participants"
-            value={kpis.totalParticipants || 40}
-            trend="+8 enrolled"
-            icon={Users}
-            color="default"
-          />
-          <KpiCard
-            label="Total Teams"
-            value={kpis.totalTeams || 10}
-            trend="10 formed"
-            icon={Briefcase}
-            color="default"
-          />
-          <KpiCard
-            label="Active Teams"
-            value={kpis.activeTeams || 7}
-            trend="High velocity"
-            icon={CheckCircle2}
-            color="emerald"
-          />
-          <KpiCard
-            label="Mentors"
-            value={kpis.mentors || 5}
-            trend="5 assigned"
-            icon={GraduationCap}
-            color="default"
-          />
-          <KpiCard
-            label="Problem Sets"
-            value={kpis.problemStatements || 8}
-            trend="8 active"
-            icon={Lightbulb}
-            color="default"
-          />
-          <KpiCard
-            label="Pending Review"
-            value={kpis.pendingSubmissions || 1}
-            trend="Action needed"
-            trendPositive={false}
-            icon={UploadCloud}
-            color="amber"
-          />
-          <KpiCard
-            label="Submissions"
-            value={kpis.completedSubmissions || 2}
-            trend="2 approved"
-            icon={FileCheck}
-            color="emerald"
-          />
-          <KpiCard
-            label="Avg Progress"
-            value={`${kpis.overallProgress || 48}%`}
-            trend="On target"
-            icon={TrendingUp}
-            color="accent"
-          />
-        </div>
+          {/* Section 37: BOOTCAMP PROGRESS */}
+          <div className="rounded-2xl border-2 border-border bg-surface p-7 shadow-soft space-y-4">
+            <div className="flex items-center justify-between pb-2 border-b border-border/70">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#111111]">
+                BOOTCAMP PROGRESS
+              </div>
+              <span className="text-xs font-mono-num text-secondary">
+                Aggregate completion across all registered teams
+              </span>
+            </div>
 
-        {/* Large Bootcamp Phase Timeline */}
-        <BootcampPhaseTimeline
-          currentPhase={bootcamp.currentPhase || "Ideation"}
-          overallProgress={kpis.overallProgress || 48}
-          teamsCompletedCount={4}
-          teamsPendingCount={6}
-          onPhaseSelect={handlePhaseSelect}
-        />
+            <div className="space-y-3 font-mono text-xs">
+              {dayProgressBars.map((item) => {
+                const filledCount = Math.round(item.percent / 5);
+                const emptyCount = 20 - filledCount;
+                const barStr = "█".repeat(filledCount) + "░".repeat(emptyCount);
 
-        {/* Needs Attention System */}
+                return (
+                  <div key={item.day} className="flex items-center justify-between gap-4">
+                    <span className="font-bold text-[#111111] w-20 shrink-0">{item.day}</span>
+                    <span className="text-[#111111] font-mono tracking-tight flex-1 truncate text-xs sm:text-sm">
+                      {barStr}
+                    </span>
+                    <span className="font-bold text-right w-12 shrink-0">{item.percent}%</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Needs Attention Panel */}
         <NeedsAttentionPanel items={data.attentionItems} />
 
-        {/* Team Operations Matrix */}
+        {/* Section 43: Teams Table */}
         <TeamTable
           teams={data.teams}
           onTeamClick={(teamId) => router.push(`/admin/teams/${teamId}`)}

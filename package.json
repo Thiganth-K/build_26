@@ -8,7 +8,9 @@
     "start": "node .next/standalone/server.js",
     "lint": "next lint",
     "seed": "node scripts/seed.mjs",
-    "db:check": "node scripts/check-db.mjs"
+    "db:check": "node scripts/check-db.mjs",
+    "db:clean": "node scripts/clean-db.mjs",
+    "db:erase": "node scripts/clean-db.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",

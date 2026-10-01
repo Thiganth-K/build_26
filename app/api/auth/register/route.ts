@@ -11,19 +11,21 @@ export async function POST(req: NextRequest) {
     const {
       name,
       email,
+      college,
+      institution,
+      phone,
+      mobileNumber,
       admissionNumber,
       yearOfStudy,
       department,
-      mobileNumber,
       password,
     } = body;
 
-    // 1. Validate required fields
-    if (!name || !email || !admissionNumber || !yearOfStudy || !department || !mobileNumber) {
+    // 1. Validate required fields from wireframe
+    if (!name || !email) {
       return NextResponse.json(
         {
-          error:
-            "All fields are required: Full Name, Email, Admission Number, Year of Study, Department, and Mobile Number.",
+          error: "Full Name and College Email are required.",
         },
         { status: 400 }
       );
@@ -31,32 +33,23 @@ export async function POST(req: NextRequest) {
 
     const cleanEmail = email.trim().toLowerCase();
     const cleanName = name.trim();
-    const cleanAdmission = admissionNumber.trim().toUpperCase();
-    const cleanMobile = mobileNumber.trim();
-    const cleanDepartment = department.trim();
-    const cleanYear = yearOfStudy.trim();
+    const cleanCollege = (college || institution || "Sona College of Technology").trim();
+    const cleanPhone = (phone || mobileNumber || "").trim();
+    const cleanAdmission = (
+      admissionNumber ||
+      `B26-${Math.floor(1000 + Math.random() * 9000)}`
+    ).trim().toUpperCase();
+    const cleanDepartment = (department || "Engineering & Technology").trim();
+    const cleanYear = (yearOfStudy || "3rd Year").trim();
 
     // 2. Already Account Exists Check (Email)
     const existingUser = await User.findOne({ email: cleanEmail });
     if (existingUser) {
       return NextResponse.json(
         {
-          error: `An account with email "${cleanEmail}" already exists. Please sign in instead.`,
+          error: "Account already exists. Please sign in.",
           accountExists: true,
           existingEmail: cleanEmail,
-        },
-        { status: 409 }
-      );
-    }
-
-    // 3. Already Account Exists Check (Admission Number)
-    const existingParticipant = await Participant.findOne({ admissionNumber: cleanAdmission });
-    if (existingParticipant) {
-      return NextResponse.json(
-        {
-          error: `Admission number "${cleanAdmission}" is already registered. Please sign in instead.`,
-          accountExists: true,
-          existingAdmissionNumber: cleanAdmission,
         },
         { status: 409 }
       );
@@ -67,7 +60,7 @@ export async function POST(req: NextRequest) {
     if (existingParticipantEmail) {
       return NextResponse.json(
         {
-          error: `A participant profile with email "${cleanEmail}" already exists. Please sign in instead.`,
+          error: "Account already exists. Please sign in.",
           accountExists: true,
           existingEmail: cleanEmail,
         },
@@ -85,6 +78,8 @@ export async function POST(req: NextRequest) {
     const user = await User.create({
       name: cleanName,
       email: cleanEmail,
+      college: cleanCollege,
+      phone: cleanPhone,
       password: hashedPassword,
       role: "PARTICIPANT",
       avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
@@ -97,11 +92,13 @@ export async function POST(req: NextRequest) {
       user: user._id,
       name: cleanName,
       email: cleanEmail,
+      college: cleanCollege,
       admissionNumber: cleanAdmission,
       yearOfStudy: cleanYear,
       year: cleanYear,
       department: cleanDepartment,
-      mobileNumber: cleanMobile,
+      mobileNumber: cleanPhone,
+      phone: cleanPhone,
       roleInTeam: "Participant",
       skills: ["Web Development", "Prototyping"],
       contributionScore: 85,

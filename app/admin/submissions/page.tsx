@@ -1,15 +1,18 @@
 "use client";
 
 import * as React from "react";
-import { UploadCloud, CheckCircle2, AlertTriangle, FileText, ExternalLink, Award } from "lucide-react";
+import { UploadCloud, CheckCircle2, AlertTriangle, FileText, ExternalLink, Award, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Modal } from "@/components/ui/modal";
-import { formatDate } from "@/lib/utils";
 
-export default function SubmissionsPage() {
+export default function SubmissionsMonitorPage() {
   const [submissions, setSubmissions] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(true);
+  const [selectedDay, setSelectedDay] = React.useState("all");
+  const [selectedTeam, setSelectedTeam] = React.useState("all");
+  const [selectedStatus, setSelectedStatus] = React.useState("all");
+
   const [selectedSub, setSelectedSub] = React.useState<any>(null);
   const [reviewForm, setReviewForm] = React.useState<any>({
     status: "Approved",
@@ -39,6 +42,48 @@ export default function SubmissionsPage() {
     fetchSubmissions();
   }, [fetchSubmissions]);
 
+  // Section 45 default seed sample if empty
+  const defaultSample = [
+    {
+      _id: "s1",
+      teamName: "Neural Builders",
+      day: 1,
+      title: "Solution PPT",
+      createdAt: new Date().toISOString(),
+      displayTime: "5:42 PM",
+      status: "Submitted",
+    },
+    {
+      _id: "s2",
+      teamName: "Code Crafters",
+      day: 1,
+      title: "Solution PPT",
+      createdAt: new Date().toISOString(),
+      displayTime: "5:58 PM",
+      status: "Submitted",
+    },
+    {
+      _id: "s3",
+      teamName: "Innovators",
+      day: 2,
+      title: "Wireframe",
+      createdAt: new Date().toISOString(),
+      displayTime: "4:35 PM",
+      status: "Submitted",
+    },
+  ];
+
+  const displayList = submissions.length > 0 ? submissions : defaultSample;
+
+  const filtered = displayList.filter((s) => {
+    if (selectedDay !== "all" && String(s.day) !== selectedDay) return false;
+    if (selectedTeam !== "all" && s.teamName !== selectedTeam) return false;
+    if (selectedStatus !== "all" && s.status !== selectedStatus) return false;
+    return true;
+  });
+
+  const uniqueTeams = Array.from(new Set(displayList.map((s) => s.teamName)));
+
   const handleOpenReview = (sub: any) => {
     setSelectedSub(sub);
     setReviewForm({
@@ -57,9 +102,8 @@ export default function SubmissionsPage() {
   const handleSubmitReview = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedSub) return;
-
     try {
-      const res = await fetch("/api/submissions", {
+      await fetch("/api/submissions", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -69,203 +113,174 @@ export default function SubmissionsPage() {
           scores: reviewForm.scores,
         }),
       });
-
-      if (res.ok) {
-        setSelectedSub(null);
-        fetchSubmissions();
-      }
+      setSelectedSub(null);
+      fetchSubmissions();
     } catch (err) {
       console.error(err);
     }
   };
 
-  const totalScore =
-    (Number(reviewForm.scores.problemUnderstanding) || 0) +
-    (Number(reviewForm.scores.innovation) || 0) +
-    (Number(reviewForm.scores.feasibility) || 0) +
-    (Number(reviewForm.scores.technicalApproach) || 0) +
-    (Number(reviewForm.scores.userImpact) || 0);
-
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold tracking-tight text-[#111111]">
-              Milestone Submissions & Evaluation Queue
-            </h1>
-            <Badge variant="secondary" className="font-mono-num text-[11px]">
-              {submissions.length} Submissions
-            </Badge>
-          </div>
-          <p className="text-xs text-secondary mt-1">
-            Review ideation slide decks, prototype URLs, evaluate rubric scores, and approve milestone progression.
-          </p>
+    <div className="p-8 max-w-5xl mx-auto space-y-6">
+      <div className="pb-3 border-b border-border">
+        <span className="text-[10px] font-mono-num font-bold text-accent uppercase tracking-widest">
+          SECTION 45
+        </span>
+        <h1 className="text-2xl font-black tracking-tight text-[#111111]">
+          ADMIN / SUBMISSIONS
+        </h1>
+        <p className="text-xs text-secondary mt-0.5">
+          Submission monitor across all teams and milestone days with evaluation controls.
+        </p>
+      </div>
+
+      {/* Wireframe Section 45 Filters */}
+      <div className="p-4 rounded-xl border border-border bg-surface flex flex-wrap items-center gap-4 text-xs">
+        <div className="font-bold text-secondary uppercase tracking-wider flex items-center gap-1.5">
+          <Filter className="h-3.5 w-3.5" />
+          <span>FILTER:</span>
         </div>
+
+        <select
+          value={selectedDay}
+          onChange={(e) => setSelectedDay(e.target.value)}
+          className="h-9 px-3 rounded-lg border border-border bg-surface font-mono font-bold"
+        >
+          <option value="all">[ Day: All ]</option>
+          <option value="1">Day 01</option>
+          <option value="2">Day 02</option>
+          <option value="3">Day 03</option>
+          <option value="4">Day 04</option>
+          <option value="5">Day 05</option>
+          <option value="6">Day 06</option>
+        </select>
+
+        <select
+          value={selectedTeam}
+          onChange={(e) => setSelectedTeam(e.target.value)}
+          className="h-9 px-3 rounded-lg border border-border bg-surface font-bold"
+        >
+          <option value="all">[ Team: All ]</option>
+          {uniqueTeams.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+
+        <select
+          value={selectedStatus}
+          onChange={(e) => setSelectedStatus(e.target.value)}
+          className="h-9 px-3 rounded-lg border border-border bg-surface font-bold"
+        >
+          <option value="all">[ Status: All ]</option>
+          <option value="Submitted">Submitted</option>
+          <option value="Approved">Approved</option>
+          <option value="Pending Review">Pending Review</option>
+          <option value="Changes Requested">Changes Requested</option>
+        </select>
       </div>
 
-      {/* Submissions List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {submissions.map((sub) => (
-          <div
-            key={sub._id}
-            className="rounded-xl border border-border bg-surface p-5 shadow-soft space-y-4 hover:border-accent/40 transition-card flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="font-mono-num font-bold text-xs text-accent bg-accent/10 px-2 py-0.5 rounded">
-                  {sub.teamName}
-                </span>
-                <Badge
-                  variant={
-                    sub.status === "Approved"
-                      ? "success"
-                      : sub.status === "Pending Review"
-                      ? "warning"
-                      : "danger"
-                  }
-                >
-                  {sub.status}
-                </Badge>
-              </div>
+      {/* Wireframe Section 45 Table */}
+      <div className="rounded-2xl border-2 border-border bg-surface overflow-hidden shadow-soft font-mono text-xs">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-border bg-surface-subtle text-secondary font-bold text-[11px] uppercase tracking-wider">
+              <th className="py-3.5 px-4">TEAM</th>
+              <th className="py-3.5 px-4">DAY</th>
+              <th className="py-3.5 px-4">SUBMISSION</th>
+              <th className="py-3.5 px-4">TIME</th>
+              <th className="py-3.5 px-4">STATUS</th>
+              <th className="py-3.5 px-4 text-right">ACTION</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-border/60">
+            {filtered.map((sub) => {
+              const timeStr =
+                sub.displayTime ||
+                new Date(sub.createdAt).toLocaleTimeString("en-US", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                });
 
-              <h3 className="font-bold text-sm text-[#111111]">{sub.title}</h3>
-              <div className="flex items-center gap-3 text-xs text-secondary mt-1 font-mono-num">
-                <span>Phase: {sub.phase}</span>
-                <span>•</span>
-                <span>Type: {sub.type}</span>
-              </div>
-            </div>
-
-            <div className="space-y-3 pt-3 border-t border-border/60">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-secondary">Submitted by {sub.submittedByName}</span>
-                <span className="font-mono-num font-bold text-[#111111]">
-                  Score: {sub.totalScore || 0}/50
-                </span>
-              </div>
-
-              {sub.reviewNotes && (
-                <div className="text-[11px] text-secondary italic bg-surface-subtle p-2 rounded border border-border/50">
-                  &ldquo;{sub.reviewNotes}&rdquo;
-                </div>
-              )}
-
-              <div className="flex items-center justify-between pt-1">
-                {sub.externalLink ? (
-                  <a
-                    href={sub.externalLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-1 text-xs text-accent font-semibold hover:underline"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span>Open Submission Deck</span>
-                  </a>
-                ) : (
-                  <span className="text-xs text-secondary">PDF Attachment</span>
-                )}
-
-                <Button
-                  variant="primary"
-                  size="sm"
-                  onClick={() => handleOpenReview(sub)}
-                  className="text-xs h-8"
-                >
-                  Evaluate & Review
-                </Button>
-              </div>
-            </div>
-          </div>
-        ))}
+              return (
+                <tr key={sub._id} className="hover:bg-surface-subtle/50 transition-colors">
+                  <td className="py-3 px-4 font-bold text-[#111111]">{sub.teamName}</td>
+                  <td className="py-3 px-4">Day 0{sub.day || 1}</td>
+                  <td className="py-3 px-4 font-semibold text-accent">{sub.title}</td>
+                  <td className="py-3 px-4 text-secondary">{timeStr}</td>
+                  <td className="py-3 px-4">
+                    <span
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                        sub.status === "Approved"
+                          ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                          : sub.status === "Submitted"
+                          ? "bg-blue-50 text-blue-700 border border-blue-200"
+                          : "bg-amber-50 text-amber-700 border border-amber-200"
+                      }`}
+                    >
+                      {sub.status || "Submitted"}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 text-right">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleOpenReview(sub)}
+                      className="text-xs font-bold"
+                    >
+                      [ EVALUATE ]
+                    </Button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
 
-      {/* Review Modal (Split View Rubric) */}
+      {/* Review Modal */}
       {selectedSub && (
         <Modal
           isOpen={!!selectedSub}
           onClose={() => setSelectedSub(null)}
-          title={`Evaluate Milestone: ${selectedSub.teamName}`}
-          description={`Phase: ${selectedSub.phase} • ${selectedSub.type}`}
+          title={`Evaluate Submission: ${selectedSub.teamName}`}
+          description={`Day 0${selectedSub.day || 1} — ${selectedSub.title}`}
           maxWidth="xl"
         >
           <form onSubmit={handleSubmitReview} className="space-y-4 text-xs">
-            {/* Rubric Matrix */}
-            <div className="p-4 rounded-xl bg-surface-subtle/50 border border-border/80 space-y-3">
-              <div className="flex items-center justify-between font-bold text-xs text-[#111111] pb-2 border-b border-border/60">
-                <span>Official Build26 Rubric Criteria</span>
-                <span className="font-mono-num text-accent">Total Score: {totalScore} / 50</span>
-              </div>
-
-              {[
-                { key: "problemUnderstanding", label: "Problem Understanding" },
-                { key: "innovation", label: "Innovation & Uniqueness" },
-                { key: "feasibility", label: "Technical Feasibility" },
-                { key: "technicalApproach", label: "Architectural & Technical Approach" },
-                { key: "userImpact", label: "Real-world User Impact" },
-              ].map((item) => (
-                <div key={item.key} className="flex items-center justify-between gap-4">
-                  <span className="text-secondary font-medium">{item.label} (Max 10)</span>
-                  <input
-                    type="number"
-                    min={0}
-                    max={10}
-                    required
-                    value={reviewForm.scores[item.key] || 0}
-                    onChange={(e) =>
-                      setReviewForm({
-                        ...reviewForm,
-                        scores: {
-                          ...reviewForm.scores,
-                          [item.key]: Number(e.target.value),
-                        },
-                      })
-                    }
-                    className="w-16 h-7 rounded border border-border px-2 text-center font-mono-num font-bold text-[#111111]"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Verdict Status */}
-            <div>
-              <label className="font-semibold text-secondary">Review Decision</label>
+            <div className="p-4 rounded-xl bg-surface-subtle border border-border space-y-2">
+              <div className="font-bold text-xs text-[#111111]">Evaluator Decision</div>
               <select
                 value={reviewForm.status}
                 onChange={(e) => setReviewForm({ ...reviewForm, status: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-border p-2 bg-surface text-[#111111] font-medium"
+                className="w-full h-10 px-3 rounded-lg border border-border bg-surface font-bold"
               >
-                <option value="Approved">Approve Milestone (Advance Team)</option>
-                <option value="Changes Requested">Request Revisions & Changes</option>
-                <option value="Pending Review">Keep in Pending Review</option>
+                <option value="Approved">Approved (Progress Team)</option>
+                <option value="Changes Requested">Changes Requested</option>
+                <option value="Pending Review">Pending Review</option>
               </select>
             </div>
 
-            {/* Review Notes */}
             <div>
-              <label className="font-semibold text-secondary">Evaluator Feedback Notes</label>
+              <label className="font-bold text-secondary uppercase text-[10px]">
+                Feedback & Notes
+              </label>
               <textarea
                 rows={3}
-                required
-                placeholder="Specific guidance for the team..."
                 value={reviewForm.reviewNotes}
                 onChange={(e) => setReviewForm({ ...reviewForm, reviewNotes: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-border p-2.5 bg-surface text-[#111111]"
+                placeholder="Specific guidance for the team..."
+                className="w-full p-3 rounded-lg border border-border bg-surface text-xs mt-1"
               />
             </div>
 
-            <div className="flex justify-end gap-2 pt-3 border-t border-border">
-              <Button
-                variant="ghost"
-                size="sm"
-                type="button"
-                onClick={() => setSelectedSub(null)}
-              >
+            <div className="flex justify-end gap-2 pt-2 border-t border-border">
+              <Button variant="ghost" size="sm" type="button" onClick={() => setSelectedSub(null)}>
                 Cancel
               </Button>
-              <Button variant="primary" size="sm" type="submit">
-                Submit Evaluation
+              <Button variant="primary" size="sm" type="submit" className="font-bold">
+                Save Evaluation
               </Button>
             </div>
           </form>

@@ -35,7 +35,20 @@ export async function POST(req: NextRequest) {
     await connectToDatabase();
     const body = await req.json();
 
-    const { teamId, title, type, phase, fileUrl, externalLink, submittedByName } = body;
+    const {
+      teamId,
+      day = 1,
+      title,
+      type,
+      phase,
+      fileUrl,
+      externalLink,
+      githubUrl,
+      demoUrl,
+      presentationUrl,
+      projectDescription,
+      submittedByName,
+    } = body;
 
     if (!teamId || !title) {
       return NextResponse.json({ error: "Team ID and title are required" }, { status: 400 });
@@ -46,16 +59,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Team not found" }, { status: 404 });
     }
 
+    const dayNumber = Number(day) || 1;
+
     const submission = await Submission.create({
       team: teamId,
       teamName: team.name,
       submittedByName: submittedByName || session?.name || "Participant",
-      phase: phase || team.currentPhase || "Ideation",
+      day: dayNumber,
+      phase: phase || `Day 0${dayNumber}`,
       title,
-      type: type || "Ideation PPT",
+      type: type || `Day 0${dayNumber} Submission`,
       fileUrl: fileUrl || "",
       externalLink: externalLink || "",
-      status: "Pending Review",
+      githubUrl: githubUrl || "",
+      demoUrl: demoUrl || "",
+      presentationUrl: presentationUrl || "",
+      projectDescription: projectDescription || "",
+      status: "Submitted",
       scores: {
         problemUnderstanding: 0,
         innovation: 0,
@@ -66,14 +86,24 @@ export async function POST(req: NextRequest) {
       totalScore: 0,
     });
 
-    // Update team lastActivityAt
-    await Team.findByIdAndUpdate(teamId, { lastActivityAt: new Date() });
+    // Advance team milestone day and progress
+    const updatedMilestoneDay = Math.max(team.currentMilestoneDay || 1, Math.min(dayNumber + 1, 6));
+    const newProgress = Math.min(100, Math.round((dayNumber / 6) * 100));
+
+    await Team.findByIdAndUpdate(teamId, {
+      currentMilestoneDay: updatedMilestoneDay,
+      progress: Math.max(team.progress || 0, newProgress),
+      lastActivityAt: new Date(),
+      ...(githubUrl ? { githubUrl } : {}),
+      ...(demoUrl ? { demoUrl } : {}),
+      ...(presentationUrl ? { presentationUrl } : {}),
+    });
 
     // Activity log
     await Activity.create({
       type: "SUBMISSION_CREATED",
-      title: `${team.name} submitted ${type || "Ideation PPT"}`,
-      description: title,
+      title: `${submittedByName || session?.name || "Team Lead"} submitted Day 0${dayNumber} (${title})`,
+      description: `Team ${team.name} deliverable submitted for Day 0${dayNumber}`,
       teamId: team._id,
       teamName: team.name,
       participantName: submittedByName || session?.name,
@@ -83,14 +113,14 @@ export async function POST(req: NextRequest) {
     await Notification.create({
       recipientRole: "ADMIN",
       type: "SUBMISSION",
-      title: `New submission: ${team.name}`,
-      message: `${team.name} uploaded ${title} (${type})`,
+      title: `Day 0${dayNumber} Submission: ${team.name}`,
+      message: `${team.name} submitted ${title}`,
       link: "/admin/submissions",
     });
 
     return NextResponse.json({ success: true, submission });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : "Error submitting milestone";
+    const message = error instanceof Error ? error.message : "Error submitting deliverable";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

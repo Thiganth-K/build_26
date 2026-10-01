@@ -38,11 +38,14 @@ export async function GET(req: NextRequest) {
       message = `Admission number "${admissionNumber}" is already registered.`;
     }
 
+    const found = existingByEmail || existingByAdmission;
+
     return NextResponse.json({
       exists,
       emailExists: Boolean(existingByEmail),
       admissionExists: Boolean(existingByAdmission),
       message,
+      user: found ? { name: found.name, email: found.email } : null,
     });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Error checking user existence";

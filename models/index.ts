@@ -5,6 +5,8 @@ export interface IUser extends Document {
   name: string;
   email: string;
   password?: string;
+  college?: string;
+  phone?: string;
   role: "SUPER_ADMIN" | "ADMIN" | "MENTOR" | "PARTICIPANT";
   avatar?: string;
   participantId?: mongoose.Types.ObjectId;
@@ -18,6 +20,8 @@ const UserSchema = new Schema<IUser>(
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true, trim: true },
     password: { type: String, required: false },
+    college: { type: String, default: "Sona College of Technology" },
+    phone: { type: String, default: "" },
     role: {
       type: String,
       enum: ["SUPER_ADMIN", "ADMIN", "MENTOR", "PARTICIPANT"],
@@ -35,11 +39,13 @@ export interface IParticipant extends Document {
   user: mongoose.Types.ObjectId;
   name: string;
   email: string;
+  college?: string;
   admissionNumber?: string;
   yearOfStudy?: string;
   department: string;
   year: string;
   mobileNumber?: string;
+  phone?: string;
   team?: mongoose.Types.ObjectId;
   roleInTeam: string; // Team Lead, Product, UI/UX, Frontend, Backend, AI/ML, Research, Marketing
   skills: string[];
@@ -56,11 +62,13 @@ const ParticipantSchema = new Schema<IParticipant>(
     user: { type: Schema.Types.ObjectId, ref: "User" },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true },
+    college: { type: String, default: "Sona College of Technology" },
     admissionNumber: { type: String, trim: true },
     yearOfStudy: { type: String, default: "3rd Year" },
     department: { type: String, default: "Computer Science" },
     year: { type: String, default: "3rd Year" },
     mobileNumber: { type: String, trim: true },
+    phone: { type: String, trim: true },
     team: { type: Schema.Types.ObjectId, ref: "Team" },
     roleInTeam: { type: String, default: "Frontend Developer" },
     skills: [{ type: String }],
@@ -117,12 +125,34 @@ export interface ITeamMember {
   isLeader: boolean;
 }
 
+export interface IJoinRequest {
+  participant: mongoose.Types.ObjectId;
+  name: string;
+  email: string;
+  requestedRole: string;
+  status: "PENDING" | "ACCEPTED" | "REJECTED";
+  requestedAt: Date;
+}
+
+export interface IInvitation {
+  _id?: mongoose.Types.ObjectId;
+  email: string;
+  role: string;
+  status: "INVITED" | "ACCEPTED" | "DECLINED" | "CANCELLED";
+  invitedBy?: string;
+  invitedAt: Date;
+  expiresAt?: Date;
+}
+
 export interface ITeam extends Document {
   name: string;
   code: string;
+  teamSize: number; // 3 or 4, fixed after creation
   problemStatement?: mongoose.Types.ObjectId;
   mentor?: mongoose.Types.ObjectId;
   members: ITeamMember[];
+  definedRoles?: Array<{ slot: number; role: string }>;
+  currentMilestoneDay: number; // 1 to 6
   currentPhase: "Problem Understanding" | "Ideation" | "Validation" | "Build" | "Testing" | "Final Demo";
   progress: number; // 0 - 100
   status: "ACTIVE" | "NEEDS_ATTENTION" | "INACTIVE";
@@ -135,6 +165,8 @@ export interface ITeam extends Document {
   demoUrl?: string;
   githubUrl?: string;
   presentationUrl?: string;
+  joinRequests: IJoinRequest[];
+  invitations: IInvitation[];
   lastActivityAt: Date;
   createdAt: Date;
   updatedAt: Date;
@@ -144,6 +176,7 @@ const TeamSchema = new Schema<ITeam>(
   {
     name: { type: String, required: true, unique: true },
     code: { type: String, required: true, unique: true, uppercase: true },
+    teamSize: { type: Number, enum: [3, 4], default: 4 },
     problemStatement: { type: Schema.Types.ObjectId, ref: "ProblemStatement" },
     mentor: { type: Schema.Types.ObjectId, ref: "Mentor" },
     members: [
@@ -155,12 +188,19 @@ const TeamSchema = new Schema<ITeam>(
         isLeader: { type: Boolean, default: false },
       },
     ],
+    definedRoles: [
+      {
+        slot: { type: Number },
+        role: { type: String },
+      },
+    ],
+    currentMilestoneDay: { type: Number, default: 1 },
     currentPhase: {
       type: String,
       enum: ["Problem Understanding", "Ideation", "Validation", "Build", "Testing", "Final Demo"],
-      default: "Ideation",
+      default: "Problem Understanding",
     },
-    progress: { type: Number, default: 15 },
+    progress: { type: Number, default: 0 },
     status: { type: String, enum: ["ACTIVE", "NEEDS_ATTENTION", "INACTIVE"], default: "ACTIVE" },
     solutionTitle: { type: String, default: "" },
     solutionDescription: { type: String, default: "" },
@@ -171,6 +211,26 @@ const TeamSchema = new Schema<ITeam>(
     demoUrl: { type: String, default: "" },
     githubUrl: { type: String, default: "" },
     presentationUrl: { type: String, default: "" },
+    joinRequests: [
+      {
+        participant: { type: Schema.Types.ObjectId, ref: "Participant" },
+        name: { type: String, required: true },
+        email: { type: String, required: true },
+        requestedRole: { type: String, default: "Frontend Developer" },
+        status: { type: String, enum: ["PENDING", "ACCEPTED", "REJECTED"], default: "PENDING" },
+        requestedAt: { type: Date, default: Date.now },
+      },
+    ],
+    invitations: [
+      {
+        email: { type: String, required: true, lowercase: true },
+        role: { type: String, default: "Developer" },
+        status: { type: String, enum: ["INVITED", "ACCEPTED", "DECLINED", "CANCELLED"], default: "INVITED" },
+        invitedBy: { type: String },
+        invitedAt: { type: Date, default: Date.now },
+        expiresAt: { type: Date },
+      },
+    ],
     lastActivityAt: { type: Date, default: Date.now },
   },
   { timestamps: true }
@@ -285,14 +345,16 @@ export interface IWorkLog extends Document {
   team: mongoose.Types.ObjectId;
   teamName: string;
   date: Date;
+  day: number; // 1 to 6
   role: string;
   workDone: string;
+  contributionTypes: string[]; // Ideation, Research, UI/UX, Frontend, Backend, AI/ML, Testing, Documentation, Presentation, Other
   completedTasks: string;
   nextSteps: string;
   blockers: string;
   timeSpentHours: number;
   evidenceUrl?: string;
-  status: "Completed" | "In Progress" | "Blocked";
+  status: "Completed" | "In Progress" | "Blocked" | "Planned";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -304,14 +366,20 @@ const WorkLogSchema = new Schema<IWorkLog>(
     team: { type: Schema.Types.ObjectId, ref: "Team", required: true },
     teamName: { type: String, required: true },
     date: { type: Date, default: Date.now },
+    day: { type: Number, default: 1, min: 1, max: 6 },
     role: { type: String, required: true },
     workDone: { type: String, required: true },
+    contributionTypes: [{ type: String }],
     completedTasks: { type: String, default: "" },
     nextSteps: { type: String, default: "" },
     blockers: { type: String, default: "None" },
     timeSpentHours: { type: Number, default: 2 },
     evidenceUrl: { type: String, default: "" },
-    status: { type: String, enum: ["Completed", "In Progress", "Blocked"], default: "Completed" },
+    status: {
+      type: String,
+      enum: ["Completed", "In Progress", "Blocked", "Planned"],
+      default: "Completed",
+    },
   },
   { timestamps: true }
 );
@@ -355,12 +423,17 @@ export interface ISubmission extends Document {
   team: mongoose.Types.ObjectId;
   teamName: string;
   submittedByName: string;
+  day: number; // 1 to 6
   phase: string;
   title: string;
-  type: "Ideation PPT" | "Problem Analysis" | "Solution Proposal" | "Prototype" | "Progress Report" | "Final Demo" | "Final Presentation";
+  type: string;
   fileUrl?: string;
   externalLink?: string;
-  status: "Pending Review" | "Changes Requested" | "Approved";
+  githubUrl?: string;
+  demoUrl?: string;
+  presentationUrl?: string;
+  projectDescription?: string;
+  status: "Pending Review" | "Changes Requested" | "Approved" | "Submitted";
   reviewNotes?: string;
   scores: {
     problemUnderstanding: number; // max 10
@@ -381,27 +454,23 @@ const SubmissionSchema = new Schema<ISubmission>(
     team: { type: Schema.Types.ObjectId, ref: "Team", required: true },
     teamName: { type: String, required: true },
     submittedByName: { type: String, required: true },
+    day: { type: Number, default: 1, min: 1, max: 6 },
     phase: { type: String, default: "Ideation" },
     title: { type: String, required: true },
     type: {
       type: String,
-      enum: [
-        "Ideation PPT",
-        "Problem Analysis",
-        "Solution Proposal",
-        "Prototype",
-        "Progress Report",
-        "Final Demo",
-        "Final Presentation",
-      ],
       default: "Ideation PPT",
     },
     fileUrl: { type: String, default: "" },
     externalLink: { type: String, default: "" },
+    githubUrl: { type: String, default: "" },
+    demoUrl: { type: String, default: "" },
+    presentationUrl: { type: String, default: "" },
+    projectDescription: { type: String, default: "" },
     status: {
       type: String,
-      enum: ["Pending Review", "Changes Requested", "Approved"],
-      default: "Pending Review",
+      enum: ["Pending Review", "Changes Requested", "Approved", "Submitted"],
+      default: "Submitted",
     },
     reviewNotes: { type: String, default: "" },
     scores: {
@@ -414,6 +483,56 @@ const SubmissionSchema = new Schema<ISubmission>(
     totalScore: { type: Number, default: 0 },
     reviewedByName: { type: String, default: "" },
     reviewedAt: { type: Date },
+  },
+  { timestamps: true }
+);
+
+// ================= MILESTONE MODEL =================
+export interface IMilestoneTask {
+  id: string;
+  title: string;
+  completed?: boolean;
+}
+
+export interface IMilestone extends Document {
+  dayNumber: number; // 1 to 6
+  title: string;
+  objective: string;
+  instructions: string;
+  tasks: IMilestoneTask[];
+  requiredSubmission: string;
+  allowedFileTypes: string[];
+  workLogRequired: boolean;
+  startDate: Date;
+  endDate: Date;
+  status: "Published" | "Active" | "Scheduled" | "Draft";
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+const MilestoneSchema = new Schema<IMilestone>(
+  {
+    dayNumber: { type: Number, required: true, unique: true, min: 1, max: 6 },
+    title: { type: String, required: true },
+    objective: { type: String, required: true },
+    instructions: { type: String, default: "" },
+    tasks: [
+      {
+        id: { type: String, required: true },
+        title: { type: String, required: true },
+        completed: { type: Boolean, default: false },
+      },
+    ],
+    requiredSubmission: { type: String, default: "Deliverable" },
+    allowedFileTypes: [{ type: String }],
+    workLogRequired: { type: Boolean, default: true },
+    startDate: { type: Date, default: Date.now },
+    endDate: { type: Date, default: () => new Date(Date.now() + 24 * 60 * 60 * 1000) },
+    status: {
+      type: String,
+      enum: ["Published", "Active", "Scheduled", "Draft"],
+      default: "Published",
+    },
   },
   { timestamps: true }
 );
@@ -598,3 +717,5 @@ export const Announcement: Model<IAnnouncement> = mongoose.models.Announcement |
 export const Notification: Model<INotification> = mongoose.models.Notification || mongoose.model<INotification>("Notification", NotificationSchema);
 export const Evaluation: Model<IEvaluation> = mongoose.models.Evaluation || mongoose.model<IEvaluation>("Evaluation", EvaluationSchema);
 export const Activity: Model<IActivity> = mongoose.models.Activity || mongoose.model<IActivity>("Activity", ActivitySchema);
+export const Milestone: Model<IMilestone> = mongoose.models.Milestone || mongoose.model<IMilestone>("Milestone", MilestoneSchema);
+

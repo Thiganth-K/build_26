@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSessionFromRequest, clearSessionCookie } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/db";
-import { Participant } from "@/models";
+import { Participant, Team } from "@/models";
 
 export async function GET(req: NextRequest) {
   try {
@@ -32,11 +32,36 @@ export async function GET(req: NextRequest) {
 
         if (p.team) {
           session.teamId = (p.team._id || p.team).toString();
-          teamData = p.team;
+          teamData = await Team.findById(p.team._id || p.team)
+            .populate("problemStatement", "title category description")
+            .lean();
         } else {
           session.teamId = undefined;
         }
       }
+    }
+
+    // Find any teams where this user is invited
+    let pendingInvitations: any[] = [];
+    if (session.email) {
+      const invitedTeams = await Team.find({
+        "invitations.email": session.email.toLowerCase(),
+        "invitations.status": "INVITED",
+      }).lean();
+
+      pendingInvitations = invitedTeams.map((t: any) => {
+        const lead = t.members?.find((m: any) => m.isLeader) || t.members?.[0];
+        const inv = t.invitations?.find((i: any) => i.email === session.email.toLowerCase());
+        return {
+          teamId: t._id,
+          teamName: t.name,
+          teamCode: t.code,
+          teamSize: t.teamSize || 4,
+          memberCount: t.members?.length || 0,
+          leadName: lead?.name || "Team Lead",
+          proposedRole: inv?.role || "Team Member",
+        };
+      });
     }
 
     return NextResponse.json({
@@ -44,6 +69,7 @@ export async function GET(req: NextRequest) {
       participant: participantData,
       team: teamData,
       hasTeam: Boolean(session.teamId),
+      invitations: pendingInvitations,
     });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Error verifying session";

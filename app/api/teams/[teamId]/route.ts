@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db";
-import { Team, WorkLog, Task, Submission, Feedback, Evaluation, Activity } from "@/models";
+import { 
+  Team, 
+  WorkLog, 
+  Task, 
+  Submission, 
+  Feedback, 
+  Evaluation, 
+  Activity, 
+  ProblemStatement, 
+  Mentor, 
+  User, 
+  Participant 
+} from "@/models";
 import { getSessionFromRequest } from "@/lib/auth";
 
 export async function GET(

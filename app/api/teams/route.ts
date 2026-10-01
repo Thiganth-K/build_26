@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db";
-import { Team, Activity, ProblemStatement, Participant } from "@/models";
+import { Team, Activity, ProblemStatement, Participant, User } from "@/models";
 import { getSessionFromRequest } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
@@ -46,11 +46,41 @@ export async function POST(req: NextRequest) {
     await connectToDatabase();
     const body = await req.json();
 
-    const { name, code, problemStatementId, solutionTitle, solutionDescription, techStack } = body;
+    const {
+      name,
+      code,
+      teamSize = 4,
+      leadRole = "Full Stack Developer",
+      definedRoles = [],
+      invitations = [],
+      problemStatementId,
+      solutionTitle,
+      solutionDescription,
+      techStack,
+    } = body;
 
     if (!name || !name.trim()) {
-      return NextResponse.json({ error: "Team name is required" }, { status: 400 });
+      return NextResponse.json({ error: "Team name is required." }, { status: 400 });
     }
+
+    const cleanTeamName = name.trim();
+
+    // Rule 03: Team name must be unique
+    const existingTeamName = await Team.findOne({
+      name: { $regex: `^${cleanTeamName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, $options: "i" },
+    });
+    if (existingTeamName) {
+      return NextResponse.json(
+        {
+          error: "TEAM NAME ALREADY EXISTS. Please choose another team name.",
+          nameExists: true,
+        },
+        { status: 409 }
+      );
+    }
+
+    // Rule 04: Team size must be 3 or 4
+    const validTeamSize = Number(teamSize) === 3 ? 3 : 4;
 
     // Identify participant if session exists
     let participant: any = null;
@@ -78,21 +108,26 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const cleanTeamName = name.trim();
-    const cleanPrefix = cleanTeamName
-      .replace(/[^a-zA-Z0-9]/g, "")
-      .substring(0, 5)
-      .toUpperCase();
-    const generatedCode =
-      code || `B26-${cleanPrefix || "TEAM"}-${Math.floor(100 + Math.random() * 900)}`;
+    // Generate unique code in wireframe format: B26-X7K9
+    const generateTeamCode = () => {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let randomPart = "";
+      for (let i = 0; i < 4; i++) {
+        randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return `B26-${randomPart}`;
+    };
 
+    const finalCode = code?.trim().toUpperCase() || generateTeamCode();
+
+    // Member list starting with Team Lead (Rule 05)
     const memberList = participant
       ? [
           {
             participant: participant._id,
             name: participant.name,
             email: participant.email,
-            role: "Team Lead",
+            role: leadRole || "Team Lead",
             isLeader: true,
           },
         ]
@@ -102,29 +137,60 @@ export async function POST(req: NextRequest) {
             participant: session.participantId || session.id,
             name: session.name,
             email: session.email,
-            role: "Team Lead",
+            role: leadRole || "Team Lead",
             isLeader: true,
           },
         ]
       : [];
 
+    // Process valid invitations
+    const invitationList: Array<{
+      email: string;
+      role: string;
+      status: "INVITED";
+      invitedBy: string;
+      invitedAt: Date;
+      expiresAt: Date;
+    }> = [];
+    const leadName = participant?.name || session?.name || "Team Lead";
+    const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+
+    if (Array.isArray(invitations)) {
+      for (const inv of invitations) {
+        if (inv && inv.email && inv.email.trim()) {
+          invitationList.push({
+            email: inv.email.trim().toLowerCase(),
+            role: inv.role || "Developer",
+            status: "INVITED",
+            invitedBy: leadName,
+            invitedAt: new Date(),
+            expiresAt: sevenDaysFromNow,
+          });
+        }
+      }
+    }
+
     const newTeam = await Team.create({
       name: cleanTeamName,
-      code: generatedCode,
+      code: finalCode,
+      teamSize: validTeamSize,
       problemStatement: problemStatementId || undefined,
       solutionTitle: solutionTitle || "",
       solutionDescription: solutionDescription || "",
-      techStack: Array.isArray(techStack) ? techStack : ["Next.js", "TypeScript"],
+      techStack: Array.isArray(techStack) ? techStack : ["Next.js", "TypeScript", "Tailwind CSS"],
       members: memberList,
+      definedRoles: Array.isArray(definedRoles) ? definedRoles : [],
+      invitations: invitationList,
+      currentMilestoneDay: 1,
       currentPhase: "Problem Understanding",
-      progress: 10,
+      progress: 0,
       status: "ACTIVE",
     });
 
     // Link team to participant
     if (participant) {
       participant.team = newTeam._id;
-      participant.roleInTeam = "Team Lead";
+      participant.roleInTeam = leadRole || "Team Lead";
       await participant.save();
     }
 
@@ -134,10 +200,25 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // Create notifications for invited participants
+    for (const inv of invitationList) {
+      const invitedUser = await User.findOne({ email: inv.email });
+      if (invitedUser) {
+        await Activity.create({
+          type: "PARTICIPANT_JOINED",
+          title: `Invitation sent to ${inv.email}`,
+          description: `Invited to join ${cleanTeamName} as ${inv.role}`,
+          teamId: newTeam._id,
+          teamName: cleanTeamName,
+          participantName: participant?.name || session?.name,
+        });
+      }
+    }
+
     await Activity.create({
       type: "TEAM_CREATED",
       title: `${cleanTeamName} was formed`,
-      description: `New team registered with code ${generatedCode}`,
+      description: `New team registered with code ${finalCode}`,
       teamId: newTeam._id,
       teamName: cleanTeamName,
       participantName: participant?.name || session?.name || "Participant",

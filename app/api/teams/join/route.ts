@@ -77,8 +77,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 4. Capacity check (Max 4 team members per bootcamp guidelines)
-    const MAX_TEAM_SIZE = 4;
+    // 4. Capacity check (Max teamSize fixed at creation)
+    const MAX_TEAM_SIZE = team.teamSize || 4;
     const currentMemberCount = team.members ? team.members.length : 0;
     if (currentMemberCount >= MAX_TEAM_SIZE) {
       return NextResponse.json(
@@ -89,8 +89,79 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const chosenRole = roleInTeam?.trim() || "Frontend Developer";
+
+    // Validate that chosen role is configured and not already taken (Requirements 4 & 5)
+    if (team.definedRoles && team.definedRoles.length > 0) {
+      const isConfigured = team.definedRoles.some((dr: any) => dr.role?.toLowerCase() === chosenRole.toLowerCase());
+      if (!isConfigured) {
+        return NextResponse.json(
+          { error: `The role "${chosenRole}" is not configured for ${team.name}. Please select from the available roles.` },
+          { status: 400 }
+        );
+      }
+
+      const roleAssigned = team.members.some((m: any) => m.role?.toLowerCase() === chosenRole.toLowerCase());
+      if (roleAssigned) {
+        const assignedMember = team.members.find((m: any) => m.role?.toLowerCase() === chosenRole.toLowerCase());
+        return NextResponse.json(
+          { error: `The role "${chosenRole}" is already assigned to ${assignedMember?.name || "another member"}.` },
+          { status: 400 }
+        );
+      }
+    }
+
+    const requestOnly = body.requestOnly ?? false;
+
+    // Check if participant was already invited
+    const hasInvitation = (team.invitations || []).some(
+      (inv: any) =>
+        inv.email?.toLowerCase() === participant.email?.toLowerCase() && inv.status === "INVITED"
+    );
+
+    if (requestOnly && !hasInvitation) {
+      // Add or update in joinRequests
+      if (!team.joinRequests) team.joinRequests = [];
+      const existingReqIndex = team.joinRequests.findIndex(
+        (r: any) => r.email?.toLowerCase() === participant.email?.toLowerCase()
+      );
+
+      if (existingReqIndex >= 0) {
+        team.joinRequests[existingReqIndex].status = "PENDING";
+        team.joinRequests[existingReqIndex].requestedRole = chosenRole;
+      } else {
+        team.joinRequests.push({
+          participant: participant._id,
+          name: participant.name,
+          email: participant.email,
+          requestedRole: chosenRole,
+          status: "PENDING",
+          requestedAt: new Date(),
+        });
+      }
+      await team.save();
+
+      await Activity.create({
+        type: "PARTICIPANT_JOINED",
+        title: `${participant.name} requested to join ${team.name}`,
+        description: `Requested role: ${chosenRole}`,
+        teamId: team._id,
+        teamName: team.name,
+        participantName: participant.name,
+      });
+
+      return NextResponse.json({
+        success: true,
+        requested: true,
+        message: "Join request submitted! Awaiting Team Lead approval.",
+        team: {
+          name: team.name,
+          code: team.code,
+        },
+      });
+    }
+
     // 5. Add participant to team members if not already listed
-    const chosenRole = roleInTeam?.trim() || "Full-Stack Developer";
     const alreadyListed = team.members.some(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (m: any) =>
@@ -106,6 +177,15 @@ export async function POST(req: NextRequest) {
         role: chosenRole,
         isLeader: false,
       });
+
+      // If they had an invitation, mark it accepted
+      if (team.invitations) {
+        team.invitations.forEach((inv: any) => {
+          if (inv.email?.toLowerCase() === participant.email?.toLowerCase()) {
+            inv.status = "ACCEPTED";
+          }
+        });
+      }
       await team.save();
     }
 

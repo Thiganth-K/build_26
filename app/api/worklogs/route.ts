@@ -52,8 +52,10 @@ export async function POST(req: NextRequest) {
       participantName,
       teamId,
       teamName,
+      day = 1,
       role,
       workDone,
+      contributionTypes,
       completedTasks,
       nextSteps,
       blockers,
@@ -98,14 +100,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Today's work description is required" }, { status: 400 });
     }
 
+    const dayNumber = Number(day) || 1;
+    const typesArray = Array.isArray(contributionTypes)
+      ? contributionTypes
+      : typeof contributionTypes === "string"
+      ? contributionTypes.split(",").map((s) => s.trim())
+      : ["Ideation"];
+
     const workLog = await WorkLog.create({
       participant: pId || tId,
       participantName: pName,
       team: tId,
       teamName: tName || "Team Alpha",
       date: new Date(),
+      day: dayNumber,
       role: userRole,
       workDone,
+      contributionTypes: typesArray,
       completedTasks: completedTasks || "",
       nextSteps: nextSteps || "",
       blockers: blockers || "None",
@@ -123,7 +134,7 @@ export async function POST(req: NextRequest) {
     // Create activity
     await Activity.create({
       type: "WORKLOG_CREATED",
-      title: `${pName} logged ${timeSpentHours || 2} hours for ${tName}`,
+      title: `${pName} logged Day 0${dayNumber} work log (${typesArray.join(", ")})`,
       description: workDone.length > 80 ? `${workDone.substring(0, 80)}...` : workDone,
       teamId: tId,
       teamName: tName,
