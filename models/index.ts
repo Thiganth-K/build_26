@@ -419,6 +419,16 @@ const TaskSchema = new Schema<ITask>(
 );
 
 // ================= SUBMISSION MODEL =================
+export interface IMemberApproval {
+  participant?: mongoose.Types.ObjectId;
+  name: string;
+  email: string;
+  role: string;
+  status: "PENDING" | "APPROVED" | "CHANGES_REQUESTED";
+  comment?: string;
+  updatedAt: Date;
+}
+
 export interface ISubmission extends Document {
   team: mongoose.Types.ObjectId;
   teamName: string;
@@ -428,12 +438,20 @@ export interface ISubmission extends Document {
   title: string;
   type: string;
   fileUrl?: string;
+  fileName?: string;
+  fileSize?: string;
   externalLink?: string;
   githubUrl?: string;
   demoUrl?: string;
   presentationUrl?: string;
   projectDescription?: string;
-  status: "Pending Review" | "Changes Requested" | "Approved" | "Submitted";
+  status: "Pending Review" | "Changes Requested" | "Approved" | "Submitted" | "Pending Team Approval";
+  requiresMemberApproval?: boolean;
+  memberApprovals?: IMemberApproval[];
+  approvalStatus?: "PENDING_APPROVAL" | "APPROVED" | "CHANGES_REQUESTED";
+  uploadedByName?: string;
+  uploadedByEmail?: string;
+  version?: number;
   reviewNotes?: string;
   scores: {
     problemUnderstanding: number; // max 10
@@ -462,6 +480,8 @@ const SubmissionSchema = new Schema<ISubmission>(
       default: "Ideation PPT",
     },
     fileUrl: { type: String, default: "" },
+    fileName: { type: String, default: "" },
+    fileSize: { type: String, default: "" },
     externalLink: { type: String, default: "" },
     githubUrl: { type: String, default: "" },
     demoUrl: { type: String, default: "" },
@@ -469,9 +489,33 @@ const SubmissionSchema = new Schema<ISubmission>(
     projectDescription: { type: String, default: "" },
     status: {
       type: String,
-      enum: ["Pending Review", "Changes Requested", "Approved", "Submitted"],
+      enum: ["Pending Review", "Changes Requested", "Approved", "Submitted", "Pending Team Approval"],
       default: "Submitted",
     },
+    requiresMemberApproval: { type: Boolean, default: false },
+    memberApprovals: [
+      {
+        participant: { type: Schema.Types.ObjectId, ref: "Participant" },
+        name: { type: String, required: true },
+        email: { type: String, required: true },
+        role: { type: String, default: "Team Member" },
+        status: {
+          type: String,
+          enum: ["PENDING", "APPROVED", "CHANGES_REQUESTED"],
+          default: "PENDING",
+        },
+        comment: { type: String, default: "" },
+        updatedAt: { type: Date, default: Date.now },
+      },
+    ],
+    approvalStatus: {
+      type: String,
+      enum: ["PENDING_APPROVAL", "APPROVED", "CHANGES_REQUESTED"],
+      default: "PENDING_APPROVAL",
+    },
+    uploadedByName: { type: String, default: "" },
+    uploadedByEmail: { type: String, default: "" },
+    version: { type: Number, default: 1 },
     reviewNotes: { type: String, default: "" },
     scores: {
       problemUnderstanding: { type: Number, default: 0 },

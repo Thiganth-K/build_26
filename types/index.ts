@@ -155,17 +155,36 @@ export interface Task {
   evidenceUrl?: string;
 }
 
+export interface MemberApproval {
+  participant?: string;
+  name: string;
+  email: string;
+  role: string;
+  status: "PENDING" | "APPROVED" | "CHANGES_REQUESTED";
+  comment?: string;
+  updatedAt: string;
+}
+
 export interface Submission {
   _id: string;
   team: string | { _id: string; name: string };
   teamName: string;
   submittedByName: string;
+  day?: number;
   phase: string;
   title: string;
-  type: "Ideation PPT" | "Problem Analysis" | "Solution Proposal" | "Prototype" | "Progress Report" | "Final Demo" | "Final Presentation";
+  type: string;
   fileUrl?: string;
+  fileName?: string;
+  fileSize?: string;
   externalLink?: string;
-  status: "Pending Review" | "Changes Requested" | "Approved";
+  status: "Pending Review" | "Changes Requested" | "Approved" | "Submitted" | "Pending Team Approval";
+  requiresMemberApproval?: boolean;
+  memberApprovals?: MemberApproval[];
+  approvalStatus?: "PENDING_APPROVAL" | "APPROVED" | "CHANGES_REQUESTED";
+  uploadedByName?: string;
+  uploadedByEmail?: string;
+  version?: number;
   reviewNotes?: string;
   scores: {
     problemUnderstanding: number;
@@ -178,6 +197,7 @@ export interface Submission {
   reviewedByName?: string;
   reviewedAt?: string;
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface Feedback {

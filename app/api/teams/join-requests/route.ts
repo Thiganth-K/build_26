@@ -11,10 +11,13 @@ export async function POST(req: NextRequest) {
     }
 
     await connectToDatabase();
-    const { teamId, participantId, action } = await req.json();
+    const body = await req.json();
+    const teamId = body.teamId;
+    const targetId = body.participantId || body.requestId;
+    const action = body.action?.toUpperCase();
 
-    if (!teamId || !participantId || !action) {
-      return NextResponse.json({ error: "teamId, participantId, and action are required." }, { status: 400 });
+    if (!teamId || !targetId || !action) {
+      return NextResponse.json({ error: "teamId, participantId/requestId, and action are required." }, { status: 400 });
     }
 
     const team = await Team.findById(teamId);
@@ -26,7 +29,10 @@ export async function POST(req: NextRequest) {
     const isLeader = team.members.some(
       (m: any) =>
         m.isLeader &&
-        (m.participant?.toString() === session.participantId || m.email?.toLowerCase() === session.email.toLowerCase())
+        (m.participant?.toString() === session.participantId ||
+         m.participant?.toString() === session.id ||
+         m._id?.toString() === session.participantId ||
+         m.email?.toLowerCase() === session.email.toLowerCase())
     );
 
     if (!isLeader && session.role !== "ADMIN" && session.role !== "SUPER_ADMIN") {
@@ -34,7 +40,10 @@ export async function POST(req: NextRequest) {
     }
 
     const requestIndex = (team.joinRequests || []).findIndex(
-      (r: any) => r.participant?.toString() === participantId || r._id?.toString() === participantId
+      (r: any) =>
+        r._id?.toString() === targetId ||
+        r.participant?.toString() === targetId ||
+        r.email?.toLowerCase() === targetId.toLowerCase()
     );
 
     if (requestIndex === -1) {
@@ -53,23 +62,41 @@ export async function POST(req: NextRequest) {
         );
       }
 
-      // Add to members
-      team.members.push({
-        participant: request.participant,
-        name: request.name,
-        email: request.email,
-        role: request.requestedRole || "Developer",
-        isLeader: false,
-      });
+      // Add to members if not already listed
+      const alreadyMember = team.members.some(
+        (m: any) =>
+          (request.participant && m.participant?.toString() === request.participant.toString()) ||
+          m.email?.toLowerCase() === request.email?.toLowerCase()
+      );
+
+      if (!alreadyMember) {
+        team.members.push({
+          participant: request.participant,
+          name: request.name,
+          email: request.email,
+          role: request.requestedRole || "Developer",
+          isLeader: false,
+        });
+      }
 
       request.status = "ACCEPTED";
       await team.save();
 
       // Update participant record
-      await Participant.findByIdAndUpdate(request.participant, {
-        team: team._id,
-        roleInTeam: request.requestedRole || "Developer",
-      });
+      if (request.participant) {
+        await Participant.findByIdAndUpdate(request.participant, {
+          team: team._id,
+          roleInTeam: request.requestedRole || "Developer",
+        });
+      } else if (request.email) {
+        await Participant.findOneAndUpdate(
+          { email: request.email.toLowerCase() },
+          {
+            team: team._id,
+            roleInTeam: request.requestedRole || "Developer",
+          }
+        );
+      }
 
       await Activity.create({
         type: "PARTICIPANT_JOINED",

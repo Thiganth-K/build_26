@@ -178,14 +178,15 @@ function ParticipantTeamContent() {
         body: JSON.stringify({
           teamId: data.team._id,
           requestId,
-          action,
+          participantId: requestId,
+          action: action.toUpperCase(),
         }),
       });
       const result = await res.json();
       if (!res.ok) {
         alert(result.error || "Failed to process join request");
       }
-      loadTeamData();
+      await loadTeamData();
     } catch (err) {
       console.error("Join request processing error:", err);
     } finally {
@@ -323,12 +324,37 @@ function ParticipantTeamContent() {
   }
 
   const { team } = data;
-  const isLead = team.lead?._id === currentUser?._id || team.lead === currentUser?._id;
-  const teamLeadName = team.lead?.name || currentUser?.name || "Team Lead";
+  const leadMember = team.members?.find((m: any) => m.isLeader) || (team.lead ? {
+    participant: team.lead._id || team.lead,
+    name: team.lead.name,
+    email: team.lead.email,
+    isLeader: true,
+  } : null);
+
+  const teamLeadName = leadMember?.name || team.lead?.name || currentUser?.name || "Team Lead";
+
+  const currentUserId = (currentUser?._id || currentUser?.id || currentUser?.participantId)?.toString();
+  const currentUserEmail = currentUser?.email?.toLowerCase();
+
+  const isLead = Boolean(
+    leadMember && (
+      (currentUserId && (
+        leadMember.participant?.toString() === currentUserId ||
+        leadMember.participant?._id?.toString() === currentUserId ||
+        leadMember._id?.toString() === currentUserId
+      )) ||
+      (currentUserEmail && leadMember.email?.toLowerCase() === currentUserEmail) ||
+      (team.lead && (
+        team.lead?._id?.toString() === currentUserId ||
+        team.lead?.toString() === currentUserId
+      ))
+    )
+  );
+
   const problemTitle = team.problemStatement?.title || "Smart Campus Mobility";
   const teamSize = team.teamSize || 4;
   const members = team.members || [];
-  const joinRequests = team.joinRequests?.filter((r: any) => r.status === "Pending") || [];
+  const joinRequests = team.joinRequests?.filter((r: any) => r.status?.toUpperCase() === "PENDING") || [];
   const invitations = team.invitations || [];
 
   return (
@@ -384,9 +410,9 @@ function ParticipantTeamContent() {
                     : "bg-surface border border-border text-secondary hover:text-[#111111]"
                 }`}
               >
-                [ INVITATIONS ]
+                [ INVITATIONS & REQUESTS ]
                 {joinRequests.length > 0 && (
-                  <span className="ml-1 px-1.5 py-0.2 bg-rose-500 text-white rounded-full text-[9px] font-bold">
+                  <span className="ml-1 px-1.5 py-0.5 bg-rose-500 text-white rounded-full text-[9px] font-bold animate-pulse">
                     {joinRequests.length}
                   </span>
                 )}
@@ -497,6 +523,63 @@ function ParticipantTeamContent() {
             </Button>
           </div>
 
+          {/* Day 1 Deliverable Status Card */}
+          {(() => {
+            const day1Sub = (data.submissions || []).find((s: any) => s.day === 1);
+            const approvals = day1Sub?.memberApprovals || [];
+            const approvedCount = approvals.filter((a: any) => a.status === "APPROVED").length;
+            const totalMembers = approvals.length || team.members?.length || 1;
+            const isApproved = day1Sub && (day1Sub.status === "Submitted" || day1Sub.approvalStatus === "APPROVED");
+
+            return (
+              <div className="p-4 sm:p-5 rounded-xl border border-border bg-surface flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
+                <div className="flex items-start sm:items-center gap-3">
+                  <div
+                    className={`h-10 w-10 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 ${
+                      isApproved
+                        ? "bg-emerald-100 text-emerald-800"
+                        : day1Sub
+                        ? "bg-amber-100 text-amber-900"
+                        : "bg-surface-subtle text-secondary"
+                    }`}
+                  >
+                    {isApproved ? "✓" : "📊"}
+                  </div>
+                  <div className="space-y-0.5">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-[10px] font-mono-num font-bold text-accent uppercase tracking-wider">
+                        DAY 01 DELIVERABLE
+                      </span>
+                      {isApproved ? (
+                        <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.2 rounded border border-emerald-200">
+                          100% Team Approved
+                        </span>
+                      ) : day1Sub ? (
+                        <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.2 rounded border border-amber-200">
+                          Pending Approval ({approvedCount}/{totalMembers})
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold text-secondary bg-surface-subtle px-2 py-0.2 rounded border border-border">
+                          Not Uploaded Yet
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-xs font-bold text-[#111111]">
+                      {day1Sub?.title || "Solution Ideation PPT (Collaborative Sign-Off)"}
+                    </div>
+                  </div>
+                </div>
+
+                <Link
+                  href="/participant/milestones?day=1"
+                  className="self-start sm:self-auto px-4 py-2 rounded-xl bg-[#111111] hover:bg-black text-white text-xs font-bold transition-all shadow-2xs whitespace-nowrap"
+                >
+                  {day1Sub ? "[ REVIEW PPT & VOTES ]" : "[ UPLOAD DAY 1 PPT ]"}
+                </Link>
+              </div>
+            );
+          })()}
+
           {/* Section 15: 6-DAY JOURNEY INDICATOR (Derived from real submissions, Section 17) */}
           <div className="p-5 rounded-xl border border-border bg-surface shadow-2xs space-y-3">
             <div className="text-[11px] font-bold uppercase tracking-wider text-secondary text-center">
@@ -563,7 +646,14 @@ function ParticipantTeamContent() {
 
             <div className="divide-y divide-border/70 rounded-xl border border-border bg-surface shadow-2xs">
               {members.map((member: any) => {
-                const memberIsLead = member.isLead || member._id === team.lead?._id || member.id === team.lead?._id || member.name === teamLeadName;
+                const memberIsLead = Boolean(
+                  member.isLeader ||
+                  member.isLead ||
+                  member._id === team.lead?._id ||
+                  member.id === team.lead?._id ||
+                  (leadMember && (member.email?.toLowerCase() === leadMember.email?.toLowerCase() || member.name === leadMember.name)) ||
+                  member.name === teamLeadName
+                );
                 return (
                   <div key={member.id || member._id || member.email} className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="space-y-1">
@@ -635,40 +725,59 @@ function ParticipantTeamContent() {
         {/* Section 13: Join Requests & Section 08/09: Invitations */}
         {activeTab === "invitations" && (
           <section className="space-y-6">
-            {/* Section 13: Team Join Requests (Team Lead view) */}
-            {isLead && (
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-1 border-b border-border">
+            {/* Section 13: Team Join Requests */}
+            <div className="space-y-3">
+              <div className="flex items-center justify-between pb-1 border-b border-border">
+                <div className="flex items-center gap-2">
                   <h3 className="text-sm font-bold text-[#111111] uppercase tracking-wide">
                     TEAM JOIN REQUESTS
                   </h3>
-                  <span className="text-xs text-secondary font-mono-num">
-                    {joinRequests.length} Pending
-                  </span>
+                  {isLead ? (
+                    <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                      Team Lead Action
+                    </span>
+                  ) : (
+                    <span className="text-[10px] font-bold text-secondary bg-surface-subtle px-2 py-0.5 rounded border border-border">
+                      Lead Approval Required
+                    </span>
+                  )}
                 </div>
+                <span className="text-xs text-secondary font-mono-num">
+                  {joinRequests.length} Pending
+                </span>
+              </div>
 
-                {joinRequests.length === 0 ? (
-                  <div className="p-6 rounded-xl border border-dashed border-border bg-surface text-center text-xs text-secondary">
-                    No pending join requests right now.
-                  </div>
-                ) : (
-                  <div className="space-y-3">
-                    {joinRequests.map((req: any) => (
-                      <div
-                        key={req._id}
-                        className="p-4 rounded-xl border border-border bg-surface flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs"
-                      >
-                        <div className="space-y-1">
-                          <div className="font-bold text-sm text-[#111111] flex items-center gap-2">
-                            <span>👤</span>
-                            <span>{req.name}</span>
-                          </div>
-                          <div className="text-xs text-secondary">Email: {req.email}</div>
-                          <div className="text-xs font-semibold text-accent">
-                            Requested Role: {req.requestedRole}
-                          </div>
+              {joinRequests.length === 0 ? (
+                <div className="p-6 rounded-xl border border-dashed border-border bg-surface text-center text-xs text-secondary">
+                  No pending join requests right now.
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {joinRequests.map((req: any) => (
+                    <div
+                      key={req._id}
+                      className="p-4 rounded-xl border-2 border-amber-200/80 bg-amber-50/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs"
+                    >
+                      <div className="space-y-1">
+                        <div className="font-bold text-sm text-[#111111] flex items-center gap-2">
+                          <span>👤</span>
+                          <span>{req.name}</span>
+                          <span className="text-[10px] px-2 py-0.5 bg-amber-100 text-amber-800 rounded-full font-bold">
+                            PENDING APPROVAL
+                          </span>
                         </div>
+                        <div className="text-xs text-secondary">Email: {req.email}</div>
+                        <div className="text-xs font-semibold text-accent">
+                          Requested Role: {req.requestedRole}
+                        </div>
+                        {req.requestedAt && (
+                          <div className="text-[10px] text-secondary">
+                            Requested on: {new Date(req.requestedAt).toLocaleDateString()} {new Date(req.requestedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                          </div>
+                        )}
+                      </div>
 
+                      {isLead ? (
                         <div className="flex items-center gap-2">
                           <Button
                             variant="primary"
@@ -691,12 +800,16 @@ function ParticipantTeamContent() {
                             <span>[ REJECT ]</span>
                           </Button>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+                      ) : (
+                        <div className="text-xs text-secondary italic">
+                          Awaiting Team Lead approval
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Section 08 & 09: Invite Through Email */}
             <div className="p-6 rounded-xl border border-border bg-surface shadow-2xs space-y-4">
@@ -903,24 +1016,31 @@ function ParticipantTeamContent() {
               </div>
               <div className="space-y-2">
                 {members
-                  .filter((m: any) => m._id !== team.lead?._id && m.id !== team.lead?._id && m.name !== teamLeadName)
-                  .map((m: any) => (
-                    <label
-                      key={m.id || m._id || m.email}
-                      className="flex items-center gap-3 p-3 rounded-xl border border-border hover:bg-surface-subtle cursor-pointer transition-all"
-                    >
-                      <input
-                        type="radio"
-                        name="newLead"
-                        value={m.id || m._id}
-                        checked={selectedNewLead === (m.id || m._id)}
-                        onChange={(e) => setSelectedNewLead(e.target.value)}
-                        className="text-black focus:ring-black"
-                      />
-                      <div className="text-xs font-bold text-[#111111]">{m.name}</div>
-                      <span className="text-[11px] text-secondary">({m.role})</span>
-                    </label>
-                  ))}
+                  .filter((m: any) =>
+                    !m.isLeader &&
+                    m.name !== teamLeadName &&
+                    (leadMember ? m.email?.toLowerCase() !== leadMember.email?.toLowerCase() : true)
+                  )
+                  .map((m: any) => {
+                    const leadVal = m.participant?.toString() || m._id?.toString() || m.id || m.email;
+                    return (
+                      <label
+                        key={m.id || m._id || m.email}
+                        className="flex items-center gap-3 p-3 rounded-xl border border-border hover:bg-surface-subtle cursor-pointer transition-all"
+                      >
+                        <input
+                          type="radio"
+                          name="newLead"
+                          value={leadVal}
+                          checked={selectedNewLead === leadVal}
+                          onChange={(e) => setSelectedNewLead(e.target.value)}
+                          className="text-black focus:ring-black"
+                        />
+                        <div className="text-xs font-bold text-[#111111]">{m.name}</div>
+                        <span className="text-[11px] text-secondary">({m.role})</span>
+                      </label>
+                    );
+                  })}
               </div>
             </div>
 

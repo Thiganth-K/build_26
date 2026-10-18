@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Day1PptApprovalHub } from "@/components/participant/Day1PptApprovalHub";
 
 function MilestonesContent() {
   const searchParams = useSearchParams();
@@ -316,100 +317,130 @@ function MilestonesContent() {
           {/* Day 1: TEAM + IDEATION (Section 23) */}
           {selectedDay === 1 && (
             <div className="space-y-6 animate-in fade-in-50">
-              <div className="pb-4 border-b border-border flex items-center justify-between">
+              <div className="pb-4 border-b border-border flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <span className="text-[10px] font-mono-num font-bold text-accent uppercase tracking-widest">
-                    SECTION 23
+                    SECTION 23 — SPRINT GATEWAY
                   </span>
                   <h2 className="text-xl font-black text-[#111111] tracking-tight">
                     DAY 01 — TEAM + IDEATION
                   </h2>
                 </div>
-                <Badge variant={submittedDays.has(1) ? "success" : "secondary"}>
-                  {submittedDays.has(1) ? "✓ Submitted" : "Open for Submission"}
-                </Badge>
+                <div className="flex items-center gap-2">
+                  {submissions.find((s) => s.day === 1)?.status === "Submitted" ? (
+                    <Badge variant="success">✓ Submitted to Mentors</Badge>
+                  ) : submissions.find((s) => s.day === 1)?.approvalStatus === "CHANGES_REQUESTED" ? (
+                    <Badge variant="secondary" className="border-rose-300 text-rose-700 bg-rose-50">
+                      Revisions Requested
+                    </Badge>
+                  ) : submissions.find((s) => s.day === 1)?.status === "Pending Team Approval" ? (
+                    <Badge variant="accent">Waiting for Team Sign-Off</Badge>
+                  ) : (
+                    <Badge variant="secondary">Open for Submission</Badge>
+                  )}
+                </div>
               </div>
+
+              {/* Problem statement status alert */}
+              {!team?.problemStatement && (
+                <div className="p-4 rounded-xl border border-amber-300 bg-amber-50 text-xs text-amber-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">🎯</span>
+                    <span>
+                      <strong>Problem Challenge Not Selected:</strong> Your squad should lock in an official problem statement to align your PPT ideation deck.
+                    </span>
+                  </div>
+                  <Link
+                    href="/participant/problem"
+                    className="px-3 py-1.5 rounded-lg bg-[#111111] text-white font-bold text-[11px] whitespace-nowrap self-start sm:self-auto"
+                  >
+                    Select Challenge →
+                  </Link>
+                </div>
+              )}
 
               <div className="space-y-2">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
                   OBJECTIVE
                 </div>
                 <p className="text-xs text-secondary leading-relaxed bg-surface-subtle p-3.5 rounded-xl border border-border">
-                  Form your team, assign responsibilities, select a problem statement, and submit your initial solution idea.
+                  Form your squad, allocate multidisciplinary engineering roles, claim your problem statement challenge, and prepare &amp; submit your Solution Ideation PPT with 100% team member consensus.
                 </p>
               </div>
 
+              {/* Dynamic Checklist */}
               <div className="space-y-2">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
-                  CHECKLIST
+                  CHECKLIST PROGRESS
                 </div>
-                <div className="space-y-2 text-xs">
-                  <div className="flex items-center gap-2 text-emerald-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                    <span>✓ Create team</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div className="flex items-center gap-2 text-emerald-800 bg-emerald-50/50 p-2 rounded-lg border border-emerald-100">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Create team roster</span>
                   </div>
-                  <div className="flex items-center gap-2 text-emerald-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                    <span>✓ Complete team membership</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${
+                    (team?.members?.length || 0) >= (team?.teamSize || 3)
+                      ? "text-emerald-800 bg-emerald-50/50 border-emerald-100"
+                      : "text-secondary bg-surface-subtle border-border"
+                  }`}>
+                    {(team?.members?.length || 0) >= (team?.teamSize || 3) ? (
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    ) : (
+                      <span className="text-secondary font-mono">○</span>
+                    )}
+                    <span>Complete team membership ({team?.members?.length || 1}/{team?.teamSize || 4})</span>
                   </div>
-                  <div className="flex items-center gap-2 text-emerald-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                    <span>✓ Assign roles</span>
+                  <div className="flex items-center gap-2 text-emerald-800 bg-emerald-50/50 p-2 rounded-lg border border-emerald-100">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Assign engineering roles</span>
                   </div>
-                  <div className="flex items-center gap-2 text-emerald-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                    <span>✓ Select problem statement</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${
+                    team?.problemStatement
+                      ? "text-emerald-800 bg-emerald-50/50 border-emerald-100"
+                      : "text-secondary bg-surface-subtle border-border"
+                  }`}>
+                    {team?.problemStatement ? (
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    ) : (
+                      <span className="text-secondary font-mono">○</span>
+                    )}
+                    <span>Select problem challenge</span>
                   </div>
-                  <div className="flex items-center gap-2 text-secondary">
-                    <span>○</span>
-                    <span>Prepare solution ideation</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${
+                    submissions.some((s) => s.day === 1)
+                      ? "text-emerald-800 bg-emerald-50/50 border-emerald-100"
+                      : "text-secondary bg-surface-subtle border-border"
+                  }`}>
+                    {submissions.some((s) => s.day === 1) ? (
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    ) : (
+                      <span className="text-secondary font-mono">○</span>
+                    )}
+                    <span>Prepare Solution Ideation deck</span>
                   </div>
-                  <div className="flex items-center gap-2 text-secondary">
-                    <span>○</span>
-                    <span>Prepare presentation</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-secondary">
-                    <span>○</span>
-                    <span>Submit presentation</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${
+                    submissions.find((s) => s.day === 1)?.status === "Submitted"
+                      ? "text-emerald-800 bg-emerald-50/50 border-emerald-100"
+                      : "text-secondary bg-surface-subtle border-border"
+                  }`}>
+                    {submissions.find((s) => s.day === 1)?.status === "Submitted" ? (
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    ) : (
+                      <span className="text-secondary font-mono">○</span>
+                    )}
+                    <span>All team members approve PPT</span>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-3 pt-2">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-secondary">
-                  REQUIRED SUBMISSION: PPT — Solution Ideation
-                </div>
-
-                <div className="p-6 rounded-xl border-2 border-dashed border-border bg-surface-subtle/50 text-center space-y-2">
-                  <UploadCloud className="h-8 w-8 text-accent mx-auto" />
-                  <div className="font-bold text-xs text-[#111111]">📎 UPLOAD PPT</div>
-                  <div className="text-[11px] text-secondary">Drag & drop or browse</div>
-                  <input
-                    type="text"
-                    value={day1FileName}
-                    onChange={(e) => setDay1FileName(e.target.value)}
-                    placeholder="solution_ideation.pptx"
-                    className="max-w-xs mx-auto h-8 px-3 rounded border border-border bg-surface text-xs text-center font-mono"
-                  />
-                </div>
-
-                <div className="flex justify-end pt-2">
-                  <Button
-                    variant="primary"
-                    size="md"
-                    disabled={submitting}
-                    onClick={() =>
-                      handleSubmitDay(1, {
-                        title: "PPT — Solution Ideation",
-                        fileUrl: day1FileName,
-                        type: "Presentation",
-                      })
-                    }
-                    className="font-bold text-xs"
-                  >
-                    {submitting ? "Submitting..." : "[ SUBMIT DAY 1 ]"}
-                  </Button>
-                </div>
+              {/* Day 1 PPT Upload & Team Approval Hub */}
+              <div className="pt-2">
+                <Day1PptApprovalHub
+                  team={team}
+                  currentUser={currentUser}
+                  submission={submissions.find((s) => s.day === 1)}
+                  onRefresh={fetchMilestoneState}
+                />
               </div>
             </div>
           )}

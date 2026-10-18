@@ -32,6 +32,19 @@ export async function GET(
       return NextResponse.json({ error: "Team not found" }, { status: 404 });
     }
 
+    const leadMember = (team.members as any[])?.find((m: any) => m.isLeader) || (team.members as any[])?.[0];
+    const teamWithLead = {
+      ...team,
+      lead: leadMember
+        ? {
+            _id: leadMember.participant?.toString() || leadMember._id?.toString(),
+            name: leadMember.name,
+            email: leadMember.email,
+            role: leadMember.role,
+          }
+        : null,
+    };
+
     const [workLogs, tasks, submissions, feedback, evaluation] = await Promise.all([
       WorkLog.find({ team: teamId }).sort({ date: -1 }).limit(20).lean(),
       Task.find({ team: teamId }).sort({ createdAt: -1 }).lean(),
@@ -41,7 +54,7 @@ export async function GET(
     ]);
 
     return NextResponse.json({
-      team,
+      team: teamWithLead,
       workLogs,
       tasks,
       submissions,

@@ -257,9 +257,67 @@ function SubmissionsContent() {
 
               {activeModalSub.fileUrl && (
                 <div>
-                  <span className="text-secondary text-[10px] uppercase font-bold">Uploaded File</span>
-                  <div className="font-mono text-xs text-accent mt-0.5 p-2 rounded bg-surface-subtle border border-border">
-                    {activeModalSub.fileUrl}
+                  <span className="text-secondary text-[10px] uppercase font-bold">Presentation File</span>
+                  <div className="flex items-center justify-between gap-2 mt-0.5 p-2.5 rounded-lg bg-surface-subtle border border-border">
+                    <span className="font-mono text-xs text-[#111111] truncate">
+                      {activeModalSub.fileName || activeModalSub.fileUrl}
+                    </span>
+                    <a
+                      href={activeModalSub.fileUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded bg-[#111111] text-white text-[11px] font-bold hover:bg-black transition-all shrink-0 inline-flex items-center gap-1"
+                    >
+                      <span>Open Deck</span>
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+              )}
+
+              {/* Day 1 Team Member Approvals Audit */}
+              {activeModalSub.memberApprovals && activeModalSub.memberApprovals.length > 0 && (
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-secondary text-[10px] uppercase font-bold">
+                      Team Consensus &amp; Member Sign-Off
+                    </span>
+                    <span className="text-[10px] font-mono-num font-bold text-accent">
+                      {activeModalSub.memberApprovals.filter((a: any) => a.status === "APPROVED").length} of {activeModalSub.memberApprovals.length} Approved
+                    </span>
+                  </div>
+
+                  <div className="space-y-1.5 max-h-48 overflow-y-auto">
+                    {activeModalSub.memberApprovals.map((m: any, idx: number) => (
+                      <div
+                        key={idx}
+                        className="p-2.5 rounded-lg border border-border bg-surface-subtle flex items-center justify-between text-xs"
+                      >
+                        <div>
+                          <div className="font-bold text-[#111111]">{m.name}</div>
+                          <div className="text-[10px] text-secondary font-medium">{m.role || "Team Member"}</div>
+                          {m.comment && (
+                            <div className="text-[10px] text-secondary italic mt-0.5">&ldquo;{m.comment}&rdquo;</div>
+                          )}
+                        </div>
+
+                        <div>
+                          {m.status === "APPROVED" ? (
+                            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                              ✓ Approved
+                            </span>
+                          ) : m.status === "CHANGES_REQUESTED" ? (
+                            <span className="text-[10px] font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">
+                              ⚠ Changes Requested
+                            </span>
+                          ) : (
+                            <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                              ⏳ Pending
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}

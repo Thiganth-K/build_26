@@ -35,6 +35,17 @@ export async function GET(req: NextRequest) {
           teamData = await Team.findById(p.team._id || p.team)
             .populate("problemStatement", "title category description")
             .lean();
+          if (teamData) {
+            const leadMember = (teamData.members as any[])?.find((m: any) => m.isLeader) || (teamData.members as any[])?.[0];
+            (teamData as any).lead = leadMember
+              ? {
+                  _id: leadMember.participant?.toString() || leadMember._id?.toString(),
+                  name: leadMember.name,
+                  email: leadMember.email,
+                  role: leadMember.role,
+                }
+              : null;
+          }
         } else {
           session.teamId = undefined;
         }

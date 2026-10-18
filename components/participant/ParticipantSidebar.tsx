@@ -47,12 +47,30 @@ export function ParticipantSidebar({
       .then((r) => r.json())
       .then((data) => {
         if (data.user) {
+          const team = data.team;
+          const leadMember = team?.members?.find((m: any) => m.isLeader);
+          const currentUserId = (data.participant?._id || data.user?.participantId || data.user?.id || data.user?._id)?.toString();
+          const currentUserEmail = (data.user?.email || data.participant?.email)?.toLowerCase();
+
+          const isLead = Boolean(
+            team && (
+              (currentUserId && (
+                team.lead?._id?.toString() === currentUserId ||
+                team.lead?.toString() === currentUserId ||
+                leadMember?.participant?.toString() === currentUserId ||
+                leadMember?.participant?._id?.toString() === currentUserId ||
+                leadMember?._id?.toString() === currentUserId
+              )) ||
+              (currentUserEmail && leadMember?.email?.toLowerCase() === currentUserEmail)
+            )
+          );
+
           setProfile({
             name: data.participant?.name || data.user.name,
             teamName: data.team?.name || (data.hasTeam ? "My Team" : "No Team"),
             teamCode: data.team?.code || (data.hasTeam ? "B26-X7K9" : "NO TEAM"),
-            role: data.participant?.roleInTeam || "Full Stack Developer",
-            isTeamLead: data.team?.lead?.toString() === (data.participant?._id || data.user?._id),
+            role: data.participant?.roleInTeam || (isLead ? "Team Lead" : "Full Stack Developer"),
+            isTeamLead: isLead,
             hasTeam: data.hasTeam,
           });
         }

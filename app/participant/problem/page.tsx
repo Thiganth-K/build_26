@@ -53,17 +53,20 @@ export default function ProblemStatementsPage() {
     fetchData();
   }, [fetchData]);
 
-  const isLead =
+  const isLead = Boolean(
     currentTeam &&
     (currentTeam.lead?._id === currentUser?._id ||
       currentTeam.lead === currentUser?._id ||
       currentTeam.members?.some(
         (m: any) =>
           m.isLeader &&
-          (m.participant?._id === currentUser?._id ||
+          (m.participant?._id?.toString() === currentUser?._id?.toString() ||
+            m.participant?.toString() === (currentUser?._id || currentUser?.id)?.toString() ||
             m.participant === currentUser?._id ||
+            m.email?.toLowerCase() === currentUser?.email?.toLowerCase() ||
             m.name === currentUser?.name)
-      ));
+      ))
+  );
 
   const handleSelectProblem = async (problemId: string) => {
     if (!currentTeam) {

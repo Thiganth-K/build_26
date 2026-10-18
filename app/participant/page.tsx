@@ -109,10 +109,36 @@ export default function ParticipantDashboardPage() {
   }
 
   const { team } = data;
-  const teamLeadName = team.lead?.name || userProfile?.name || "Team Lead";
+  const leadMember = team.members?.find((m: any) => m.isLeader) || (team.lead ? {
+    participant: team.lead._id || team.lead,
+    name: team.lead.name,
+    email: team.lead.email,
+    isLeader: true,
+  } : null);
+
+  const teamLeadName = leadMember?.name || team.lead?.name || userProfile?.name || "Team Lead";
   const teamSize = team.teamSize || 4;
   const currentMemberCount = team.members?.length || 1;
-  const isLead = team.lead?._id === userProfile?._id || team.lead === userProfile?._id;
+
+  const currentUserId = (userProfile?._id || userProfile?.id || userProfile?.participantId)?.toString();
+  const currentUserEmail = userProfile?.email?.toLowerCase();
+
+  const isLead = Boolean(
+    leadMember && (
+      (currentUserId && (
+        leadMember.participant?.toString() === currentUserId ||
+        leadMember.participant?._id?.toString() === currentUserId ||
+        leadMember._id?.toString() === currentUserId
+      )) ||
+      (currentUserEmail && leadMember.email?.toLowerCase() === currentUserEmail) ||
+      (team.lead && (
+        team.lead?._id?.toString() === currentUserId ||
+        team.lead?.toString() === currentUserId
+      ))
+    )
+  );
+
+  const joinRequests = team.joinRequests?.filter((r: any) => r.status?.toUpperCase() === "PENDING") || [];
   const currentMilestoneDay = team.currentMilestoneDay || 1;
   const submissions = data.submissions || [];
 
@@ -159,6 +185,156 @@ export default function ParticipantDashboardPage() {
               Review your team details, problem challenge, and active milestone.
             </p>
           </div>
+
+          {/* Pending Join Requests Alert for Team Lead */}
+          {joinRequests.length > 0 && isLead && (
+            <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in duration-300">
+              <div className="flex items-start sm:items-center gap-3.5">
+                <div className="h-10 w-10 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center font-bold text-lg shrink-0">
+                  🔔
+                </div>
+                <div>
+                  <div className="text-xs font-black text-amber-950 uppercase tracking-wide flex items-center gap-2">
+                    <span>{joinRequests.length} Pending Team Join Request{joinRequests.length > 1 ? "s" : ""}</span>
+                    <span className="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold">Action Needed</span>
+                  </div>
+                  <div className="text-xs text-amber-800 mt-0.5">
+                    {joinRequests.map((r: any) => `${r.name} (${r.requestedRole})`).join(", ")} requested to join your team.
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/participant/team?tab=invitations"
+                className="self-start sm:self-auto px-4 py-2 rounded-xl bg-[#111111] hover:bg-black text-white text-xs font-bold transition-all shadow-sm whitespace-nowrap"
+              >
+                [ REVIEW & APPROVE ]
+              </Link>
+            </div>
+          )}
+
+          {/* Day 1 PPT Approval Banner */}
+          {(() => {
+            const day1Sub = submissions.find((s: any) => s.day === 1);
+            if (!day1Sub) {
+              return (
+                <div className="rounded-2xl border-2 border-border bg-surface p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+                  <div className="flex items-start sm:items-center gap-3.5">
+                    <div className="h-10 w-10 rounded-full bg-accent/10 text-accent flex items-center justify-center font-bold text-lg shrink-0">
+                      🚀
+                    </div>
+                    <div>
+                      <div className="text-xs font-black text-[#111111] uppercase tracking-wide flex items-center gap-2">
+                        <span>Day 01 Milestone: Solution Ideation PPT</span>
+                        <span className="px-2 py-0.5 rounded-full bg-accent/10 text-accent text-[10px] font-bold">Upload Open</span>
+                      </div>
+                      <div className="text-xs text-secondary mt-0.5">
+                        Upload your squad&apos;s Solution Ideation slide deck with team member approval.
+                      </div>
+                    </div>
+                  </div>
+                  <Link
+                    href="/participant/milestones?day=1"
+                    className="self-start sm:self-auto px-4 py-2 rounded-xl bg-[#111111] hover:bg-black text-white text-xs font-bold transition-all shadow-sm whitespace-nowrap"
+                  >
+                    [ UPLOAD PPT ]
+                  </Link>
+                </div>
+              );
+            }
+
+            const approvals = day1Sub.memberApprovals || [];
+            const userApproval = approvals.find(
+              (a: any) =>
+                (currentUserEmail && a.email?.toLowerCase() === currentUserEmail) ||
+                (currentUserId && a.participant?.toString() === currentUserId) ||
+                a.name?.toLowerCase() === userProfile?.name?.toLowerCase()
+            );
+
+            const isPendingUserVote = userApproval && userApproval.status === "PENDING";
+            const approvedCount = approvals.filter((a: any) => a.status === "APPROVED").length;
+            const totalMembers = approvals.length || team.members?.length || 1;
+
+            if (day1Sub.status === "Submitted" || day1Sub.approvalStatus === "APPROVED") {
+              return (
+                <div className="rounded-2xl border-2 border-emerald-300 bg-emerald-50/70 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+                  <div className="flex items-start sm:items-center gap-3.5">
+                    <div className="h-10 w-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-lg shrink-0">
+                      ✓
+                    </div>
+                    <div>
+                      <div className="text-xs font-black text-emerald-950 uppercase tracking-wide flex items-center gap-2">
+                        <span>Day 01 PPT Submitted with 100% Team Approval</span>
+                        <span className="px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-bold">Consensus Locked</span>
+                      </div>
+                      <div className="text-xs text-emerald-800 mt-0.5">
+                        &ldquo;{day1Sub.title}&rdquo; is currently in the bootcamp evaluator review queue.
+                      </div>
+                    </div>
+                  </div>
+                  <Link
+                    href="/participant/milestones?day=1"
+                    className="self-start sm:self-auto px-4 py-2 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold transition-all shadow-sm whitespace-nowrap"
+                  >
+                    [ VIEW PPT &amp; VOTES ]
+                  </Link>
+                </div>
+              );
+            }
+
+            if (isPendingUserVote) {
+              return (
+                <div className="rounded-2xl border-2 border-amber-400 bg-amber-50 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+                  <div className="flex items-start sm:items-center gap-3.5">
+                    <div className="h-10 w-10 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center font-bold text-lg shrink-0">
+                      🗳️
+                    </div>
+                    <div>
+                      <div className="text-xs font-black text-amber-950 uppercase tracking-wide flex items-center gap-2">
+                        <span>Day 01 PPT Awaiting Your Sign-Off!</span>
+                        <span className="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold animate-pulse">Vote Required</span>
+                      </div>
+                      <div className="text-xs text-amber-900 mt-0.5">
+                        {day1Sub.uploadedByName || "A teammate"} uploaded &ldquo;{day1Sub.title}&rdquo;. {approvedCount} of {totalMembers} members approved so far.
+                      </div>
+                    </div>
+                  </div>
+                  <Link
+                    href="/participant/milestones?day=1"
+                    className="self-start sm:self-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm whitespace-nowrap"
+                  >
+                    [ REVIEW &amp; APPROVE PPT ]
+                  </Link>
+                </div>
+              );
+            }
+
+            return (
+              <div className="rounded-2xl border-2 border-border bg-surface p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+                <div className="flex items-start sm:items-center gap-3.5">
+                  <div className="h-10 w-10 rounded-full bg-surface-subtle text-[#111111] flex items-center justify-center font-bold text-lg shrink-0">
+                    ⏳
+                  </div>
+                  <div>
+                    <div className="text-xs font-black text-[#111111] uppercase tracking-wide flex items-center gap-2">
+                      <span>Day 01 PPT Staged — Waiting for Team Consensus</span>
+                      <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold">
+                        {approvedCount}/{totalMembers} Approved
+                      </span>
+                    </div>
+                    <div className="text-xs text-secondary mt-0.5">
+                      Waiting for remaining squad members to vote before submitting to evaluators.
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  href="/participant/milestones?day=1"
+                  className="self-start sm:self-auto px-4 py-2 rounded-xl bg-[#111111] hover:bg-black text-white text-xs font-bold transition-all shadow-sm whitespace-nowrap"
+                >
+                  [ VIEW STATUS ]
+                </Link>
+              </div>
+            );
+          })()}
 
           {/* Section 05 Master Card */}
           <div className="rounded-2xl border-2 border-border bg-surface p-7 shadow-soft hover:border-black/20 transition-all">
