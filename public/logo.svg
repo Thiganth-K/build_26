@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120" fill="none">
+  <!-- Core Symbol: Two Bold Slanted Slashes // -->
+  <g transform="translate(10, 10)">
+    <polygon points="25,95 50,5 72,5 47,95" fill="#111111" />
+    <polygon points="55,95 80,5 102,5 77,95" fill="#111111" />
+  </g>
+  <!-- Text: BUILD//26 -->
+  <text x="125" y="78" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="68" fill="#111111" letter-spacing="-2">BUILD<tspan fill="#4E56E8">//</tspan>26</text>
+</svg>

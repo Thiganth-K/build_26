@@ -116,14 +116,14 @@ export function Day1PptApprovalHub({
   });
 
   const totalMembers = consolidatedMembers.length || 1;
-  const approvedCount = consolidatedMembers.filter((m) => m.status === "APPROVED").length;
+  const approvedCount = consolidatedMembers.filter((m: any) => m.status === "APPROVED").length;
   const changesRequestedCount = consolidatedMembers.filter(
-    (m) => m.status === "CHANGES_REQUESTED"
+    (m: any) => m.status === "CHANGES_REQUESTED"
   ).length;
   const pendingCount = totalMembers - approvedCount - changesRequestedCount;
   const approvalPercent = Math.round((approvedCount / totalMembers) * 100);
 
-  const currentUserMember = consolidatedMembers.find((m) => m.isCurrentUser);
+  const currentUserMember = consolidatedMembers.find((m: any) => m.isCurrentUser);
   const currentUserStatus = currentUserMember?.status || "PENDING";
 
   const isFullyApproved =
@@ -584,7 +584,7 @@ export function Day1PptApprovalHub({
               </span>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {consolidatedMembers.map((member) => {
+                {consolidatedMembers.map((member: any) => {
                   const isApproved = member.status === "APPROVED";
                   const isChanges = member.status === "CHANGES_REQUESTED";
 

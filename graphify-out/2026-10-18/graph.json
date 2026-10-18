@@ -21,97 +21,6 @@
   },
   "nodes": [
     {
-      "id": "components_admin_activityfeed_activityfeedprops",
-      "label": "ActivityFeedProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "activityfeedprops",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "components_admin_adminheader_adminheaderprops",
-      "label": "AdminHeaderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminheaderprops",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "components_admin_adminsidebar_adminsidebarprops",
-      "label": "AdminSidebarProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminsidebarprops",
-      "source_file": "components/admin/AdminSidebar.tsx",
-      "source_location": "L24"
-    },
-    {
-      "id": "components_admin_bootcampphasetimeline_phasetimelineprops",
-      "label": "PhaseTimelineProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "phasetimelineprops",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "components_admin_deadlinepanel_deadlinepanelprops",
-      "label": "DeadlinePanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "deadlinepanelprops",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "components_admin_globalsearch_globalsearchprops",
-      "label": "GlobalSearchProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "globalsearchprops",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "components_admin_kpicard_kpicardprops",
-      "label": "KpiCardProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "kpicardprops",
-      "source_file": "components/admin/KpiCard.tsx",
-      "source_location": "L5"
-    },
-    {
       "id": "components_admin_quickactionmodal_quickactionmodalprops",
       "label": "QuickActionModalProps",
       "_callable": true,
@@ -123,136 +32,6 @@
       "norm_label": "quickactionmodalprops",
       "source_file": "components/admin/QuickActionModal.tsx",
       "source_location": "L7"
-    },
-    {
-      "id": "components_admin_teamtable_teamtableprops",
-      "label": "TeamTableProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamtableprops",
-      "source_file": "components/admin/TeamTable.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "components_participant_day1pptapprovalhub_day1pptapprovalhubprops",
-      "label": "Day1PptApprovalHubProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "day1pptapprovalhubprops",
-      "source_file": "components/participant/Day1PptApprovalHub.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "components_participant_participantheader_participantheaderprops",
-      "label": "ParticipantHeaderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantheaderprops",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L18"
-    },
-    {
-      "id": "components_participant_participantsidebar_participantsidebarprops",
-      "label": "ParticipantSidebarProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantsidebarprops",
-      "source_file": "components/participant/ParticipantSidebar.tsx",
-      "source_location": "L27"
-    },
-    {
-      "id": "components_participant_submissionmodal_submissionmodalprops",
-      "label": "SubmissionModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionmodalprops",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "components_participant_teamonboardingview_teamonboardingviewprops",
-      "label": "TeamOnboardingViewProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamonboardingviewprops",
-      "source_file": "components/participant/TeamOnboardingView.tsx",
-      "source_location": "L41"
-    },
-    {
-      "id": "components_participant_worklogmodal_worklogmodalprops",
-      "label": "WorkLogModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "worklogmodalprops",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "components_ui_avatar_avatarprops",
-      "label": "AvatarProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "avatarprops",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "components_ui_badge_badgeprops",
-      "label": "BadgeProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "badgeprops",
-      "source_file": "components/ui/badge.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "components_ui_button_buttonprops",
-      "label": "ButtonProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "buttonprops",
-      "source_file": "components/ui/button.tsx",
-      "source_location": "L4"
     },
     {
       "id": "components_ui_empty_state_emptystateprops",
@@ -268,32 +47,6 @@
       "source_location": "L5"
     },
     {
-      "id": "components_ui_modal_modalprops",
-      "label": "ModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "modalprops",
-      "source_file": "components/ui/modal.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "components_ui_progress_progressprops",
-      "label": "ProgressProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progressprops",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator",
       "label": "DesignSystemGenerator",
       "_callable": true,
@@ -305,6 +58,71 @@
       "norm_label": "designsystemgenerator",
       "source_file": ".agent/skills/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L37"
+    },
+    {
+      "id": "types_index_submission",
+      "label": "Submission",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "code",
+      "norm_label": "submission",
+      "source_file": "types/index.ts",
+      "source_location": "L168"
+    },
+    {
+      "id": "components_participant_submissionmodal_submissionmodalprops",
+      "label": "SubmissionModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodalprops",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "components_participant_worklogmodal_worklogmodalprops",
+      "label": "WorkLogModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "worklogmodalprops",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "components_ui_button_buttonprops",
+      "label": "ButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "buttonprops",
+      "source_file": "components/ui/button.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_ui_modal_modalprops",
+      "label": "ModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "modalprops",
+      "source_file": "components/ui/modal.tsx",
+      "source_location": "L7"
     },
     {
       "id": "agent_skills_ui_ux_pro_max_scripts_core_bm25",
@@ -333,17 +151,30 @@
       "source_location": "L8"
     },
     {
-      "id": "lib_db_mongoosecache",
-      "label": "MongooseCache",
+      "id": "components_admin_bootcampphasetimeline_phasetimelineprops",
+      "label": "PhaseTimelineProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "mongoosecache",
-      "source_file": "lib/db.ts",
-      "source_location": "L3"
+      "norm_label": "phasetimelineprops",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "components_ui_progress_progressprops",
+      "label": "ProgressProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "progressprops",
+      "source_file": "components/ui/progress.tsx",
+      "source_location": "L4"
     },
     {
       "id": "models_index_iactivity",
@@ -619,6 +450,292 @@
       "source_location": "L342"
     },
     {
+      "id": "components_admin_activityfeed_activityfeedprops",
+      "label": "ActivityFeedProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "activityfeedprops",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_admin_teamtable_teamtableprops",
+      "label": "TeamTableProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "teamtableprops",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "components_ui_avatar_avatarprops",
+      "label": "AvatarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatarprops",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_ui_badge_badgeprops",
+      "label": "BadgeProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "badgeprops",
+      "source_file": "components/ui/badge.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_admin_adminheader_adminheaderprops",
+      "label": "AdminHeaderProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "adminheaderprops",
+      "source_file": "components/admin/AdminHeader.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_admin_deadlinepanel_deadlinepanelprops",
+      "label": "DeadlinePanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "deadlinepanelprops",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "components_admin_globalsearch_globalsearchprops",
+      "label": "GlobalSearchProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "globalsearchprops",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "components_admin_adminsidebar_adminsidebarprops",
+      "label": "AdminSidebarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "adminsidebarprops",
+      "source_file": "components/admin/AdminSidebar.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "components_admin_kpicard_kpicardprops",
+      "label": "KpiCardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "kpicardprops",
+      "source_file": "components/admin/KpiCard.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "components_participant_participantheader_participantheaderprops",
+      "label": "ParticipantHeaderProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantheaderprops",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "components_participant_participantsidebar_participantsidebarprops",
+      "label": "ParticipantSidebarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantsidebarprops",
+      "source_file": "components/participant/ParticipantSidebar.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "components_participant_teamonboardingview_teamonboardingviewprops",
+      "label": "TeamOnboardingViewProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamonboardingviewprops",
+      "source_file": "components/participant/TeamOnboardingView.tsx",
+      "source_location": "L41"
+    },
+    {
+      "id": "types_pixel_retroui_d_accordionprops",
+      "label": "AccordionProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "accordionprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L69"
+    },
+    {
+      "id": "types_pixel_retroui_d_bubbleprops",
+      "label": "BubbleProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "bubbleprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L37"
+    },
+    {
+      "id": "types_pixel_retroui_d_buttonprops",
+      "label": "ButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "buttonprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "types_pixel_retroui_d_cardprops",
+      "label": "CardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "cardprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "types_pixel_retroui_d_inputprops",
+      "label": "InputProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "inputprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "types_pixel_retroui_d_popupprops",
+      "label": "PopupProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "popupprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L60"
+    },
+    {
+      "id": "types_pixel_retroui_d_progressbarprops",
+      "label": "ProgressBarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "progressbarprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "types_pixel_retroui_d_textareaprops",
+      "label": "TextAreaProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "textareaprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L53"
+    },
+    {
+      "id": "components_participant_day1pptapprovalhub_day1pptapprovalhubprops",
+      "label": "Day1PptApprovalHubProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "day1pptapprovalhubprops",
+      "source_file": "components/participant/Day1PptApprovalHub.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "lib_db_mongoosecache",
+      "label": "MongooseCache",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "mongoosecache",
+      "source_file": "lib/db.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "components_admin_needsattentionpanel_needsattentionpanelprops",
       "label": "NeedsAttentionPanelProps",
       "_callable": true,
@@ -762,19 +879,6 @@
       "source_location": "L114"
     },
     {
-      "id": "types_index_submission",
-      "label": "Submission",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "types/index.ts",
-      "file_type": "code",
-      "norm_label": "submission",
-      "source_file": "types/index.ts",
-      "source_location": "L168"
-    },
-    {
       "id": "types_index_task",
       "label": "Task",
       "_callable": true,
@@ -853,18 +957,6 @@
       "source_location": "L127"
     },
     {
-      "id": "app_admin_analytics_page_analyticspage",
-      "label": "AnalyticsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "analyticspage()",
-      "source_file": "app/admin/analytics/page.tsx",
-      "source_location": "L8"
-    },
-    {
       "id": "app_admin_announcements_page_announcementspage",
       "label": "AnnouncementsPage()",
       "_callable": true,
@@ -889,42 +981,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_admin_evaluation_page_evaluationpage",
-      "label": "EvaluationPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "evaluationpage()",
-      "source_file": "app/admin/evaluation/page.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_admin_feedback_page_feedbackpage",
-      "label": "FeedbackPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "feedbackpage()",
-      "source_file": "app/admin/feedback/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_admin_layout_adminlayout",
-      "label": "AdminLayout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminlayout()",
-      "source_file": "app/admin/layout.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "app_admin_mentors_page_mentorspage",
       "label": "MentorsPage()",
       "_callable": true,
@@ -935,30 +991,6 @@
       "norm_label": "mentorspage()",
       "source_file": "app/admin/mentors/page.tsx",
       "source_location": "L10"
-    },
-    {
-      "id": "app_admin_milestones_page_adminmilestonespage",
-      "label": "AdminMilestonesPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminmilestonespage()",
-      "source_file": "app/admin/milestones/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "app_admin_page_admindashboardpage",
-      "label": "AdminDashboardPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admindashboardpage()",
-      "source_file": "app/admin/page.tsx",
-      "source_location": "L31"
     },
     {
       "id": "app_admin_participants_page_participantspage",
@@ -985,18 +1017,6 @@
       "source_location": "L9"
     },
     {
-      "id": "app_admin_progress_page_progresspage",
-      "label": "ProgressPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progresspage()",
-      "source_file": "app/admin/progress/page.tsx",
-      "source_location": "L8"
-    },
-    {
       "id": "app_admin_reports_page_adminreportspage",
       "label": "AdminReportsPage()",
       "_callable": true,
@@ -1021,42 +1041,6 @@
       "source_location": "L9"
     },
     {
-      "id": "app_admin_settings_page_settingspage",
-      "label": "SettingsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "settingspage()",
-      "source_file": "app/admin/settings/page.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_admin_showcase_page_showcasepage",
-      "label": "ShowcasePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "showcasepage()",
-      "source_file": "app/admin/showcase/page.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_admin_submissions_page_submissionsmonitorpage",
-      "label": "SubmissionsMonitorPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionsmonitorpage()",
-      "source_file": "app/admin/submissions/page.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "app_admin_teams_page_teamslistpage",
       "label": "TeamsListPage()",
       "_callable": true,
@@ -1067,30 +1051,6 @@
       "norm_label": "teamslistpage()",
       "source_file": "app/admin/teams/page.tsx",
       "source_location": "L14"
-    },
-    {
-      "id": "app_admin_teams_teamid_page_teamdetailpage",
-      "label": "TeamDetailPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamdetailpage()",
-      "source_file": "app/admin/teams/[teamId]/page.tsx",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_admin_worklogs_page_adminworklogsmonitoringpage",
-      "label": "AdminWorkLogsMonitoringPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminworklogsmonitoringpage()",
-      "source_file": "app/admin/worklogs/page.tsx",
-      "source_location": "L10"
     },
     {
       "id": "app_forgot_password_page_forgotpasswordpage",
@@ -1105,294 +1065,6 @@
       "source_location": "L8"
     },
     {
-      "id": "app_page_homepage",
-      "label": "HomePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "homepage()",
-      "source_file": "app/page.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "app_participant_activity_page_teamactivitypage",
-      "label": "TeamActivityPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamactivitypage()",
-      "source_file": "app/participant/activity/page.tsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "app_participant_feedback_page_participantfeedbackpage",
-      "label": "ParticipantFeedbackPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantfeedbackpage()",
-      "source_file": "app/participant/feedback/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_participant_layout_participantlayout",
-      "label": "ParticipantLayout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantlayout()",
-      "source_file": "app/participant/layout.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_participant_milestones_page_milestonescontent",
-      "label": "MilestonesContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "milestonescontent()",
-      "source_file": "app/participant/milestones/page.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "app_participant_milestones_page_milestonespage",
-      "label": "MilestonesPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "milestonespage()",
-      "source_file": "app/participant/milestones/page.tsx",
-      "source_location": "L949"
-    },
-    {
-      "id": "app_participant_page_participantdashboardpage",
-      "label": "ParticipantDashboardPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantdashboardpage()",
-      "source_file": "app/participant/page.tsx",
-      "source_location": "L28"
-    },
-    {
-      "id": "app_participant_problem_page_problemstatementspage",
-      "label": "ProblemStatementsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "problemstatementspage()",
-      "source_file": "app/participant/problem/page.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "app_participant_profile_page_participantprofilepage",
-      "label": "ParticipantProfilePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantprofilepage()",
-      "source_file": "app/participant/profile/page.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "app_participant_schedule_page_participantschedulepage",
-      "label": "ParticipantSchedulePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantschedulepage()",
-      "source_file": "app/participant/schedule/page.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_participant_submissions_page_submissionscenterpage",
-      "label": "SubmissionsCenterPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionscenterpage()",
-      "source_file": "app/participant/submissions/page.tsx",
-      "source_location": "L375"
-    },
-    {
-      "id": "app_participant_submissions_page_submissionscontent",
-      "label": "SubmissionsContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionscontent()",
-      "source_file": "app/participant/submissions/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "app_participant_tasks_page_participanttaskspage",
-      "label": "ParticipantTasksPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participanttaskspage()",
-      "source_file": "app/participant/tasks/page.tsx",
-      "source_location": "L11"
-    },
-    {
-      "id": "app_participant_team_page_participantteamcontent",
-      "label": "ParticipantTeamContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantteamcontent()",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "app_participant_team_page_participantteampage",
-      "label": "ParticipantTeamPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantteampage()",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L1135"
-    },
-    {
-      "id": "app_participant_worklogs_page_participantworklogspage",
-      "label": "ParticipantWorklogsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantworklogspage()",
-      "source_file": "app/participant/worklogs/page.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "components_admin_activityfeed_activityfeed",
-      "label": "ActivityFeed()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "activityfeed()",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "components_admin_adminheader_adminheader",
-      "label": "AdminHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminheader()",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L27"
-    },
-    {
-      "id": "components_admin_adminsidebar_adminsidebar",
-      "label": "AdminSidebar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminsidebar()",
-      "source_file": "components/admin/AdminSidebar.tsx",
-      "source_location": "L31"
-    },
-    {
-      "id": "components_admin_bootcampphasetimeline_bootcampphasetimeline",
-      "label": "BootcampPhaseTimeline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "bootcampphasetimeline()",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "components_admin_deadlinepanel_deadlinepanel",
-      "label": "DeadlinePanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "deadlinepanel()",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "components_admin_globalsearch_globalsearch",
-      "label": "GlobalSearch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "globalsearch()",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L24"
-    },
-    {
-      "id": "components_admin_kpicard_kpicard",
-      "label": "KpiCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "kpicard()",
-      "source_file": "components/admin/KpiCard.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "components_admin_needsattentionpanel_needsattentionpanel",
-      "label": "NeedsAttentionPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "needsattentionpanel()",
-      "source_file": "components/admin/NeedsAttentionPanel.tsx",
-      "source_location": "L14"
-    },
-    {
       "id": "components_admin_quickactionmodal_quickactionmodal",
       "label": "QuickActionModal()",
       "_callable": true,
@@ -1403,186 +1075,6 @@
       "norm_label": "quickactionmodal()",
       "source_file": "components/admin/QuickActionModal.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "components_admin_teamtable_teamtable",
-      "label": "TeamTable()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamtable()",
-      "source_file": "components/admin/TeamTable.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "components_participant_day1pptapprovalhub_day1pptapprovalhub",
-      "label": "Day1PptApprovalHub()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "day1pptapprovalhub()",
-      "source_file": "components/participant/Day1PptApprovalHub.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "components_participant_participantheader_participantheader",
-      "label": "ParticipantHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantheader()",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L24"
-    },
-    {
-      "id": "components_participant_participantsidebar_participantsidebar",
-      "label": "ParticipantSidebar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantsidebar()",
-      "source_file": "components/participant/ParticipantSidebar.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "components_participant_submissionmodal_submissionmodal",
-      "label": "SubmissionModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionmodal()",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "components_participant_teamonboardingview_teamonboardingview",
-      "label": "TeamOnboardingView()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamonboardingview()",
-      "source_file": "components/participant/TeamOnboardingView.tsx",
-      "source_location": "L54"
-    },
-    {
-      "id": "components_participant_worklogmodal_worklogmodal",
-      "label": "WorkLogModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "worklogmodal()",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "components_ui_avatar_avatar",
-      "label": "Avatar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "avatar()",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "components_ui_badge_badge",
-      "label": "Badge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "badge()",
-      "source_file": "components/ui/badge.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "components_ui_card_card",
-      "label": "Card()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "card()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "components_ui_card_cardcontent",
-      "label": "CardContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "cardcontent()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L28"
-    },
-    {
-      "id": "components_ui_card_carddescription",
-      "label": "CardDescription()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "carddescription()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L24"
-    },
-    {
-      "id": "components_ui_card_cardfooter",
-      "label": "CardFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "cardfooter()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "components_ui_card_cardheader",
-      "label": "CardHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "cardheader()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_ui_card_cardtitle",
-      "label": "CardTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "cardtitle()",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L20"
     },
     {
       "id": "components_ui_empty_state_emptystate",
@@ -1597,144 +1089,12 @@
       "source_location": "L13"
     },
     {
-      "id": "components_ui_modal_modal",
-      "label": "Modal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "modal()",
-      "source_file": "components/ui/modal.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_ui_progress_progressbar",
-      "label": "ProgressBar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progressbar()",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "components_ui_progress_progressring",
-      "label": "ProgressRing()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progressring()",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "lib_utils_cn",
-      "label": "cn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "cn()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "lib_utils_formatdate",
-      "label": "formatDate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "formatdate()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "lib_utils_formatrelativetime",
-      "label": "formatRelativeTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "formatrelativetime()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L28"
-    },
-    {
-      "id": "lib_utils_formattime",
-      "label": "formatTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "formattime()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L18"
-    },
-    {
-      "id": "lib_utils_getstatusbadgevariant",
-      "label": "getStatusBadgeVariant()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "getstatusbadgevariant()",
-      "source_file": "lib/utils.ts",
-      "source_location": "L41"
-    },
-    {
-      "id": "app_api_announcements_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L74"
-    },
-    {
-      "id": "app_api_announcements_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_announcements_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "app_api_feedback_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/feedback/route.ts",
@@ -1746,7 +1106,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/feedback/route.ts",
@@ -1758,7 +1118,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/notifications/route.ts",
@@ -1770,11 +1130,119 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "patch()",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L33"
+    },
+    {
+      "id": "app_api_submissions_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_submissions_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L291"
+    },
+    {
+      "id": "app_api_submissions_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L32"
+    },
+    {
+      "id": "app_api_teams_invitations_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_api_teams_invitations_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_api_teams_invite_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L172"
+    },
+    {
+      "id": "app_api_teams_invite_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_join_requests_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/join-requests/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "lib_auth_getsessionfromrequest",
+      "label": "getSessionFromRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "getsessionfromrequest()",
+      "source_file": "lib/auth.ts",
+      "source_location": "L39"
     },
     {
       "id": "app_login_page_logincontent",
@@ -1933,6 +1401,18 @@
       "source_location": "L122"
     },
     {
+      "id": "app_api_health_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L7"
+    },
+    {
       "id": "app_api_upload_route_post",
       "label": "POST()",
       "_callable": true,
@@ -2077,16 +1557,112 @@
       "source_location": "L9"
     },
     {
+      "id": "app_admin_evaluation_page_evaluationpage",
+      "label": "EvaluationPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "evaluationpage()",
+      "source_file": "app/admin/evaluation/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_admin_submissions_page_submissionsmonitorpage",
+      "label": "SubmissionsMonitorPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionsmonitorpage()",
+      "source_file": "app/admin/submissions/page.tsx",
+      "source_location": "L9"
+    },
+    {
       "id": "app_participant_loading_participantloading",
       "label": "ParticipantLoading()",
       "_callable": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "loading.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "participantloading()",
       "source_file": "app/participant/loading.tsx",
       "source_location": "L3"
+    },
+    {
+      "id": "app_participant_schedule_page_participantschedulepage",
+      "label": "ParticipantSchedulePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participantschedulepage()",
+      "source_file": "app/participant/schedule/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_participant_tasks_page_participanttaskspage",
+      "label": "ParticipantTasksPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participanttaskspage()",
+      "source_file": "app/participant/tasks/page.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_participant_worklogs_page_participantworklogspage",
+      "label": "ParticipantWorklogsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participantworklogspage()",
+      "source_file": "app/participant/worklogs/page.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "components_participant_submissionmodal_submissionmodal",
+      "label": "SubmissionModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodal()",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "components_participant_worklogmodal_worklogmodal",
+      "label": "WorkLogModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "worklogmodal()",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "components_ui_modal_modal",
+      "label": "Modal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "modal()",
+      "source_file": "components/ui/modal.tsx",
+      "source_location": "L16"
     },
     {
       "id": "agent_skills_ui_ux_pro_max_scripts_design_system_detect_page_type",
@@ -2365,42 +1941,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_api_participants_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_participants_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L126"
-    },
-    {
-      "id": "app_api_participants_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L44"
-    },
-    {
       "id": "app_api_teams_edit_role_route_post",
       "label": "POST()",
       "_callable": true,
@@ -2411,6 +1951,18 @@
       "norm_label": "post()",
       "source_file": "app/api/teams/edit-role/route.ts",
       "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_join_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/join/route.ts",
+      "source_location": "L7"
     },
     {
       "id": "app_api_teams_route_get",
@@ -2435,6 +1987,18 @@
       "norm_label": "post()",
       "source_file": "app/api/teams/route.ts",
       "source_location": "L43"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "lib_auth_clearsessioncookie",
@@ -2473,208 +2037,88 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_activities_route_get",
+      "id": "app_admin_analytics_page_analyticspage",
+      "label": "AnalyticsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "analyticspage()",
+      "source_file": "app/admin/analytics/page.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_admin_teams_teamid_page_teamdetailpage",
+      "label": "TeamDetailPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "teamdetailpage()",
+      "source_file": "app/admin/teams/[teamId]/page.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "components_admin_bootcampphasetimeline_bootcampphasetimeline",
+      "label": "BootcampPhaseTimeline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "bootcampphasetimeline()",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "components_ui_progress_progressbar",
+      "label": "ProgressBar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "progressbar()",
+      "source_file": "components/ui/progress.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_ui_progress_progressring",
+      "label": "ProgressRing()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "[teamId]/page.tsx",
+      "file_type": "code",
+      "norm_label": "progressring()",
+      "source_file": "components/ui/progress.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "app_api_bootcamp_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community": 4,
+      "community_name": "models/index.ts",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "app_api_activities_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_api_activity_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/activity/route.ts",
+      "source_file": "app/api/bootcamp/route.ts",
       "source_location": "L6"
     },
     {
-      "id": "app_api_activity_route_post",
-      "label": "POST()",
+      "id": "app_api_bootcamp_route_patch",
+      "label": "PATCH()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community": 4,
+      "community_name": "models/index.ts",
       "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activity/route.ts",
+      "norm_label": "patch()",
+      "source_file": "app/api/bootcamp/route.ts",
       "source_location": "L27"
-    },
-    {
-      "id": "app_api_teams_invitations_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_api_teams_invitations_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "app_api_teams_invite_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L172"
-    },
-    {
-      "id": "app_api_teams_invite_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_join_requests_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/join-requests/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_join_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/join/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_api_teams_select_problem_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/select-problem/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_worklogs_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/worklogs/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_worklogs_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/worklogs/route.ts",
-      "source_location": "L44"
-    },
-    {
-      "id": "lib_auth_getsessionfromrequest",
-      "label": "getSessionFromRequest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "getsessionfromrequest()",
-      "source_file": "lib/auth.ts",
-      "source_location": "L39"
-    },
-    {
-      "id": "app_api_milestones_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "models/index.ts",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/milestones/route.ts",
-      "source_location": "L112"
-    },
-    {
-      "id": "app_api_milestones_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "models/index.ts",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/milestones/route.ts",
-      "source_location": "L132"
     },
     {
       "id": "app_api_evaluations_route_get",
@@ -2701,31 +2145,595 @@
       "source_location": "L28"
     },
     {
-      "id": "app_api_bootcamp_route_get",
+      "id": "app_api_milestones_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 41,
-      "community_name": "bootcamp/route.ts",
+      "community_name": "milestones/route.ts",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/bootcamp/route.ts",
-      "source_location": "L6"
+      "source_file": "app/api/milestones/route.ts",
+      "source_location": "L112"
     },
     {
-      "id": "app_api_bootcamp_route_patch",
-      "label": "PATCH()",
+      "id": "app_api_milestones_route_post",
+      "label": "POST()",
       "_callable": true,
       "_origin": "ast",
       "community": 41,
-      "community_name": "bootcamp/route.ts",
+      "community_name": "milestones/route.ts",
       "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/bootcamp/route.ts",
+      "norm_label": "post()",
+      "source_file": "app/api/milestones/route.ts",
+      "source_location": "L132"
+    },
+    {
+      "id": "app_admin_feedback_page_feedbackpage",
+      "label": "FeedbackPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "feedbackpage()",
+      "source_file": "app/admin/feedback/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_admin_showcase_page_showcasepage",
+      "label": "ShowcasePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "showcasepage()",
+      "source_file": "app/admin/showcase/page.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_participant_feedback_page_participantfeedbackpage",
+      "label": "ParticipantFeedbackPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "participantfeedbackpage()",
+      "source_file": "app/participant/feedback/page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_admin_activityfeed_activityfeed",
+      "label": "ActivityFeed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "activityfeed()",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "components_ui_avatar_avatar",
+      "label": "Avatar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatar()",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "lib_utils_formatdate",
+      "label": "formatDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "formatdate()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "lib_utils_formatrelativetime",
+      "label": "formatRelativeTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "formatrelativetime()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L28"
+    },
+    {
+      "id": "lib_utils_formattime",
+      "label": "formatTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "formattime()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "lib_utils_getstatusbadgevariant",
+      "label": "getStatusBadgeVariant()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "getstatusbadgevariant()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "app_admin_page_admindashboardpage",
+      "label": "AdminDashboardPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "admindashboardpage()",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "components_admin_adminheader_adminheader",
+      "label": "AdminHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "adminheader()",
+      "source_file": "components/admin/AdminHeader.tsx",
       "source_location": "L27"
     },
     {
-      "id": "app_api_health_route_get",
+      "id": "components_admin_deadlinepanel_deadlinepanel",
+      "label": "DeadlinePanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "deadlinepanel()",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "components_admin_globalsearch_globalsearch",
+      "label": "GlobalSearch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "globalsearch()",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "components_admin_needsattentionpanel_needsattentionpanel",
+      "label": "NeedsAttentionPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "needsattentionpanel()",
+      "source_file": "components/admin/NeedsAttentionPanel.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "components_admin_teamtable_teamtable",
+      "label": "TeamTable()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "teamtable()",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_admin_layout_adminlayout",
+      "label": "AdminLayout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "adminlayout()",
+      "source_file": "app/admin/layout.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_admin_adminsidebar_adminsidebar",
+      "label": "AdminSidebar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "adminsidebar()",
+      "source_file": "components/admin/AdminSidebar.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "components_admin_kpicard_kpicard",
+      "label": "KpiCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "kpicard()",
+      "source_file": "components/admin/KpiCard.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "components_ui_card_card",
+      "label": "Card()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "card()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_ui_card_cardcontent",
+      "label": "CardContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "cardcontent()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L28"
+    },
+    {
+      "id": "components_ui_card_carddescription",
+      "label": "CardDescription()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "carddescription()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "components_ui_card_cardfooter",
+      "label": "CardFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "cardfooter()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "components_ui_card_cardheader",
+      "label": "CardHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "cardheader()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "components_ui_card_cardtitle",
+      "label": "CardTitle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "cardtitle()",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "cn()",
+      "source_file": "lib/utils.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "app_participant_layout_participantlayout",
+      "label": "ParticipantLayout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantlayout()",
+      "source_file": "app/participant/layout.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_participant_page_participantdashboardpage",
+      "label": "ParticipantDashboardPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantdashboardpage()",
+      "source_file": "app/participant/page.tsx",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_participant_submissions_page_submissionscenterpage",
+      "label": "SubmissionsCenterPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "submissionscenterpage()",
+      "source_file": "app/participant/submissions/page.tsx",
+      "source_location": "L375"
+    },
+    {
+      "id": "app_participant_submissions_page_submissionscontent",
+      "label": "SubmissionsContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "submissionscontent()",
+      "source_file": "app/participant/submissions/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "components_participant_participantheader_participantheader",
+      "label": "ParticipantHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantheader()",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "components_participant_participantsidebar_participantsidebar",
+      "label": "ParticipantSidebar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantsidebar()",
+      "source_file": "components/participant/ParticipantSidebar.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "components_participant_teamonboardingview_teamonboardingview",
+      "label": "TeamOnboardingView()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamonboardingview()",
+      "source_file": "components/participant/TeamOnboardingView.tsx",
+      "source_location": "L54"
+    },
+    {
+      "id": "app_admin_milestones_page_adminmilestonespage",
+      "label": "AdminMilestonesPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "adminmilestonespage()",
+      "source_file": "app/admin/milestones/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "app_admin_progress_page_progresspage",
+      "label": "ProgressPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "progresspage()",
+      "source_file": "app/admin/progress/page.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_admin_settings_page_settingspage",
+      "label": "SettingsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "settingspage()",
+      "source_file": "app/admin/settings/page.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_admin_worklogs_page_adminworklogsmonitoringpage",
+      "label": "AdminWorkLogsMonitoringPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "adminworklogsmonitoringpage()",
+      "source_file": "app/admin/worklogs/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_participant_activity_page_teamactivitypage",
+      "label": "TeamActivityPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "teamactivitypage()",
+      "source_file": "app/participant/activity/page.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "app_participant_milestones_page_milestonescontent",
+      "label": "MilestonesContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "milestonescontent()",
+      "source_file": "app/participant/milestones/page.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_participant_milestones_page_milestonespage",
+      "label": "MilestonesPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "milestonespage()",
+      "source_file": "app/participant/milestones/page.tsx",
+      "source_location": "L949"
+    },
+    {
+      "id": "app_participant_problem_page_problemstatementspage",
+      "label": "ProblemStatementsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "problemstatementspage()",
+      "source_file": "app/participant/problem/page.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "app_participant_profile_page_participantprofilepage",
+      "label": "ParticipantProfilePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "participantprofilepage()",
+      "source_file": "app/participant/profile/page.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "app_participant_team_page_participantteamcontent",
+      "label": "ParticipantTeamContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "participantteamcontent()",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "app_participant_team_page_participantteampage",
+      "label": "ParticipantTeamPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "participantteampage()",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L1135"
+    },
+    {
+      "id": "components_participant_day1pptapprovalhub_day1pptapprovalhub",
+      "label": "Day1PptApprovalHub()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "day1pptapprovalhub()",
+      "source_file": "components/participant/Day1PptApprovalHub.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "components_ui_badge_badge",
+      "label": "Badge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "badge()",
+      "source_file": "components/ui/badge.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_page_homepage",
+      "label": "HomePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "homepage()",
+      "source_file": "app/page.tsx",
+      "source_location": "L29"
+    },
+    {
+      "id": "components_ui_retrodemo_retrodemo",
+      "label": "RetroDemo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "retrodemo()",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_activities_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
@@ -2733,8 +2741,80 @@
       "community_name": "connectToDatabase",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/health/route.ts",
-      "source_location": "L7"
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_api_activities_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_api_activity_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_activity_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L27"
+    },
+    {
+      "id": "app_api_announcements_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L74"
+    },
+    {
+      "id": "app_api_announcements_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_announcements_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L30"
     },
     {
       "id": "app_api_mentors_route_get",
@@ -2771,6 +2851,42 @@
       "norm_label": "post()",
       "source_file": "app/api/mentors/route.ts",
       "source_location": "L21"
+    },
+    {
+      "id": "app_api_participants_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_participants_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L126"
+    },
+    {
+      "id": "app_api_participants_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L44"
     },
     {
       "id": "app_api_problem_statements_route_delete",
@@ -2869,42 +2985,6 @@
       "source_location": "L26"
     },
     {
-      "id": "app_api_submissions_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_submissions_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L291"
-    },
-    {
-      "id": "app_api_submissions_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L32"
-    },
-    {
       "id": "app_api_tasks_route_delete",
       "label": "DELETE()",
       "_callable": true,
@@ -2970,7 +3050,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/analytics/route.ts",
@@ -2982,7 +3062,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/attention/route.ts",
@@ -2994,7 +3074,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/submissions/approve/route.ts",
@@ -3006,7 +3086,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/teams/check-name/route.ts",
@@ -3018,11 +3098,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/teams/find/route.ts",
       "source_location": "L5"
+    },
+    {
+      "id": "app_api_teams_select_problem_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/select-problem/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "app_api_teams_teamid_route_delete",
@@ -3030,7 +3122,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "delete()",
       "source_file": "app/api/teams/[teamId]/route.ts",
@@ -3042,7 +3134,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/teams/[teamId]/route.ts",
@@ -3054,11 +3146,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "patch()",
       "source_file": "app/api/teams/[teamId]/route.ts",
       "source_location": "L70"
+    },
+    {
+      "id": "app_api_worklogs_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_worklogs_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L44"
     },
     {
       "id": "lib_auth_getsessionuser",
@@ -3085,17 +3201,6 @@
       "source_location": "L24"
     },
     {
-      "id": "app_admin_analytics_page",
-      "label": "analytics/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "analytics/page.tsx",
-      "source_file": "app/admin/analytics/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_admin_announcements_page",
       "label": "announcements/page.tsx",
       "_origin": "ast",
@@ -3118,39 +3223,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_admin_evaluation_page",
-      "label": "evaluation/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "evaluation/page.tsx",
-      "source_file": "app/admin/evaluation/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_feedback_page",
-      "label": "admin/feedback/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/feedback/page.tsx",
-      "source_file": "app/admin/feedback/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_layout",
-      "label": "admin/layout.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/layout.tsx",
-      "source_file": "app/admin/layout.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_admin_mentors_page",
       "label": "mentors/page.tsx",
       "_origin": "ast",
@@ -3159,28 +3231,6 @@
       "file_type": "code",
       "norm_label": "mentors/page.tsx",
       "source_file": "app/admin/mentors/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_milestones_page",
-      "label": "admin/milestones/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/milestones/page.tsx",
-      "source_file": "app/admin/milestones/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_page",
-      "label": "admin/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/page.tsx",
-      "source_file": "app/admin/page.tsx",
       "source_location": "L1"
     },
     {
@@ -3206,28 +3256,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_admin_progress_page",
-      "label": "progress/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progress/page.tsx",
-      "source_file": "app/admin/progress/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_reports_page",
-      "label": "reports/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "reports/page.tsx",
-      "source_file": "app/admin/reports/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_admin_schedule_page",
       "label": "admin/schedule/page.tsx",
       "_origin": "ast",
@@ -3236,39 +3264,6 @@
       "file_type": "code",
       "norm_label": "admin/schedule/page.tsx",
       "source_file": "app/admin/schedule/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_settings_page",
-      "label": "settings/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "settings/page.tsx",
-      "source_file": "app/admin/settings/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_showcase_page",
-      "label": "showcase/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "showcase/page.tsx",
-      "source_file": "app/admin/showcase/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_submissions_page",
-      "label": "admin/submissions/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/submissions/page.tsx",
-      "source_file": "app/admin/submissions/page.tsx",
       "source_location": "L1"
     },
     {
@@ -3283,28 +3278,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_admin_teams_teamid_page",
-      "label": "[teamId]/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "[teamid]/page.tsx",
-      "source_file": "app/admin/teams/[teamId]/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_admin_worklogs_page",
-      "label": "admin/worklogs/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "admin/worklogs/page.tsx",
-      "source_file": "app/admin/worklogs/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_forgot_password_page",
       "label": "forgot-password/page.tsx",
       "_origin": "ast",
@@ -3313,259 +3286,6 @@
       "file_type": "code",
       "norm_label": "forgot-password/page.tsx",
       "source_file": "app/forgot-password/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_page",
-      "label": "app/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "app/page.tsx",
-      "source_file": "app/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_activity_page",
-      "label": "activity/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "activity/page.tsx",
-      "source_file": "app/participant/activity/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_feedback_page",
-      "label": "participant/feedback/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/feedback/page.tsx",
-      "source_file": "app/participant/feedback/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_layout",
-      "label": "participant/layout.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/layout.tsx",
-      "source_file": "app/participant/layout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_milestones_page",
-      "label": "participant/milestones/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/milestones/page.tsx",
-      "source_file": "app/participant/milestones/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_page",
-      "label": "participant/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/page.tsx",
-      "source_file": "app/participant/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_problem_page",
-      "label": "problem/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "problem/page.tsx",
-      "source_file": "app/participant/problem/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_profile_page",
-      "label": "profile/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "profile/page.tsx",
-      "source_file": "app/participant/profile/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_schedule_page",
-      "label": "participant/schedule/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/schedule/page.tsx",
-      "source_file": "app/participant/schedule/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_submissions_page",
-      "label": "participant/submissions/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/submissions/page.tsx",
-      "source_file": "app/participant/submissions/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_tasks_page",
-      "label": "tasks/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "tasks/page.tsx",
-      "source_file": "app/participant/tasks/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_team_page",
-      "label": "team/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "team/page.tsx",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_team_page_canonical_roles",
-      "label": "CANONICAL_ROLES",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "canonical_roles",
-      "source_file": "app/participant/team/page.tsx",
-      "source_location": "L30"
-    },
-    {
-      "id": "app_participant_worklogs_page",
-      "label": "participant/worklogs/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participant/worklogs/page.tsx",
-      "source_file": "app/participant/worklogs/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_participant_worklogs_page_contribution_types",
-      "label": "CONTRIBUTION_TYPES",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "contribution_types",
-      "source_file": "app/participant/worklogs/page.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "components_admin_activityfeed",
-      "label": "ActivityFeed.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "activityfeed.tsx",
-      "source_file": "components/admin/ActivityFeed.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_adminheader",
-      "label": "AdminHeader.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminheader.tsx",
-      "source_file": "components/admin/AdminHeader.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_adminsidebar",
-      "label": "AdminSidebar.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "adminsidebar.tsx",
-      "source_file": "components/admin/AdminSidebar.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_bootcampphasetimeline",
-      "label": "BootcampPhaseTimeline.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "bootcampphasetimeline.tsx",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_bootcampphasetimeline_phases",
-      "label": "PHASES",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "phases",
-      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "components_admin_deadlinepanel",
-      "label": "DeadlinePanel.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "deadlinepanel.tsx",
-      "source_file": "components/admin/DeadlinePanel.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_globalsearch",
-      "label": "GlobalSearch.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "globalsearch.tsx",
-      "source_file": "components/admin/GlobalSearch.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_admin_kpicard",
-      "label": "KpiCard.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "kpicard.tsx",
-      "source_file": "components/admin/KpiCard.tsx",
       "source_location": "L1"
     },
     {
@@ -3580,127 +3300,6 @@
       "source_location": "L1"
     },
     {
-      "id": "components_admin_teamtable",
-      "label": "TeamTable.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamtable.tsx",
-      "source_file": "components/admin/TeamTable.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_day1pptapprovalhub",
-      "label": "Day1PptApprovalHub.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "day1pptapprovalhub.tsx",
-      "source_file": "components/participant/Day1PptApprovalHub.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_participantheader",
-      "label": "ParticipantHeader.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantheader.tsx",
-      "source_file": "components/participant/ParticipantHeader.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_participantsidebar",
-      "label": "ParticipantSidebar.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "participantsidebar.tsx",
-      "source_file": "components/participant/ParticipantSidebar.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_submissionmodal",
-      "label": "SubmissionModal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "submissionmodal.tsx",
-      "source_file": "components/participant/SubmissionModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_teamonboardingview",
-      "label": "TeamOnboardingView.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "teamonboardingview.tsx",
-      "source_file": "components/participant/TeamOnboardingView.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_participant_teamonboardingview_team_roles",
-      "label": "TEAM_ROLES",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "team_roles",
-      "source_file": "components/participant/TeamOnboardingView.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "components_participant_worklogmodal",
-      "label": "WorkLogModal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "worklogmodal.tsx",
-      "source_file": "components/participant/WorkLogModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_avatar",
-      "label": "avatar.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "avatar.tsx",
-      "source_file": "components/ui/avatar.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_badge",
-      "label": "badge.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "badge.tsx",
-      "source_file": "components/ui/badge.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_button",
-      "label": "button.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "button.tsx",
-      "source_file": "components/ui/button.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_ui_button_button",
       "label": "Button",
       "_origin": "ast",
@@ -3712,17 +3311,6 @@
       "source_location": "L10"
     },
     {
-      "id": "components_ui_card",
-      "label": "card.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "card.tsx",
-      "source_file": "components/ui/card.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_ui_empty_state",
       "label": "empty-state.tsx",
       "_origin": "ast",
@@ -3732,61 +3320,6 @@
       "norm_label": "empty-state.tsx",
       "source_file": "components/ui/empty-state.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "components_ui_modal",
-      "label": "modal.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "modal.tsx",
-      "source_file": "components/ui/modal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_ui_progress",
-      "label": "progress.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "progress.tsx",
-      "source_file": "components/ui/progress.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "lib_utils",
-      "label": "utils.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "utils.ts",
-      "source_file": "lib/utils.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_lucide_react",
-      "label": "lucide-react",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "concept",
-      "norm_label": "lucide-react",
-      "source_file": "package.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L21"
     },
     {
       "id": "tsconfig",
@@ -3998,22 +3531,11 @@
       "source_location": "L25"
     },
     {
-      "id": "app_api_announcements_route",
-      "label": "announcements/route.ts",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "announcements/route.ts",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_feedback_route",
       "label": "feedback/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "feedback/route.ts",
       "source_file": "app/api/feedback/route.ts",
@@ -4024,29 +3546,62 @@
       "label": "notifications/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "notifications/route.ts",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "models_index_announcement",
-      "label": "Announcement",
+      "id": "app_api_submissions_route",
+      "label": "submissions/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
-      "norm_label": "announcement",
-      "source_file": "models/index.ts",
-      "source_location": "L760"
+      "norm_label": "submissions/route.ts",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invitations_route",
+      "label": "invitations/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invitations/route.ts",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invite_route",
+      "label": "invite/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invite/route.ts",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_join_requests_route",
+      "label": "join-requests/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "join-requests/route.ts",
+      "source_file": "app/api/teams/join-requests/route.ts",
+      "source_location": "L1"
     },
     {
       "id": "models_index_feedback",
       "label": "Feedback",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "feedback",
       "source_file": "models/index.ts",
@@ -4057,7 +3612,7 @@
       "label": "Notification",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "notification",
       "source_file": "models/index.ts",
@@ -4141,6 +3696,17 @@
       "source_location": "L20"
     },
     {
+      "id": "package_dependencies_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "pixel-retroui",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
       "id": "package_dependencies_react",
       "label": "react",
       "_origin": "ast",
@@ -4149,7 +3715,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -4160,7 +3726,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_dependencies_recharts",
@@ -4171,7 +3737,7 @@
       "file_type": "code",
       "norm_label": "recharts",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "package_dependencies_tailwind_merge",
@@ -4182,7 +3748,7 @@
       "file_type": "code",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_dependencies_zod",
@@ -4193,7 +3759,7 @@
       "file_type": "code",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies",
@@ -4204,7 +3770,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_autoprefixer",
@@ -4215,7 +3781,7 @@
       "file_type": "code",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "package_devdependencies_postcss",
@@ -4226,7 +3792,7 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -4237,7 +3803,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "package_devdependencies_types_bcryptjs",
@@ -4248,7 +3814,7 @@
       "file_type": "code",
       "norm_label": "@types/bcryptjs",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "package_devdependencies_types_jsonwebtoken",
@@ -4259,7 +3825,7 @@
       "file_type": "code",
       "norm_label": "@types/jsonwebtoken",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -4270,7 +3836,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -4281,7 +3847,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -4292,7 +3858,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -4303,7 +3869,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "agent_skills_ui_ux_pro_max_skill",
@@ -4974,6 +4540,18 @@
       "source_location": "L112"
     },
     {
+      "id": "readme_7_database_models_models_index_ts",
+      "label": "7. Database Models (`/models/index.ts`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. database models (`/models/index.ts`)",
+      "source_file": "README.md",
+      "source_location": "L144"
+    },
+    {
       "id": "readme_8_docker_setup_operations",
       "label": "8. Docker Setup & Operations",
       "_origin": "ast",
@@ -5247,6 +4825,28 @@
       "source_location": "L2"
     },
     {
+      "id": "app_api_health_route",
+      "label": "health/route.ts",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "health/route.ts",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_health_route_dynamic",
+      "label": "dynamic",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "dynamic",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L5"
+    },
+    {
       "id": "app_api_upload_route",
       "label": "upload/route.ts",
       "_origin": "ast",
@@ -5365,7 +4965,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "agents_rules_graphify",
@@ -5512,15 +5112,147 @@
       "source_location": "L4"
     },
     {
+      "id": "app_admin_evaluation_page",
+      "label": "evaluation/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "evaluation/page.tsx",
+      "source_file": "app/admin/evaluation/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_reports_page",
+      "label": "reports/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "reports/page.tsx",
+      "source_file": "app/admin/reports/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_submissions_page",
+      "label": "admin/submissions/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "admin/submissions/page.tsx",
+      "source_file": "app/admin/submissions/page.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "app_participant_loading",
       "label": "loading.tsx",
       "_origin": "ast",
       "community": 28,
-      "community_name": "loading.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "loading.tsx",
       "source_file": "app/participant/loading.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "app_participant_schedule_page",
+      "label": "participant/schedule/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participant/schedule/page.tsx",
+      "source_file": "app/participant/schedule/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_tasks_page",
+      "label": "tasks/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "tasks/page.tsx",
+      "source_file": "app/participant/tasks/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_worklogs_page",
+      "label": "participant/worklogs/page.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "participant/worklogs/page.tsx",
+      "source_file": "app/participant/worklogs/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_worklogs_page_contribution_types",
+      "label": "CONTRIBUTION_TYPES",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "contribution_types",
+      "source_file": "app/participant/worklogs/page.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "components_participant_submissionmodal",
+      "label": "SubmissionModal.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "submissionmodal.tsx",
+      "source_file": "components/participant/SubmissionModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_worklogmodal",
+      "label": "WorkLogModal.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "worklogmodal.tsx",
+      "source_file": "components/participant/WorkLogModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_button",
+      "label": "button.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "button.tsx",
+      "source_file": "components/ui/button.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_modal",
+      "label": "modal.tsx",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "modal.tsx",
+      "source_file": "components/ui/modal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "react",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L22"
     },
     {
       "id": "agent_skills_ui_ux_pro_max_scripts_design_system",
@@ -5981,7 +5713,7 @@
       "node_kind": "heading",
       "norm_label": "2.2 day 02 \u2014 wireframe & user flow (wireframe section 24)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L40"
+      "source_location": "L42"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_2_3_day_03_build_repository_initialization_wireframe_section_25",
@@ -5993,7 +5725,7 @@
       "node_kind": "heading",
       "norm_label": "2.3 day 03 \u2014 build / repository initialization (wireframe section 25)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L54"
+      "source_location": "L56"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_2_4_day_04_integration_api_handshake_wireframe_section_26",
@@ -6005,7 +5737,7 @@
       "node_kind": "heading",
       "norm_label": "2.4 day 04 \u2014 integration & api handshake (wireframe section 26)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L68"
+      "source_location": "L70"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_2_5_day_05_test_polish_wireframe_section_27",
@@ -6017,7 +5749,7 @@
       "node_kind": "heading",
       "norm_label": "2.5 day 05 \u2014 test + polish (wireframe section 27)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L82"
+      "source_location": "L84"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_2_6_day_06_final_demo_product_ship_wireframe_section_28",
@@ -6029,7 +5761,7 @@
       "node_kind": "heading",
       "norm_label": "2.6 day 06 \u2014 final demo & product ship (wireframe section 28)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L96"
+      "source_location": "L98"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_2_daily_milestone_specifications_submissions",
@@ -6053,7 +5785,7 @@
       "node_kind": "heading",
       "norm_label": "3. submissions center & review status (`/participant/submissions`)",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L112"
+      "source_location": "L114"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_50_point_review_rubric_breakdown",
@@ -6065,7 +5797,7 @@
       "node_kind": "heading",
       "norm_label": "50-point review rubric breakdown",
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L122"
+      "source_location": "L124"
     },
     {
       "id": "procedures_04_six_day_sprint_and_milestones_flow_procedure_04_six_day_sprint_and_milestones_execution_flow",
@@ -6168,17 +5900,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_participants_route",
-      "label": "participants/route.ts",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "participants/route.ts",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_teams_edit_role_route",
       "label": "edit-role/route.ts",
       "_origin": "ast",
@@ -6190,6 +5911,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_teams_join_route",
+      "label": "join/route.ts",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "join/route.ts",
+      "source_file": "app/api/teams/join/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "app_api_teams_route",
       "label": "teams/route.ts",
       "_origin": "ast",
@@ -6198,6 +5930,17 @@
       "file_type": "code",
       "norm_label": "teams/route.ts",
       "source_file": "app/api/teams/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route",
+      "label": "transfer-lead/route.ts",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "transfer-lead/route.ts",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
       "source_location": "L1"
     },
     {
@@ -6256,125 +5999,59 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_activities_route",
-      "label": "activities/route.ts",
+      "id": "app_admin_analytics_page",
+      "label": "analytics/page.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "activities/route.ts",
-      "source_file": "app/api/activities/route.ts",
+      "norm_label": "analytics/page.tsx",
+      "source_file": "app/admin/analytics/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_api_activity_route",
-      "label": "activity/route.ts",
+      "id": "app_admin_teams_teamid_page",
+      "label": "[teamId]/page.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "activity/route.ts",
-      "source_file": "app/api/activity/route.ts",
+      "norm_label": "[teamid]/page.tsx",
+      "source_file": "app/admin/teams/[teamId]/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_api_teams_invitations_route",
-      "label": "invitations/route.ts",
+      "id": "components_admin_bootcampphasetimeline",
+      "label": "BootcampPhaseTimeline.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "invitations/route.ts",
-      "source_file": "app/api/teams/invitations/route.ts",
+      "norm_label": "bootcampphasetimeline.tsx",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_api_teams_invite_route",
-      "label": "invite/route.ts",
+      "id": "components_admin_bootcampphasetimeline_phases",
+      "label": "PHASES",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "invite/route.ts",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L1"
+      "norm_label": "phases",
+      "source_file": "components/admin/BootcampPhaseTimeline.tsx",
+      "source_location": "L16"
     },
     {
-      "id": "app_api_teams_join_requests_route",
-      "label": "join-requests/route.ts",
+      "id": "components_ui_progress",
+      "label": "progress.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "[teamId]/page.tsx",
       "file_type": "code",
-      "norm_label": "join-requests/route.ts",
-      "source_file": "app/api/teams/join-requests/route.ts",
+      "norm_label": "progress.tsx",
+      "source_file": "components/ui/progress.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_join_route",
-      "label": "join/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "join/route.ts",
-      "source_file": "app/api/teams/join/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_select_problem_route",
-      "label": "select-problem/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "select-problem/route.ts",
-      "source_file": "app/api/teams/select-problem/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route",
-      "label": "transfer-lead/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "transfer-lead/route.ts",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_worklogs_route",
-      "label": "worklogs/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "worklogs/route.ts",
-      "source_file": "app/api/worklogs/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "lib_db",
-      "label": "db.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "db.ts",
-      "source_file": "lib/db.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "models_index_activity",
-      "label": "Activity",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "activity",
-      "source_file": "models/index.ts",
-      "source_location": "L763"
     },
     {
       "id": "procedures_05_daily_work_logging_and_activity_flow",
@@ -6701,26 +6378,15 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_milestones_route",
-      "label": "milestones/route.ts",
+      "id": "app_api_bootcamp_route",
+      "label": "bootcamp/route.ts",
       "_origin": "ast",
       "community": 4,
       "community_name": "models/index.ts",
       "file_type": "code",
-      "norm_label": "milestones/route.ts",
-      "source_file": "app/api/milestones/route.ts",
+      "norm_label": "bootcamp/route.ts",
+      "source_file": "app/api/bootcamp/route.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "app_api_milestones_route_default_milestones",
-      "label": "DEFAULT_MILESTONES",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "models/index.ts",
-      "file_type": "code",
-      "norm_label": "default_milestones",
-      "source_file": "app/api/milestones/route.ts",
-      "source_location": "L6"
     },
     {
       "id": "models_index",
@@ -6754,6 +6420,17 @@
       "norm_label": "announcementschema",
       "source_file": "models/index.ts",
       "source_location": "L628"
+    },
+    {
+      "id": "models_index_bootcamp",
+      "label": "Bootcamp",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "models/index.ts",
+      "file_type": "code",
+      "norm_label": "bootcamp",
+      "source_file": "models/index.ts",
+      "source_location": "L754"
     },
     {
       "id": "models_index_bootcampschema",
@@ -6798,17 +6475,6 @@
       "norm_label": "mentorschema",
       "source_file": "models/index.ts",
       "source_location": "L253"
-    },
-    {
-      "id": "models_index_milestone",
-      "label": "Milestone",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "models/index.ts",
-      "file_type": "code",
-      "norm_label": "milestone",
-      "source_file": "models/index.ts",
-      "source_location": "L764"
     },
     {
       "id": "models_index_milestoneschema",
@@ -6943,26 +6609,444 @@
       "source_location": "L762"
     },
     {
-      "id": "app_api_bootcamp_route",
-      "label": "bootcamp/route.ts",
+      "id": "app_api_milestones_route",
+      "label": "milestones/route.ts",
       "_origin": "ast",
       "community": 41,
-      "community_name": "bootcamp/route.ts",
+      "community_name": "milestones/route.ts",
       "file_type": "code",
-      "norm_label": "bootcamp/route.ts",
-      "source_file": "app/api/bootcamp/route.ts",
+      "norm_label": "milestones/route.ts",
+      "source_file": "app/api/milestones/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "models_index_bootcamp",
-      "label": "Bootcamp",
+      "id": "app_api_milestones_route_default_milestones",
+      "label": "DEFAULT_MILESTONES",
       "_origin": "ast",
       "community": 41,
-      "community_name": "bootcamp/route.ts",
+      "community_name": "milestones/route.ts",
       "file_type": "code",
-      "norm_label": "bootcamp",
+      "norm_label": "default_milestones",
+      "source_file": "app/api/milestones/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "models_index_milestone",
+      "label": "Milestone",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "milestones/route.ts",
+      "file_type": "code",
+      "norm_label": "milestone",
       "source_file": "models/index.ts",
-      "source_location": "L754"
+      "source_location": "L764"
+    },
+    {
+      "id": "app_admin_feedback_page",
+      "label": "admin/feedback/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "admin/feedback/page.tsx",
+      "source_file": "app/admin/feedback/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_showcase_page",
+      "label": "showcase/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "showcase/page.tsx",
+      "source_file": "app/admin/showcase/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_worklogs_page",
+      "label": "admin/worklogs/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "admin/worklogs/page.tsx",
+      "source_file": "app/admin/worklogs/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_feedback_page",
+      "label": "participant/feedback/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "participant/feedback/page.tsx",
+      "source_file": "app/participant/feedback/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_profile_page",
+      "label": "profile/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "profile/page.tsx",
+      "source_file": "app/participant/profile/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_activityfeed",
+      "label": "ActivityFeed.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "activityfeed.tsx",
+      "source_file": "components/admin/ActivityFeed.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_teamtable",
+      "label": "TeamTable.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "teamtable.tsx",
+      "source_file": "components/admin/TeamTable.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_avatar",
+      "label": "avatar.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "avatar.tsx",
+      "source_file": "components/ui/avatar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_badge",
+      "label": "badge.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "badge.tsx",
+      "source_file": "components/ui/badge.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "lib_utils",
+      "label": "utils.ts",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "badge.tsx",
+      "file_type": "code",
+      "norm_label": "utils.ts",
+      "source_file": "lib/utils.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_page",
+      "label": "admin/page.tsx",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "admin/page.tsx",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_adminheader",
+      "label": "AdminHeader.tsx",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "adminheader.tsx",
+      "source_file": "components/admin/AdminHeader.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_deadlinepanel",
+      "label": "DeadlinePanel.tsx",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "deadlinepanel.tsx",
+      "source_file": "components/admin/DeadlinePanel.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_globalsearch",
+      "label": "GlobalSearch.tsx",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "admin/page.tsx",
+      "file_type": "code",
+      "norm_label": "globalsearch.tsx",
+      "source_file": "components/admin/GlobalSearch.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_layout",
+      "label": "admin/layout.tsx",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "admin/layout.tsx",
+      "source_file": "app/admin/layout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_adminsidebar",
+      "label": "AdminSidebar.tsx",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "adminsidebar.tsx",
+      "source_file": "components/admin/AdminSidebar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_admin_kpicard",
+      "label": "KpiCard.tsx",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "kpicard.tsx",
+      "source_file": "components/admin/KpiCard.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_ui_card",
+      "label": "card.tsx",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "card.tsx",
+      "source_file": "components/ui/card.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_layout",
+      "label": "participant/layout.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participant/layout.tsx",
+      "source_file": "app/participant/layout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_page",
+      "label": "participant/page.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participant/page.tsx",
+      "source_file": "app/participant/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_submissions_page",
+      "label": "participant/submissions/page.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participant/submissions/page.tsx",
+      "source_file": "app/participant/submissions/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_participantheader",
+      "label": "ParticipantHeader.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantheader.tsx",
+      "source_file": "components/participant/ParticipantHeader.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_participantsidebar",
+      "label": "ParticipantSidebar.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "participantsidebar.tsx",
+      "source_file": "components/participant/ParticipantSidebar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_teamonboardingview",
+      "label": "TeamOnboardingView.tsx",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "teamonboardingview.tsx",
+      "source_file": "components/participant/TeamOnboardingView.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_participant_teamonboardingview_team_roles",
+      "label": "TEAM_ROLES",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "team_roles",
+      "source_file": "components/participant/TeamOnboardingView.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "ref_lucide_react",
+      "label": "lucide-react",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "lucide-react",
+      "file_type": "concept",
+      "norm_label": "lucide-react",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "types_pixel_retroui_d",
+      "label": "pixel-retroui.d.ts",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "pixel-retroui.d.ts",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "types_pixel_retroui_d_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "pixel-retroui",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_milestones_page",
+      "label": "admin/milestones/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "admin/milestones/page.tsx",
+      "source_file": "app/admin/milestones/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_progress_page",
+      "label": "progress/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "progress/page.tsx",
+      "source_file": "app/admin/progress/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_settings_page",
+      "label": "settings/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "settings/page.tsx",
+      "source_file": "app/admin/settings/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_activity_page",
+      "label": "activity/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "activity/page.tsx",
+      "source_file": "app/participant/activity/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_milestones_page",
+      "label": "participant/milestones/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "participant/milestones/page.tsx",
+      "source_file": "app/participant/milestones/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_problem_page",
+      "label": "problem/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "problem/page.tsx",
+      "source_file": "app/participant/problem/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_team_page",
+      "label": "team/page.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "team/page.tsx",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_participant_team_page_canonical_roles",
+      "label": "CANONICAL_ROLES",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "canonical_roles",
+      "source_file": "app/participant/team/page.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "components_participant_day1pptapprovalhub",
+      "label": "Day1PptApprovalHub.tsx",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "Badge",
+      "file_type": "code",
+      "norm_label": "day1pptapprovalhub.tsx",
+      "source_file": "components/participant/Day1PptApprovalHub.tsx",
+      "source_location": "L1"
     },
     {
       "id": "procedures_06_admin_command_center_and_governance_flow",
@@ -7145,26 +7229,169 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_health_route",
-      "label": "health/route.ts",
+      "id": "app_page",
+      "label": "app/page.tsx",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
+      "community": 50,
+      "community_name": "app/page.tsx",
       "file_type": "code",
-      "norm_label": "health/route.ts",
-      "source_file": "app/api/health/route.ts",
+      "norm_label": "app/page.tsx",
+      "source_file": "app/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_api_health_route_dynamic",
-      "label": "dynamic",
+      "id": "components_ui_retrodemo",
+      "label": "RetroDemo.tsx",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "retrodemo.tsx",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "app/page.tsx",
+      "file_type": "concept",
+      "norm_label": "pixel-retroui",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "types_pixel_retroui_d_accordion",
+      "label": "Accordion",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Accordion",
+      "file_type": "code",
+      "norm_label": "accordion",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L85"
+    },
+    {
+      "id": "types_pixel_retroui_d_bubble",
+      "label": "Bubble",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "Bubble",
+      "file_type": "code",
+      "norm_label": "bubble",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L81"
+    },
+    {
+      "id": "types_pixel_retroui_d_button",
+      "label": "Button",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "Button",
+      "file_type": "code",
+      "norm_label": "button",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L78"
+    },
+    {
+      "id": "types_pixel_retroui_d_card",
+      "label": "Card",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "Card",
+      "file_type": "code",
+      "norm_label": "card",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L79"
+    },
+    {
+      "id": "types_pixel_retroui_d_dropdown",
+      "label": "Dropdown",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "Dropdown",
+      "file_type": "code",
+      "norm_label": "dropdown",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L86"
+    },
+    {
+      "id": "types_pixel_retroui_d_input",
+      "label": "Input",
+      "_origin": "ast",
+      "community": 56,
+      "community_name": "Input",
+      "file_type": "code",
+      "norm_label": "input",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L82"
+    },
+    {
+      "id": "types_pixel_retroui_d_popup",
+      "label": "Popup",
+      "_origin": "ast",
+      "community": 57,
+      "community_name": "Popup",
+      "file_type": "code",
+      "norm_label": "popup",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L84"
+    },
+    {
+      "id": "types_pixel_retroui_d_progressbar",
+      "label": "ProgressBar",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ProgressBar",
+      "file_type": "code",
+      "norm_label": "progressbar",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L80"
+    },
+    {
+      "id": "types_pixel_retroui_d_textarea",
+      "label": "TextArea",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "TextArea",
+      "file_type": "code",
+      "norm_label": "textarea",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L83"
+    },
+    {
+      "id": "app_api_activities_route",
+      "label": "activities/route.ts",
       "_origin": "ast",
       "community": 6,
       "community_name": "connectToDatabase",
       "file_type": "code",
-      "norm_label": "dynamic",
-      "source_file": "app/api/health/route.ts",
-      "source_location": "L5"
+      "norm_label": "activities/route.ts",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_activity_route",
+      "label": "activity/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "activity/route.ts",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_announcements_route",
+      "label": "announcements/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "announcements/route.ts",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L1"
     },
     {
       "id": "app_api_mentors_route",
@@ -7175,6 +7402,17 @@
       "file_type": "code",
       "norm_label": "mentors/route.ts",
       "source_file": "app/api/mentors/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_participants_route",
+      "label": "participants/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "participants/route.ts",
+      "source_file": "app/api/participants/route.ts",
       "source_location": "L1"
     },
     {
@@ -7200,17 +7438,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_submissions_route",
-      "label": "submissions/route.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "submissions/route.ts",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_tasks_route",
       "label": "tasks/route.ts",
       "_origin": "ast",
@@ -7220,6 +7447,28 @@
       "norm_label": "tasks/route.ts",
       "source_file": "app/api/tasks/route.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "models_index_activity",
+      "label": "Activity",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "activity",
+      "source_file": "models/index.ts",
+      "source_location": "L763"
+    },
+    {
+      "id": "models_index_announcement",
+      "label": "Announcement",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "announcement",
+      "source_file": "models/index.ts",
+      "source_location": "L760"
     },
     {
       "id": "models_index_scheduleevent",
@@ -7237,7 +7486,7 @@
       "label": "analytics/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "analytics/route.ts",
       "source_file": "app/api/analytics/route.ts",
@@ -7248,7 +7497,7 @@
       "label": "attention/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "attention/route.ts",
       "source_file": "app/api/attention/route.ts",
@@ -7259,7 +7508,7 @@
       "label": "approve/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "approve/route.ts",
       "source_file": "app/api/submissions/approve/route.ts",
@@ -7270,7 +7519,7 @@
       "label": "check-name/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "check-name/route.ts",
       "source_file": "app/api/teams/check-name/route.ts",
@@ -7281,10 +7530,21 @@
       "label": "find/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "find/route.ts",
       "source_file": "app/api/teams/find/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_select_problem_route",
+      "label": "select-problem/route.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "select-problem/route.ts",
+      "source_file": "app/api/teams/select-problem/route.ts",
       "source_location": "L1"
     },
     {
@@ -7292,10 +7552,32 @@
       "label": "[teamId]/route.ts",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "[teamid]/route.ts",
       "source_file": "app/api/teams/[teamId]/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_worklogs_route",
+      "label": "worklogs/route.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "worklogs/route.ts",
+      "source_file": "app/api/worklogs/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "lib_db",
+      "label": "db.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "db.ts",
+      "file_type": "code",
+      "norm_label": "db.ts",
+      "source_file": "lib/db.ts",
       "source_location": "L1"
     },
     {
@@ -7303,7 +7585,7 @@
       "label": "Mentor",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "mentor",
       "source_file": "models/index.ts",
@@ -7314,7 +7596,7 @@
       "label": "ProblemStatement",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "problemstatement",
       "source_file": "models/index.ts",
@@ -7325,7 +7607,7 @@
       "label": "Submission",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "submission",
       "source_file": "models/index.ts",
@@ -7336,7 +7618,7 @@
       "label": "Task",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "models/index.ts",
@@ -7347,7 +7629,7 @@
       "label": "Team",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "team",
       "source_file": "models/index.ts",
@@ -7358,7 +7640,7 @@
       "label": "WorkLog",
       "_origin": "ast",
       "community": 7,
-      "community_name": "Team",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "worklog",
       "source_file": "models/index.ts",
@@ -7699,18 +7981,6 @@
       "source_location": "L1"
     },
     {
-      "id": "readme_7_database_models_models_index_ts",
-      "label": "7. Database Models (`/models/index.ts`)",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. database models (`/models/index.ts`)",
-      "source_file": "README.md",
-      "source_location": "L144"
-    },
-    {
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
@@ -7763,7 +8033,7 @@
       "file_type": "concept",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "ref_clsx",
@@ -7796,7 +8066,7 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "ref_react_dom",
@@ -7807,7 +8077,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "ref_recharts",
@@ -7818,7 +8088,7 @@
       "file_type": "concept",
       "norm_label": "recharts",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "ref_tailwind_merge",
@@ -7829,7 +8099,7 @@
       "file_type": "concept",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "ref_types_bcryptjs",
@@ -7840,7 +8110,7 @@
       "file_type": "concept",
       "norm_label": "@types/bcryptjs",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "ref_types_jsonwebtoken",
@@ -7851,7 +8121,7 @@
       "file_type": "concept",
       "norm_label": "@types/jsonwebtoken",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "ref_types_node",
@@ -7862,7 +8132,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "ref_types_react",
@@ -7873,7 +8143,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "ref_types_react_dom",
@@ -7884,7 +8154,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "ref_typescript",
@@ -7895,7 +8165,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "ref_zod",
@@ -7906,7 +8176,7 @@
       "file_type": "concept",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "docs_build26_ai_native_build",
@@ -10620,18 +10890,6 @@
       "context": "call",
       "source_file": "app/login/page.tsx",
       "source_location": "L632",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page_homepage",
-      "target": "components_ui_button_button",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/page.tsx",
-      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -14739,30 +14997,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_page",
-      "target": "components_ui_button_button",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page",
-      "target": "components_ui_badge_badge",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
       "source": "app_participant_activity_page",
       "target": "components_ui_badge_badge",
       "relation": "imports",
@@ -15736,7 +15970,7 @@
     },
     {
       "source": "package",
-      "target": "ref_react",
+      "target": "ref_pixel_retroui",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15748,7 +15982,7 @@
     },
     {
       "source": "package",
-      "target": "ref_react_dom",
+      "target": "ref_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15760,7 +15994,7 @@
     },
     {
       "source": "package",
-      "target": "ref_recharts",
+      "target": "ref_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15772,7 +16006,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwind_merge",
+      "target": "ref_recharts",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15784,7 +16018,7 @@
     },
     {
       "source": "package",
-      "target": "ref_zod",
+      "target": "ref_tailwind_merge",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15796,19 +16030,19 @@
     },
     {
       "source": "package",
-      "target": "ref_types_bcryptjs",
+      "target": "ref_zod",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
       "source": "package",
-      "target": "ref_types_jsonwebtoken",
+      "target": "ref_types_bcryptjs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15820,7 +16054,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_node",
+      "target": "ref_types_jsonwebtoken",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15832,7 +16066,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react",
+      "target": "ref_types_node",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15844,7 +16078,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react_dom",
+      "target": "ref_types_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15856,7 +16090,7 @@
     },
     {
       "source": "package",
-      "target": "ref_autoprefixer",
+      "target": "ref_types_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15868,7 +16102,7 @@
     },
     {
       "source": "package",
-      "target": "ref_postcss",
+      "target": "ref_autoprefixer",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15880,7 +16114,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15892,7 +16126,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15900,6 +16134,18 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -19133,26 +19379,14 @@
     },
     {
       "source": "app_page",
-      "target": "components_ui_button",
+      "target": "ref_pixel_retroui",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/page.tsx",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page",
-      "target": "components_ui_badge",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L18",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -21052,6 +21286,30 @@
       "weight": 1.0
     },
     {
+      "source": "components_ui_retrodemo",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_ui_retrodemo",
+      "target": "ref_pixel_retroui",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "lib_auth",
       "target": "ref_jsonwebtoken",
       "relation": "imports_from",
@@ -21254,6 +21512,18 @@
       "source_file": "tailwind.config.ts",
       "source_location": "L1",
       "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -22837,7 +23107,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L20",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -23633,6 +23903,17 @@
       "weight": 1.0
     },
     {
+      "source": "components_ui_retrodemo",
+      "target": "components_ui_retrodemo_retrodemo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "lib_auth",
       "target": "lib_auth_signtoken",
       "relation": "contains",
@@ -24410,7 +24691,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -24514,7 +24795,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_pixel_retroui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24525,7 +24806,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24536,7 +24817,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_recharts",
+      "target": "package_dependencies_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24547,7 +24828,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_tailwind_merge",
+      "target": "package_dependencies_recharts",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24558,13 +24839,24 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_zod",
+      "target": "package_dependencies_tailwind_merge",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -24575,7 +24867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -24586,7 +24878,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -24597,7 +24889,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -24608,7 +24900,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -24619,7 +24911,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -24630,7 +24922,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -24641,7 +24933,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -24652,7 +24944,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -24663,7 +24955,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -25191,7 +25483,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -25202,7 +25494,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L54",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -25213,7 +25505,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L68",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -25224,7 +25516,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -25235,7 +25527,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L96",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -25246,7 +25538,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L122",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -25257,7 +25549,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "procedures/04_SIX_DAY_SPRINT_AND_MILESTONES_FLOW.md",
-      "source_location": "L112",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -26559,6 +26851,105 @@
       "weight": 1.0
     },
     {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_pixel_retroui",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_buttonprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_cardprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_progressbarprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_bubbleprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_inputprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_textareaprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_popupprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_accordionprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
       "source": "next_config",
       "target": "next",
       "relation": "dynamic_import",
@@ -27320,5 +27711,5 @@
       "source_file": "docs/build26.png"
     }
   ],
-  "built_at_commit": "a924e3771b92c2c695395188e818b2ee1b750f3b"
+  "built_at_commit": "94dc0efd96dc246c2a51cc9e7067a6a7d3dafb54"
 }

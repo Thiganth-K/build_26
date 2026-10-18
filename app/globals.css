@@ -1,3 +1,7 @@
+@import 'pixel-retroui/dist/index.css';
+@import 'pixel-retroui/dist/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,6 +34,17 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* Global Light Green Text Cursor Selection */
+::selection {
+  background-color: #A7F3D0 !important;
+  color: #064E3B !important;
+}
+
+::-moz-selection {
+  background-color: #A7F3D0 !important;
+  color: #064E3B !important;
 }
 
 body {

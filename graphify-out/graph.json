@@ -339,7 +339,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "mongoosecache",
       "source_file": "lib/db.ts",
@@ -617,6 +617,110 @@
       "norm_label": "iworklog",
       "source_file": "models/index.ts",
       "source_location": "L342"
+    },
+    {
+      "id": "types_pixel_retroui_d_accordionprops",
+      "label": "AccordionProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "accordionprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L69"
+    },
+    {
+      "id": "types_pixel_retroui_d_bubbleprops",
+      "label": "BubbleProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "bubbleprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L37"
+    },
+    {
+      "id": "types_pixel_retroui_d_buttonprops",
+      "label": "ButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "buttonprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "types_pixel_retroui_d_cardprops",
+      "label": "CardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "cardprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "types_pixel_retroui_d_inputprops",
+      "label": "InputProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "inputprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "types_pixel_retroui_d_popupprops",
+      "label": "PopupProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "popupprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L60"
+    },
+    {
+      "id": "types_pixel_retroui_d_progressbarprops",
+      "label": "ProgressBarProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "progressbarprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "types_pixel_retroui_d_textareaprops",
+      "label": "TextAreaProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "textareaprops",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L53"
     },
     {
       "id": "components_admin_needsattentionpanel_needsattentionpanelprops",
@@ -1114,7 +1218,7 @@
       "file_type": "code",
       "norm_label": "homepage()",
       "source_file": "app/page.tsx",
-      "source_location": "L20"
+      "source_location": "L18"
     },
     {
       "id": "app_participant_activity_page_teamactivitypage",
@@ -1693,48 +1797,12 @@
       "source_location": "L41"
     },
     {
-      "id": "app_api_announcements_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L74"
-    },
-    {
-      "id": "app_api_announcements_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_announcements_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "app_api_feedback_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/feedback/route.ts",
@@ -1746,7 +1814,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/feedback/route.ts",
@@ -1758,7 +1826,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/notifications/route.ts",
@@ -1770,11 +1838,107 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "patch()",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L33"
+    },
+    {
+      "id": "app_api_submissions_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_submissions_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L291"
+    },
+    {
+      "id": "app_api_submissions_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L32"
+    },
+    {
+      "id": "app_api_teams_invitations_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_api_teams_invitations_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_api_teams_invite_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L172"
+    },
+    {
+      "id": "app_api_teams_invite_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "lib_auth_getsessionfromrequest",
+      "label": "getSessionFromRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "getsessionfromrequest()",
+      "source_file": "lib/auth.ts",
+      "source_location": "L39"
     },
     {
       "id": "app_login_page_logincontent",
@@ -2027,6 +2191,42 @@
       "norm_label": "maskuri()",
       "source_file": "scripts/clean-db.mjs",
       "source_location": "L85"
+    },
+    {
+      "id": "scripts_generate_logo_createpng",
+      "label": "createPng()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "createpng()",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_generate_logo_createpng_crc32",
+      "label": "crc32()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "crc32()",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L55"
+    },
+    {
+      "id": "scripts_generate_logo_createpng_makechunk",
+      "label": "makeChunk()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "makechunk()",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L71"
     },
     {
       "id": "scripts_seed_loadenv",
@@ -2365,42 +2565,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_api_participants_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_participants_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L126"
-    },
-    {
-      "id": "app_api_participants_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L44"
-    },
-    {
       "id": "app_api_teams_edit_role_route_post",
       "label": "POST()",
       "_callable": true,
@@ -2410,6 +2574,18 @@
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/teams/edit-role/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_join_requests_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/join-requests/route.ts",
       "source_location": "L6"
     },
     {
@@ -2435,6 +2611,18 @@
       "norm_label": "post()",
       "source_file": "app/api/teams/route.ts",
       "source_location": "L43"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "lib_auth_clearsessioncookie",
@@ -2473,112 +2661,16 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_activities_route_get",
+      "id": "app_api_health_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "app_api_activities_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_api_activity_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_activity_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L27"
-    },
-    {
-      "id": "app_api_teams_invitations_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/teams/invitations/route.ts",
+      "source_file": "app/api/health/route.ts",
       "source_location": "L7"
-    },
-    {
-      "id": "app_api_teams_invitations_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "app_api_teams_invite_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L172"
-    },
-    {
-      "id": "app_api_teams_invite_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_join_requests_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/join-requests/route.ts",
-      "source_location": "L6"
     },
     {
       "id": "app_api_teams_join_route_post",
@@ -2586,35 +2678,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/teams/join/route.ts",
       "source_location": "L7"
-    },
-    {
-      "id": "app_api_teams_select_problem_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/select-problem/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
-      "source_location": "L6"
     },
     {
       "id": "app_api_worklogs_route_get",
@@ -2622,7 +2690,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/worklogs/route.ts",
@@ -2634,23 +2702,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/worklogs/route.ts",
       "source_location": "L44"
-    },
-    {
-      "id": "lib_auth_getsessionfromrequest",
-      "label": "getSessionFromRequest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "getsessionfromrequest()",
-      "source_file": "lib/auth.ts",
-      "source_location": "L39"
     },
     {
       "id": "app_api_milestones_route_get",
@@ -2725,7 +2781,19 @@
       "source_location": "L27"
     },
     {
-      "id": "app_api_health_route_get",
+      "id": "components_ui_retrodemo_retrodemo",
+      "label": "RetroDemo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "RetroDemo.tsx",
+      "file_type": "code",
+      "norm_label": "retrodemo()",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_activities_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
@@ -2733,8 +2801,80 @@
       "community_name": "connectToDatabase",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/health/route.ts",
-      "source_location": "L7"
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_api_activities_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_api_activity_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_activity_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L27"
+    },
+    {
+      "id": "app_api_announcements_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L74"
+    },
+    {
+      "id": "app_api_announcements_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_announcements_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L30"
     },
     {
       "id": "app_api_mentors_route_get",
@@ -2771,6 +2911,42 @@
       "norm_label": "post()",
       "source_file": "app/api/mentors/route.ts",
       "source_location": "L21"
+    },
+    {
+      "id": "app_api_participants_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_participants_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L126"
+    },
+    {
+      "id": "app_api_participants_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L44"
     },
     {
       "id": "app_api_problem_statements_route_delete",
@@ -2867,42 +3043,6 @@
       "norm_label": "post()",
       "source_file": "app/api/schedule/route.ts",
       "source_location": "L26"
-    },
-    {
-      "id": "app_api_submissions_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_submissions_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L291"
-    },
-    {
-      "id": "app_api_submissions_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L32"
     },
     {
       "id": "app_api_tasks_route_delete",
@@ -3023,6 +3163,18 @@
       "norm_label": "get()",
       "source_file": "app/api/teams/find/route.ts",
       "source_location": "L5"
+    },
+    {
+      "id": "app_api_teams_select_problem_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "Team",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/select-problem/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "app_api_teams_teamid_route_delete",
@@ -3569,6 +3721,17 @@
       "source_location": "L1"
     },
     {
+      "id": "components_admin_needsattentionpanel",
+      "label": "NeedsAttentionPanel.tsx",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Button",
+      "file_type": "code",
+      "norm_label": "needsattentionpanel.tsx",
+      "source_file": "components/admin/NeedsAttentionPanel.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_admin_quickactionmodal",
       "label": "QuickActionModal.tsx",
       "_origin": "ast",
@@ -3786,7 +3949,7 @@
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "tsconfig",
@@ -3998,22 +4161,11 @@
       "source_location": "L25"
     },
     {
-      "id": "app_api_announcements_route",
-      "label": "announcements/route.ts",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "announcements/route.ts",
-      "file_type": "code",
-      "norm_label": "announcements/route.ts",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_feedback_route",
       "label": "feedback/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "feedback/route.ts",
       "source_file": "app/api/feedback/route.ts",
@@ -4024,29 +4176,51 @@
       "label": "notifications/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "notifications/route.ts",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "models_index_announcement",
-      "label": "Announcement",
+      "id": "app_api_submissions_route",
+      "label": "submissions/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
-      "norm_label": "announcement",
-      "source_file": "models/index.ts",
-      "source_location": "L760"
+      "norm_label": "submissions/route.ts",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invitations_route",
+      "label": "invitations/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invitations/route.ts",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invite_route",
+      "label": "invite/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invite/route.ts",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L1"
     },
     {
       "id": "models_index_feedback",
       "label": "Feedback",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "feedback",
       "source_file": "models/index.ts",
@@ -4057,7 +4231,7 @@
       "label": "Notification",
       "_origin": "ast",
       "community": 11,
-      "community_name": "announcements/route.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "notification",
       "source_file": "models/index.ts",
@@ -4141,6 +4315,17 @@
       "source_location": "L20"
     },
     {
+      "id": "package_dependencies_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "pixel-retroui",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
       "id": "package_dependencies_react",
       "label": "react",
       "_origin": "ast",
@@ -4149,7 +4334,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -4160,7 +4345,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_dependencies_recharts",
@@ -4171,7 +4356,7 @@
       "file_type": "code",
       "norm_label": "recharts",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "package_dependencies_tailwind_merge",
@@ -4182,7 +4367,7 @@
       "file_type": "code",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_dependencies_zod",
@@ -4193,7 +4378,7 @@
       "file_type": "code",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies",
@@ -4204,7 +4389,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_autoprefixer",
@@ -4215,7 +4400,7 @@
       "file_type": "code",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "package_devdependencies_postcss",
@@ -4226,7 +4411,7 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -4237,7 +4422,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "package_devdependencies_types_bcryptjs",
@@ -4248,7 +4433,7 @@
       "file_type": "code",
       "norm_label": "@types/bcryptjs",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "package_devdependencies_types_jsonwebtoken",
@@ -4259,7 +4444,7 @@
       "file_type": "code",
       "norm_label": "@types/jsonwebtoken",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -4270,7 +4455,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -4281,7 +4466,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -4292,7 +4477,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -4303,7 +4488,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "agent_skills_ui_ux_pro_max_skill",
@@ -5313,6 +5498,39 @@
       "source_location": "L72"
     },
     {
+      "id": "scripts_generate_logo",
+      "label": "generate-logo.mjs",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "generate-logo.mjs",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_generate_logo_iconpng",
+      "label": "iconPng",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "iconpng",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L99"
+    },
+    {
+      "id": "scripts_generate_logo_publicdir",
+      "label": "publicDir",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "code",
+      "norm_label": "publicdir",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L5"
+    },
+    {
       "id": "scripts_seed",
       "label": "seed.mjs",
       "_origin": "ast",
@@ -5322,17 +5540,6 @@
       "norm_label": "seed.mjs",
       "source_file": "scripts/seed.mjs",
       "source_location": "L1"
-    },
-    {
-      "id": "ref_mongoose",
-      "label": "mongoose",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "clean-db.mjs",
-      "file_type": "concept",
-      "norm_label": "mongoose",
-      "source_file": "package.json",
-      "source_location": "L19"
     },
     {
       "id": "tailwind_config",
@@ -5365,7 +5572,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "agents_rules_graphify",
@@ -6168,17 +6375,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_participants_route",
-      "label": "participants/route.ts",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "participants/route.ts",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_teams_edit_role_route",
       "label": "edit-role/route.ts",
       "_origin": "ast",
@@ -6190,6 +6386,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_teams_join_requests_route",
+      "label": "join-requests/route.ts",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "join-requests/route.ts",
+      "source_file": "app/api/teams/join-requests/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "app_api_teams_route",
       "label": "teams/route.ts",
       "_origin": "ast",
@@ -6198,6 +6405,17 @@
       "file_type": "code",
       "norm_label": "teams/route.ts",
       "source_file": "app/api/teams/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route",
+      "label": "transfer-lead/route.ts",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "transfer-lead/route.ts",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
       "source_location": "L1"
     },
     {
@@ -6256,91 +6474,36 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_activities_route",
-      "label": "activities/route.ts",
+      "id": "app_api_health_route",
+      "label": "health/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
-      "norm_label": "activities/route.ts",
-      "source_file": "app/api/activities/route.ts",
+      "norm_label": "health/route.ts",
+      "source_file": "app/api/health/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "app_api_activity_route",
-      "label": "activity/route.ts",
+      "id": "app_api_health_route_dynamic",
+      "label": "dynamic",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
-      "norm_label": "activity/route.ts",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_invitations_route",
-      "label": "invitations/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "invitations/route.ts",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_invite_route",
-      "label": "invite/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "invite/route.ts",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_join_requests_route",
-      "label": "join-requests/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "join-requests/route.ts",
-      "source_file": "app/api/teams/join-requests/route.ts",
-      "source_location": "L1"
+      "norm_label": "dynamic",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L5"
     },
     {
       "id": "app_api_teams_join_route",
       "label": "join/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "join/route.ts",
       "source_file": "app/api/teams/join/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_select_problem_route",
-      "label": "select-problem/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "select-problem/route.ts",
-      "source_file": "app/api/teams/select-problem/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route",
-      "label": "transfer-lead/route.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "transfer-lead/route.ts",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
       "source_location": "L1"
     },
     {
@@ -6348,7 +6511,7 @@
       "label": "worklogs/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "worklogs/route.ts",
       "source_file": "app/api/worklogs/route.ts",
@@ -6359,22 +6522,22 @@
       "label": "db.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
+      "community_name": "db.ts",
       "file_type": "code",
       "norm_label": "db.ts",
       "source_file": "lib/db.ts",
       "source_location": "L1"
     },
     {
-      "id": "models_index_activity",
-      "label": "Activity",
+      "id": "ref_mongoose",
+      "label": "mongoose",
       "_origin": "ast",
       "community": 36,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "activity",
-      "source_file": "models/index.ts",
-      "source_location": "L763"
+      "community_name": "db.ts",
+      "file_type": "concept",
+      "norm_label": "mongoose",
+      "source_file": "package.json",
+      "source_location": "L19"
     },
     {
       "id": "procedures_05_daily_work_logging_and_activity_flow",
@@ -6965,6 +7128,28 @@
       "source_location": "L754"
     },
     {
+      "id": "types_pixel_retroui_d",
+      "label": "pixel-retroui.d.ts",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "pixel-retroui.d.ts",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "types_pixel_retroui_d_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "pixel-retroui.d.ts",
+      "file_type": "code",
+      "norm_label": "pixel-retroui",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "procedures_06_admin_command_center_and_governance_flow",
       "label": "06_ADMIN_COMMAND_CENTER_AND_GOVERNANCE_FLOW.md",
       "_origin": "ast",
@@ -7145,26 +7330,158 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_health_route",
-      "label": "health/route.ts",
+      "id": "components_ui_retrodemo",
+      "label": "RetroDemo.tsx",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
+      "community": 50,
+      "community_name": "RetroDemo.tsx",
       "file_type": "code",
-      "norm_label": "health/route.ts",
-      "source_file": "app/api/health/route.ts",
+      "norm_label": "retrodemo.tsx",
+      "source_file": "components/ui/RetroDemo.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_api_health_route_dynamic",
-      "label": "dynamic",
+      "id": "ref_pixel_retroui",
+      "label": "pixel-retroui",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "RetroDemo.tsx",
+      "file_type": "concept",
+      "norm_label": "pixel-retroui",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "types_pixel_retroui_d_accordion",
+      "label": "Accordion",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Accordion",
+      "file_type": "code",
+      "norm_label": "accordion",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L85"
+    },
+    {
+      "id": "types_pixel_retroui_d_bubble",
+      "label": "Bubble",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "Bubble",
+      "file_type": "code",
+      "norm_label": "bubble",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L81"
+    },
+    {
+      "id": "types_pixel_retroui_d_button",
+      "label": "Button",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "Button",
+      "file_type": "code",
+      "norm_label": "button",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L78"
+    },
+    {
+      "id": "types_pixel_retroui_d_card",
+      "label": "Card",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "Card",
+      "file_type": "code",
+      "norm_label": "card",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L79"
+    },
+    {
+      "id": "types_pixel_retroui_d_dropdown",
+      "label": "Dropdown",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "Dropdown",
+      "file_type": "code",
+      "norm_label": "dropdown",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L86"
+    },
+    {
+      "id": "types_pixel_retroui_d_input",
+      "label": "Input",
+      "_origin": "ast",
+      "community": 56,
+      "community_name": "Input",
+      "file_type": "code",
+      "norm_label": "input",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L82"
+    },
+    {
+      "id": "types_pixel_retroui_d_popup",
+      "label": "Popup",
+      "_origin": "ast",
+      "community": 57,
+      "community_name": "Popup",
+      "file_type": "code",
+      "norm_label": "popup",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L84"
+    },
+    {
+      "id": "types_pixel_retroui_d_progressbar",
+      "label": "ProgressBar",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ProgressBar",
+      "file_type": "code",
+      "norm_label": "progressbar",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L80"
+    },
+    {
+      "id": "types_pixel_retroui_d_textarea",
+      "label": "TextArea",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "TextArea",
+      "file_type": "code",
+      "norm_label": "textarea",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L83"
+    },
+    {
+      "id": "app_api_activities_route",
+      "label": "activities/route.ts",
       "_origin": "ast",
       "community": 6,
       "community_name": "connectToDatabase",
       "file_type": "code",
-      "norm_label": "dynamic",
-      "source_file": "app/api/health/route.ts",
-      "source_location": "L5"
+      "norm_label": "activities/route.ts",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_activity_route",
+      "label": "activity/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "activity/route.ts",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_announcements_route",
+      "label": "announcements/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "announcements/route.ts",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L1"
     },
     {
       "id": "app_api_mentors_route",
@@ -7175,6 +7492,17 @@
       "file_type": "code",
       "norm_label": "mentors/route.ts",
       "source_file": "app/api/mentors/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_participants_route",
+      "label": "participants/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "participants/route.ts",
+      "source_file": "app/api/participants/route.ts",
       "source_location": "L1"
     },
     {
@@ -7200,17 +7528,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_submissions_route",
-      "label": "submissions/route.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "submissions/route.ts",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_tasks_route",
       "label": "tasks/route.ts",
       "_origin": "ast",
@@ -7220,6 +7537,28 @@
       "norm_label": "tasks/route.ts",
       "source_file": "app/api/tasks/route.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "models_index_activity",
+      "label": "Activity",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "activity",
+      "source_file": "models/index.ts",
+      "source_location": "L763"
+    },
+    {
+      "id": "models_index_announcement",
+      "label": "Announcement",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "announcement",
+      "source_file": "models/index.ts",
+      "source_location": "L760"
     },
     {
       "id": "models_index_scheduleevent",
@@ -7285,6 +7624,17 @@
       "file_type": "code",
       "norm_label": "find/route.ts",
       "source_file": "app/api/teams/find/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_select_problem_route",
+      "label": "select-problem/route.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "Team",
+      "file_type": "code",
+      "norm_label": "select-problem/route.ts",
+      "source_file": "app/api/teams/select-problem/route.ts",
       "source_location": "L1"
     },
     {
@@ -7363,17 +7713,6 @@
       "norm_label": "worklog",
       "source_file": "models/index.ts",
       "source_location": "L756"
-    },
-    {
-      "id": "components_admin_needsattentionpanel",
-      "label": "NeedsAttentionPanel.tsx",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "types/index.ts",
-      "file_type": "code",
-      "norm_label": "needsattentionpanel.tsx",
-      "source_file": "components/admin/NeedsAttentionPanel.tsx",
-      "source_location": "L1"
     },
     {
       "id": "types_index",
@@ -7763,7 +8102,7 @@
       "file_type": "concept",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "ref_clsx",
@@ -7796,7 +8135,7 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "ref_react_dom",
@@ -7807,7 +8146,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "ref_recharts",
@@ -7818,7 +8157,7 @@
       "file_type": "concept",
       "norm_label": "recharts",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "ref_tailwind_merge",
@@ -7829,7 +8168,7 @@
       "file_type": "concept",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "ref_types_bcryptjs",
@@ -7840,7 +8179,7 @@
       "file_type": "concept",
       "norm_label": "@types/bcryptjs",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "ref_types_jsonwebtoken",
@@ -7851,7 +8190,7 @@
       "file_type": "concept",
       "norm_label": "@types/jsonwebtoken",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "ref_types_node",
@@ -7862,7 +8201,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "ref_types_react",
@@ -7873,7 +8212,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "ref_types_react_dom",
@@ -7884,7 +8223,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "ref_typescript",
@@ -7895,7 +8234,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "ref_zod",
@@ -7906,7 +8245,7 @@
       "file_type": "concept",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "docs_build26_ai_native_build",
@@ -8349,6 +8688,17 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "sys",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_zlib",
+      "label": "ref_zlib",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_zlib",
       "source_file": "",
       "type": "external"
     }
@@ -10623,18 +10973,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_page_homepage",
-      "target": "components_ui_button_button",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/page.tsx",
-      "source_location": "L55",
-      "weight": 1.0
-    },
-    {
       "source": "app_participant_activity_page_teamactivitypage",
       "target": "components_ui_badge_badge",
       "relation": "calls",
@@ -11583,6 +11921,18 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_generate_logo_createpng_makechunk",
+      "target": "scripts_generate_logo_createpng_crc32",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
       "source": "agent_skills_ui_ux_pro_max_scripts_design_system_format_ascii_box",
       "target": "agent_skills_ui_ux_pro_max_scripts_design_system_format_ascii_box_wrap_text",
       "relation": "contains",
@@ -11592,6 +11942,18 @@
       "context": "call",
       "source_file": ".agent/skills/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo_createpng",
+      "target": "scripts_generate_logo_createpng_makechunk",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -14739,30 +15101,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_page",
-      "target": "components_ui_button_button",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page",
-      "target": "components_ui_badge_badge",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
       "source": "app_participant_activity_page",
       "target": "components_ui_badge_badge",
       "relation": "imports",
@@ -15736,7 +16074,7 @@
     },
     {
       "source": "package",
-      "target": "ref_react",
+      "target": "ref_pixel_retroui",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15748,7 +16086,7 @@
     },
     {
       "source": "package",
-      "target": "ref_react_dom",
+      "target": "ref_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15760,7 +16098,7 @@
     },
     {
       "source": "package",
-      "target": "ref_recharts",
+      "target": "ref_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15772,7 +16110,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwind_merge",
+      "target": "ref_recharts",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15784,7 +16122,7 @@
     },
     {
       "source": "package",
-      "target": "ref_zod",
+      "target": "ref_tailwind_merge",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15796,19 +16134,19 @@
     },
     {
       "source": "package",
-      "target": "ref_types_bcryptjs",
+      "target": "ref_zod",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
       "source": "package",
-      "target": "ref_types_jsonwebtoken",
+      "target": "ref_types_bcryptjs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15820,7 +16158,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_node",
+      "target": "ref_types_jsonwebtoken",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15832,7 +16170,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react",
+      "target": "ref_types_node",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15844,7 +16182,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react_dom",
+      "target": "ref_types_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15856,7 +16194,7 @@
     },
     {
       "source": "package",
-      "target": "ref_autoprefixer",
+      "target": "ref_types_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15868,7 +16206,7 @@
     },
     {
       "source": "package",
-      "target": "ref_postcss",
+      "target": "ref_autoprefixer",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15880,7 +16218,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15892,7 +16230,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15900,6 +16238,18 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -19133,30 +19483,6 @@
     },
     {
       "source": "app_page",
-      "target": "components_ui_button",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page",
-      "target": "components_ui_badge",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/page.tsx",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "app_page",
       "target": "ref_react",
       "relation": "imports_from",
       "_origin": "ast",
@@ -21052,6 +21378,30 @@
       "weight": 1.0
     },
     {
+      "source": "components_ui_retrodemo",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_ui_retrodemo",
+      "target": "ref_pixel_retroui",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "lib_auth",
       "target": "ref_jsonwebtoken",
       "relation": "imports_from",
@@ -21208,6 +21558,42 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_generate_logo",
+      "target": "ref_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo",
+      "target": "ref_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo",
+      "target": "ref_zlib",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_seed",
       "target": "ref_mongoose",
       "relation": "imports_from",
@@ -21254,6 +21640,18 @@
       "source_file": "tailwind.config.ts",
       "source_location": "L1",
       "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -22837,7 +23235,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -23633,6 +24031,17 @@
       "weight": 1.0
     },
     {
+      "source": "components_ui_retrodemo",
+      "target": "components_ui_retrodemo_retrodemo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/ui/RetroDemo.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "lib_auth",
       "target": "lib_auth_signtoken",
       "relation": "contains",
@@ -24410,7 +24819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -24514,7 +24923,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_pixel_retroui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24525,7 +24934,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24536,7 +24945,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_recharts",
+      "target": "package_dependencies_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24547,7 +24956,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_tailwind_merge",
+      "target": "package_dependencies_recharts",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24558,13 +24967,24 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_zod",
+      "target": "package_dependencies_tailwind_merge",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -24575,7 +24995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -24586,7 +25006,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -24597,7 +25017,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -24608,7 +25028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -24619,7 +25039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -24630,7 +25050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -24641,7 +25061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -24652,7 +25072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -24663,7 +25083,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -26141,6 +26561,50 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_generate_logo",
+      "target": "scripts_generate_logo_createpng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo",
+      "target": "scripts_generate_logo_publicdir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo",
+      "target": "scripts_generate_logo_iconpng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_logo_createpng",
+      "target": "scripts_generate_logo_createpng_crc32",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/generate-logo.mjs",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_seed",
       "target": "scripts_seed_seed",
       "relation": "contains",
@@ -26556,6 +27020,105 @@
       "confidence_score": 1.0,
       "source_file": "types/index.ts",
       "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_pixel_retroui",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_buttonprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_cardprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_progressbarprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_bubbleprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_inputprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_textareaprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_popupprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "types_pixel_retroui_d",
+      "target": "types_pixel_retroui_d_accordionprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "types/pixel-retroui.d.ts",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -27320,5 +27883,5 @@
       "source_file": "docs/build26.png"
     }
   ],
-  "built_at_commit": "a924e3771b92c2c695395188e818b2ee1b750f3b"
+  "built_at_commit": "94dc0efd96dc246c2a51cc9e7067a6a7d3dafb54"
 }

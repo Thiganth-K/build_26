@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
           name: m.name,
           email: m.email,
           role: m.role || "Team Member",
-          status: isUploader ? "APPROVED" : "PENDING",
+          status: (isUploader ? "APPROVED" : "PENDING") as "APPROVED" | "PENDING",
           comment: isUploader ? "Uploaded & approved initial deliverable" : "",
           updatedAt: new Date(),
         };
