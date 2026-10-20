@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <!-- Deep Space Dark Retro Background -->
+  <rect width="600" height="450" fill="#09090B" />
+  <defs>
+    <pattern id="grid-ship" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#18181B" stroke-width="1" />
+    </pattern>
+    <linearGradient id="mint-flame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <linearGradient id="rocket-hull" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#grid-ship)" />
+
+  <!-- Stars & Twinkles in Sky -->
+  <g fill="#FEF08A">
+    <!-- Star 1 -->
+    <polygon points="80,40 82,46 88,48 82,50 80,56 78,50 72,48 78,46" />
+    <!-- Star 2 -->
+    <polygon points="520,60 522,66 528,68 522,70 520,76 518,70 512,68 518,66" />
+    <!-- Star 3 -->
+    <polygon points="120,180 121,184 125,185 121,186 120,190 119,186 115,185 119,184" />
+    <!-- Star 4 -->
+    <polygon points="480,190 481,194 485,195 481,196 480,200 479,196 475,195 479,194" />
+    <circle cx="200" cy="50" r="1.5" fill="#FFF" />
+    <circle cx="380" cy="35" r="2" fill="#FFF" />
+    <circle cx="450" cy="110" r="1.5" fill="#FFF" />
+    <circle cx="70" cy="120" r="2" fill="#FFF" />
+  </g>
+
+  <!-- Confetti Elements -->
+  <g>
+    <rect x="140" y="70" width="8" height="8" rx="2" fill="#00D285" transform="rotate(25 140 70)" />
+    <rect x="420" y="80" width="8" height="8" rx="2" fill="#F43F5E" transform="rotate(-30 420 80)" />
+    <rect x="180" y="120" width="6" height="6" rx="1.5" fill="#38BDF8" transform="rotate(15 180 120)" />
+    <rect x="440" y="140" width="7" height="7" rx="2" fill="#FDE047" transform="rotate(45 440 140)" />
+    <rect x="100" y="240" width="8" height="8" rx="2" fill="#C084FC" transform="rotate(-15 100 240)" />
+    <rect x="480" y="250" width="8" height="8" rx="2" fill="#00D285" transform="rotate(35 480 250)" />
+  </g>
+
+  <!-- Ground Launch Smoke & Base -->
+  <ellipse cx="300" cy="380" rx="220" ry="40" fill="#18181B" />
+  <!-- Pixel Smoke Puffs -->
+  <circle cx="240" cy="340" r="32" fill="#27272A" stroke="#000" stroke-width="2.5" />
+  <circle cx="360" cy="340" r="32" fill="#27272A" stroke="#000" stroke-width="2.5" />
+  <circle cx="270" cy="325" r="40" fill="#3F3F46" stroke="#000" stroke-width="2.5" />
+  <circle cx="330" cy="325" r="40" fill="#3F3F46" stroke="#000" stroke-width="2.5" />
+  <circle cx="300" cy="315" r="45" fill="#52525B" stroke="#000" stroke-width="3" />
+
+  <!-- Rocket Exhaust Fire Blast -->
+  <path d="M 275 240 L 325 240 L 315 320 L 300 350 L 285 320 Z" fill="url(#mint-flame)" stroke="#000" stroke-width="2.5" />
+  <path d="M 285 240 L 315 240 L 305 290 L 300 310 L 295 290 Z" fill="#FEF08A" />
+
+  <!-- CENTER RETRO SPACESHIP / ROCKET -->
+  <g transform="translate(300, 160)">
+    <!-- Left Fin -->
+    <path d="M -25 30 L -55 75 L -25 70 Z" fill="#00D285" stroke="#000" stroke-width="3" />
+    <!-- Right Fin -->
+    <path d="M 25 30 L 55 75 L 25 70 Z" fill="#00D285" stroke="#000" stroke-width="3" />
+    <!-- Center Fin Ridge -->
+    <path d="M 0 35 L 0 75" stroke="#000" stroke-width="4" />
+
+    <!-- Main Fuselage Hull -->
+    <path d="M 0 -110 C 35 -60, 32 30, 26 72 L -26 72 C -32 30, -35 -60, 0 -110 Z" fill="url(#rocket-hull)" stroke="#000" stroke-width="3.5" />
+
+    <!-- Nose Cone Tip -->
+    <path d="M 0 -110 C 18 -85, 20 -60, 20 -50 L -20 -50 C -20 -60, -18 -85, 0 -110 Z" fill="#00D285" stroke="#000" stroke-width="3" />
+
+    <!-- Porthole Window -->
+    <circle cx="0" cy="-10" r="18" fill="#38BDF8" stroke="#000" stroke-width="3" />
+    <circle cx="0" cy="-10" r="14" fill="#0284C7" />
+    <!-- Window Glare Highlight -->
+    <path d="M -8 -16 A 12 12 0 0 1 6 -2" stroke="#FFF" stroke-width="3" strokeLinecap="round" fill="none" />
+
+    <!-- Hull Decal: BUILD//26 -->
+    <rect x="-18" y="24" width="36" height="14" rx="3" fill="#18181B" stroke="#00D285" stroke-width="1.5" />
+    <text x="-14" y="34" fill="#00D285" font-family="monospace" font-size="7" font-weight="bold">SHIP//26</text>
+  </g>
+
+  <!-- LEFT FLOATING RETRO TROPHY -->
+  <g transform="translate(85, 140)">
+    <rect x="0" y="0" width="105" height="135" rx="10" fill="#18181B" stroke="#00D285" stroke-width="2.5" />
+    <rect x="0" y="0" width="105" height="20" rx="10" fill="#27272A" />
+    <text x="12" y="14" fill="#00D285" font-family="monospace" font-size="8" font-weight="bold">WINNERS PODIUM</text>
+
+    <!-- Golden Trophy Cup -->
+    <path d="M 32 40 L 72 40 L 66 75 C 62 90, 42 90, 38 75 Z" fill="#FDE047" stroke="#000" stroke-width="2" />
+    <!-- Handles -->
+    <path d="M 32 46 C 20 46, 20 65, 34 65" stroke="#000" stroke-width="2.5" fill="none" />
+    <path d="M 72 46 C 84 46, 84 65, 70 65" stroke="#000" stroke-width="2.5" fill="none" />
+    <!-- Stem and Base -->
+    <rect x="48" y="80" width="8" height="15" fill="#CA8A04" stroke="#000" stroke-width="1.5" />
+    <rect x="36" y="95" width="32" height="12" rx="2" fill="#1E293B" stroke="#000" stroke-width="2" />
+    <text x="44" y="104" fill="#FDE047" font-family="monospace" font-size="8" font-weight="900">#1</text>
+  </g>
+
+  <!-- RIGHT LIVE DEPLOYMENT WINDOW -->
+  <g transform="translate(415, 135)">
+    <rect x="0" y="0" width="125" height="140" rx="8" fill="#18181B" stroke="#00D285" stroke-width="2.5" />
+    <rect x="0" y="0" width="125" height="20" rx="8" fill="#27272A" />
+    <circle cx="10" cy="10" r="3" fill="#EF4444" />
+    <circle cx="18" cy="10" r="3" fill="#F59E0B" />
+    <circle cx="26" cy="10" r="3" fill="#10B981" />
+    <text x="40" y="13" fill="#A1A1AA" font-family="monospace" font-size="7">live-deploy</text>
+
+    <text x="10" y="42" fill="#10B981" font-family="monospace" font-size="9" font-weight="bold">● STATUS: LIVE</text>
+    <text x="10" y="58" fill="#E4E4E7" font-family="monospace" font-size="8">build26.live/app</text>
+    <line x1="10" y1="66" x2="115" y2="66" stroke="#3F3F46" stroke-width="1" />
+
+    <text x="10" y="82" fill="#38BDF8" font-family="monospace" font-size="8">AWS &amp; Vercel</text>
+    <text x="10" y="96" fill="#FDE047" font-family="monospace" font-size="8">Jury Pitch Deck</text>
+    <rect x="10" y="106" width="105" height="20" rx="4" fill="#00D285" stroke="#000" stroke-width="1.5" />
+    <text x="24" y="120" fill="#000000" font-family="monospace" font-size="9" font-weight="900">LIVE SHIP 🚀</text>
+  </g>
+
+  <!-- Bottom Milestone Chip Badge -->
+  <g transform="translate(195, 385)">
+    <rect x="0" y="0" width="210" height="36" rx="18" fill="#000" stroke="#00D285" stroke-width="2.5" />
+    <circle cx="22" cy="18" r="6" fill="#00D285" />
+    <text x="38" y="23" fill="#00D285" font-family="monospace" font-size="12" font-weight="900" letter-spacing="1">SHIP TO REALITY 🚀</text>
+  </g>
+</svg>

@@ -1,17 +1,17 @@
 # Graph Report - build_26  (2026-10-18)
 
 ## Corpus Check
-- 129 files · ~412,854 words
+- 130 files · ~590,332 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 32 file(s) not represented in the graph (top: .csv 24, (none) 4, .example 1)
 
 ## Summary
-- 728 nodes · 1635 edges · 58 communities (40 shown, 18 thin omitted)
+- 736 nodes · 1644 edges · 54 communities (34 shown, 20 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `94dc0efd`
+- Built from commit: `b507a32b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,11 +23,11 @@
 - models/index.ts
 - Procedure 06: Admin Command Center and Governance Flow
 - connectToDatabase
-- db.ts
+- Team
 - types/index.ts
 - package.json
 - compilerOptions
-- getSessionFromRequest
+- announcements/route.ts
 - dependencies
 - devDependencies
 - ui-ux-pro-max
@@ -44,7 +44,6 @@
 - postcss.config.mjs
 - seed/route.ts
 - app/layout.tsx
-- react
 - design_system.py
 - core.py
 - BM25
@@ -52,19 +51,15 @@
 - 2. Daily Milestone Specifications & Submissions
 - generate_design_system
 - next
-- [teamId]/page.tsx
+- getSessionFromRequest
 - Procedure 05: Daily Work Logging and Team Activity Flow
 - Procedure 03: Problem Statement Selection Flow
 - BUILD26 — User Procedures & Flow Navigation Manual
 - evaluations/route.ts
-- milestones/route.ts
-- badge.tsx
-- admin/page.tsx
-- cn
-- lucide-react
-- pixel-retroui.d.ts
-- Badge
+- bootcamp/route.ts
 - app/page.tsx
+- pixel-retroui.d.ts
+- RetroDemo.tsx
 - Accordion
 - Bubble
 - Button
@@ -105,15 +100,15 @@
 ## Hyperedges (group relationships)
 - **BUILD26 End-to-End Delivery Pipeline** — docs_build26_real_problems, docs_build26_ai_native_build, docs_build26_deploy_stage, docs_build26_demo_day [EXTRACTED 0.95]
 
-## Communities (58 total, 18 thin omitted)
+## Communities (54 total, 20 thin omitted)
 
 ### Community 0 - "AI-Native Build"
 Cohesion: 0.15
 Nodes (14): AI-Native Build, Daily Evidence, Demo Day, Deploy Stage, AI, APIs and Emerging Tech, Product Backlog, Product Pitch+, 8 Real Problems (+6 more)
 
 ### Community 1 - "Button"
-Cohesion: 0.18
-Nodes (14): AnnouncementsPage(), BootcampConfigurationPage(), MentorsPage(), ParticipantsPage(), ProblemStatementsPage(), AdminReportsPage(), SchedulePage(), TeamsListPage() (+6 more)
+Cohesion: 0.05
+Nodes (94): AnalyticsPage(), AnnouncementsPage(), BootcampConfigurationPage(), EvaluationPage(), FeedbackPage(), AdminLayout(), MentorsPage(), AdminMilestonesPage() (+86 more)
 
 ### Community 3 - "Procedure 02: Participant Team Formation and Onboarding Flow"
 Cohesion: 0.12
@@ -121,19 +116,19 @@ Nodes (16): 1. Flow Overview, 2. Unassigned State & Portal Directives, 3. Path A
 
 ### Community 4 - "models/index.ts"
 Cohesion: 0.05
-Nodes (40): GET(), PATCH(), ActivitySchema, AnnouncementSchema, Bootcamp, BootcampSchema, EvaluationSchema, FeedbackSchema (+32 more)
+Nodes (41): DEFAULT_MILESTONES, GET(), POST(), ActivitySchema, AnnouncementSchema, BootcampSchema, EvaluationSchema, FeedbackSchema (+33 more)
 
 ### Community 5 - "Procedure 06: Admin Command Center and Governance Flow"
 Cohesion: 0.13
 Nodes (14): 1. Flow Overview, 2.1 KPI Monitoring Cards, 2.2 Needs Attention Risk Engine, 2. Admin Command Dashboard (`/admin`), 3. Bootcamp Configuration (`/admin/bootcamp` - Wireframe Section 38), 4.1 Participant Registry (`/admin/participants`), 4.2 Teams Command Directory (`/admin/teams`), 4. Participant & Team Administration (+6 more)
 
 ### Community 6 - "connectToDatabase"
-Cohesion: 0.10
-Nodes (29): GET(), POST(), GET(), POST(), DELETE(), GET(), POST(), GET() (+21 more)
+Cohesion: 0.12
+Nodes (22): dynamic, GET(), GET(), PATCH(), POST(), DELETE(), GET(), PATCH() (+14 more)
 
-### Community 7 - "db.ts"
-Cohesion: 0.13
-Nodes (18): GET(), GET(), POST(), GET(), GET(), POST(), DELETE(), GET() (+10 more)
+### Community 7 - "Team"
+Cohesion: 0.15
+Nodes (14): GET(), GET(), POST(), GET(), GET(), DELETE(), GET(), PATCH() (+6 more)
 
 ### Community 8 - "types/index.ts"
 Cohesion: 0.05
@@ -147,9 +142,9 @@ Nodes (17): name, private, version, autoprefixer, clsx, jsonwebtoken, postcss, r
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
-### Community 11 - "getSessionFromRequest"
+### Community 11 - "announcements/route.ts"
 Cohesion: 0.15
-Nodes (15): GET(), POST(), GET(), PATCH(), GET(), PATCH(), POST(), GET() (+7 more)
+Nodes (10): DELETE(), GET(), POST(), GET(), POST(), GET(), PATCH(), Announcement (+2 more)
 
 ### Community 12 - "dependencies"
 Cohesion: 0.15
@@ -180,16 +175,12 @@ Cohesion: 0.07
 Nodes (28): 1. Executive Summary, 2. Platform Architecture & Workflow, 3. Implemented Routes & Capabilities, 4. Technology Stack, 5. Environment Variables (`.env.local`), 6. Getting Started & Running Locally, 7. Database Models (`/models/index.ts`), 8. Docker Setup & Operations (+20 more)
 
 ### Community 20 - "clean-db.mjs"
-Cohesion: 0.11
-Nodes (15): dynamic, GET(), POST(), ref_fs, mongoose, ref_path, ref_readline, checkConnection() (+7 more)
+Cohesion: 0.10
+Nodes (19): POST(), ref_fs, mongoose, ref_path, ref_readline, ref_zlib, checkConnection(), maskUri() (+11 more)
 
 ### Community 26 - "seed/route.ts"
 Cohesion: 0.50
 Nodes (4): execPromise, POST(), ref_child_process, ref_util
-
-### Community 28 - "react"
-Cohesion: 0.16
-Nodes (14): EvaluationPage(), SubmissionsMonitorPage(), ParticipantSchedulePage(), ParticipantTasksPage(), CONTRIBUTION_TYPES, ParticipantWorklogsPage(), SubmissionModal(), SubmissionModalProps (+6 more)
 
 ### Community 29 - "design_system.py"
 Cohesion: 0.19
@@ -217,11 +208,11 @@ Nodes (6): format_ascii_box(), format_markdown(), generate_design_system(), Form
 
 ### Community 35 - "next"
 Cohesion: 0.15
-Nodes (19): GET(), POST(), POST(), GET(), POST(), POST(), POST(), POST() (+11 more)
+Nodes (20): GET(), POST(), POST(), GET(), POST(), POST(), GET(), PATCH() (+12 more)
 
-### Community 36 - "[teamId]/page.tsx"
-Cohesion: 0.26
-Nodes (7): AnalyticsPage(), TeamDetailPage(), BootcampPhaseTimeline(), PHASES, PhaseTimelineProps, ProgressBar(), ProgressProps
+### Community 36 - "getSessionFromRequest"
+Cohesion: 0.15
+Nodes (17): GET(), POST(), GET(), POST(), GET(), POST(), DELETE(), POST() (+9 more)
 
 ### Community 37 - "Procedure 05: Daily Work Logging and Team Activity Flow"
 Cohesion: 0.17
@@ -239,53 +230,33 @@ Nodes (5): 1. Overview & Directory Purpose, 2. Document Index & Navigation, 3. H
 Cohesion: 0.50
 Nodes (3): GET(), POST(), Evaluation
 
-### Community 41 - "milestones/route.ts"
-Cohesion: 0.40
-Nodes (4): DEFAULT_MILESTONES, GET(), POST(), Milestone
-
-### Community 42 - "badge.tsx"
-Cohesion: 0.21
-Nodes (11): FeedbackPage(), ShowcasePage(), ParticipantFeedbackPage(), ActivityFeed(), ActivityFeedProps, TeamTableProps, Avatar(), AvatarProps (+3 more)
-
-### Community 43 - "admin/page.tsx"
-Cohesion: 0.26
-Nodes (9): AdminDashboardPage(), AdminHeader(), AdminHeaderProps, DeadlinePanel(), DeadlinePanelProps, GlobalSearch(), GlobalSearchProps, NeedsAttentionPanel() (+1 more)
-
-### Community 45 - "cn"
-Cohesion: 0.21
-Nodes (12): AdminLayout(), AdminSidebar(), AdminSidebarProps, KpiCard(), KpiCardProps, Card(), CardContent(), CardDescription() (+4 more)
-
-### Community 46 - "lucide-react"
-Cohesion: 0.19
-Nodes (12): ParticipantLayout(), ParticipantDashboardPage(), SubmissionsCenterPage(), SubmissionsContent(), ParticipantHeader(), ParticipantHeaderProps, ParticipantSidebar(), ParticipantSidebarProps (+4 more)
+### Community 41 - "bootcamp/route.ts"
+Cohesion: 0.50
+Nodes (3): GET(), PATCH(), Bootcamp
 
 ### Community 47 - "pixel-retroui.d.ts"
 Cohesion: 0.20
 Nodes (9): AccordionProps, BubbleProps, ButtonProps, CardProps, InputProps, pixel-retroui, PopupProps, ProgressBarProps (+1 more)
 
-### Community 48 - "Badge"
-Cohesion: 0.14
-Nodes (15): AdminMilestonesPage(), ProgressPage(), SettingsPage(), AdminWorkLogsMonitoringPage(), TeamActivityPage(), MilestonesContent(), MilestonesPage(), ProblemStatementsPage() (+7 more)
-
 ## Knowledge Gaps
-- **272 isolated node(s):** `dynamic`, `DEFAULT_MILESTONES`, `metadata`, `CANONICAL_ROLES`, `CONTRIBUTION_TYPES` (+267 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 341 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **275 isolated node(s):** `dynamic`, `DEFAULT_MILESTONES`, `metadata`, `sprintStages`, `CANONICAL_ROLES` (+270 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 345 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `next` to `Button`, `models/index.ts`, `connectToDatabase`, `db.ts`, `types/index.ts`, `package.json`, `getSessionFromRequest`, `login/page.tsx`, `clean-db.mjs`, `seed/route.ts`, `app/layout.tsx`, `react`, `[teamId]/page.tsx`, `evaluations/route.ts`, `milestones/route.ts`, `badge.tsx`, `admin/page.tsx`, `cn`, `lucide-react`, `Badge`, `app/page.tsx`?**
-  _High betweenness centrality (0.177) - this node is a cross-community bridge._
-- **Why does `react` connect `react` to `Button`, `[teamId]/page.tsx`, `types/index.ts`, `package.json`, `badge.tsx`, `admin/page.tsx`, `cn`, `lucide-react`, `pixel-retroui.d.ts`, `Badge`, `login/page.tsx`, `app/page.tsx`?**
+- **Why does `next` connect `next` to `Button`, `getSessionFromRequest`, `models/index.ts`, `connectToDatabase`, `Team`, `evaluations/route.ts`, `bootcamp/route.ts`, `app/page.tsx`, `announcements/route.ts`, `package.json`, `login/page.tsx`, `clean-db.mjs`, `seed/route.ts`, `app/layout.tsx`?**
+  _High betweenness centrality (0.182) - this node is a cross-community bridge._
+- **Why does `react` connect `Button` to `package.json`, `app/page.tsx`, `pixel-retroui.d.ts`, `login/page.tsx`, `RetroDemo.tsx`, `loading.tsx`?**
   _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Why does `Submission` connect `8. Docker Setup & Operations` to `types/index.ts`?**
   _High betweenness centrality (0.050) - this node is a cross-community bridge._
 - **What connects `dynamic`, `DEFAULT_MILESTONES`, `metadata` to the rest of the system?**
-  _272 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _275 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Button` be split into smaller, more focused modules?**
+  _Cohesion score 0.05194805194805195 - nodes in this community are weakly interconnected._
 - **Should `Procedure 02: Participant Team Formation and Onboarding Flow` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `models/index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
-- **Should `Procedure 06: Admin Command Center and Governance Flow` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected._

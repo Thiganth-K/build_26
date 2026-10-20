@@ -252,21 +252,21 @@
     "semantic_hash": ""
   },
   "app/layout.tsx": {
-    "mtime": 1790697565.3976972,
-    "seen": 1790697693.7818778,
-    "ast_hash": "f0cd58a3056f6f5dd4f0db1283437dd8",
+    "mtime": 1792333654.139488,
+    "seen": 1792333718.1401193,
+    "ast_hash": "fe33ae93b3772ae5a879761bd23329e2",
     "semantic_hash": ""
   },
   "app/login/page.tsx": {
-    "mtime": 1790833223.0140648,
-    "seen": 1790833669.9406462,
-    "ast_hash": "fa431393795dab7d83d9a3c869f6f201",
+    "mtime": 1792344434.2490375,
+    "seen": 1792344871.5032768,
+    "ast_hash": "59f4f817b128d7f10197be051a547537",
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1792310066.2965937,
-    "seen": 1792310230.5955737,
-    "ast_hash": "e3114f949b1d9b144c8bcb4e55ea30aa",
+    "mtime": 1792342647.4674861,
+    "seen": 1792343203.4222775,
+    "ast_hash": "3acaa36601cf1dcc82fa84544817de24",
     "semantic_hash": ""
   },
   "app/participant/feedback/page.tsx": {
@@ -831,6 +831,60 @@
     "mtime": 1792307818.537877,
     "seen": 1792307984.7280126,
     "ast_hash": "49aa235dbc69d6c26ec7b8c45529e6bb",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day1-ideation.jpg": {
+    "mtime": 1792339547.3377717,
+    "seen": 1792340345.3275287,
+    "ast_hash": "0dc652d58aedf356d6315c25b23b0cbf",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day2-wireframe.jpg": {
+    "mtime": 1792339569.7762876,
+    "seen": 1792340345.3275304,
+    "ast_hash": "5daba88cdae0f87832eb91b689cb51d3",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day3-mvp.jpg": {
+    "mtime": 1792339596.1188385,
+    "seen": 1792340345.327532,
+    "ast_hash": "8a9488b40b7df09d63e8b1288082d4f3",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day4-database.svg": {
+    "mtime": 1792340099.8359458,
+    "seen": 1792340345.3275332,
+    "ast_hash": "a13c141f3c9bee44ca3f8e1506c038c9",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day5-testing.svg": {
+    "mtime": 1792340099.8369455,
+    "seen": 1792340345.3275347,
+    "ast_hash": "86f1bea6a6086613e4abf53d1fae980b",
+    "semantic_hash": ""
+  },
+  "public/roadmap/day6-ship.svg": {
+    "mtime": 1792340099.8369455,
+    "seen": 1792340345.3275359,
+    "ast_hash": "87ed37ebe683c5f83f6b56516875578c",
+    "semantic_hash": ""
+  },
+  "public/auth-retro-illustration.svg": {
+    "mtime": 1792343442.6806796,
+    "seen": 1792343789.3726778,
+    "ast_hash": "89ca794c04a30c9cd51aa7696abe82e9",
+    "semantic_hash": ""
+  },
+  "public/Gemini_Generated_Image_8nul298nul298nul.png": {
+    "mtime": 1790340219.201531,
+    "seen": 1792344195.616903,
+    "ast_hash": "ee19254bf18c499b4fba7fbbe4cd9d13",
+    "semantic_hash": ""
+  },
+  "public/auth-blueprint.png": {
+    "mtime": 1790340219.201531,
+    "seen": 1792344195.6169043,
+    "ast_hash": "ee19254bf18c499b4fba7fbbe4cd9d13",
     "semantic_hash": ""
   }
 }

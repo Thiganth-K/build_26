@@ -32,6 +32,10 @@
   --accent-subtle: #1C1A38;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }

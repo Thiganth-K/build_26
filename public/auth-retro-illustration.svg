@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="60%" stop-color="#0F0D24" />
+      <stop offset="100%" stop-color="#070614" />
+    </radialGradient>
+
+    <!-- Neon Accent Gradients -->
+    <linearGradient id="neon-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFA3" />
+      <stop offset="100%" stop-color="#00D285" />
+    </linearGradient>
+
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="retro-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+
+    <linearGradient id="crt-frame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D303E" />
+      <stop offset="50%" stop-color="#1B1D28" />
+      <stop offset="100%" stop-color="#11121A" />
+    </linearGradient>
+
+    <!-- Floor Grid Pattern -->
+    <pattern id="retro-floor-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366F1" stroke-width="1" stroke-opacity="0.25" />
+    </pattern>
+
+    <!-- CRT Scanlines Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <!-- Drop Glow Filter -->
+    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="800" height="900" fill="url(#bg-glow)" />
+
+  <!-- Perspective Neon Floor Grid -->
+  <g opacity="0.6">
+    <path d="M 0 620 L 800 620 L 800 900 L 0 900 Z" fill="url(#retro-floor-grid)" />
+    <!-- Perspective convergence rays -->
+    <line x1="400" y1="580" x2="0" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="400" y1="580" x2="160" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="400" y1="580" x2="320" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="400" y1="580" x2="480" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="400" y1="580" x2="640" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="400" y1="580" x2="800" y2="900" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.3" />
+    <line x1="0" y1="620" x2="800" y2="620" stroke="#00D285" stroke-width="2" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Ambient Glow Blobs -->
+  <circle cx="400" cy="380" r="240" fill="#6366F1" opacity="0.15" filter="url(#glow-filter)" />
+  <circle cx="620" cy="220" r="160" fill="#00D285" opacity="0.12" filter="url(#glow-filter)" />
+
+  <!-- Retro Pixel Stars in Backdrop -->
+  <g fill="#FEF08A">
+    <polygon points="120,90 122,96 128,98 122,100 120,106 118,100 112,98 118,96" />
+    <polygon points="680,110 682,116 688,118 682,120 680,126 678,120 672,118 678,116" />
+    <polygon points="720,440 722,444 726,445 722,446 720,450 718,446 714,445 718,444" />
+    <polygon points="80,480 82,484 86,485 82,486 80,490 78,486 74,485 78,484" />
+    <circle cx="280" cy="80" r="2" fill="#FFF" opacity="0.8" />
+    <circle cx="560" cy="70" r="2.5" fill="#FFF" opacity="0.9" />
+    <circle cx="160" cy="260" r="1.5" fill="#00D285" />
+    <circle cx="660" cy="300" r="2" fill="#818CF8" />
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- MAIN RETRO CRT TERMINAL CHASSIS                           -->
+  <!-- ========================================================= -->
+  <g transform="translate(130, 110)">
+    <!-- Chassis Outer Heavy Shadow -->
+    <rect x="8" y="8" width="540" height="460" rx="36" fill="#000000" />
+    <!-- Bezel Body -->
+    <rect x="0" y="0" width="540" height="460" rx="36" fill="url(#crt-frame)" stroke="#383B4F" stroke-width="4" />
+
+    <!-- Corner Screw Details -->
+    <circle cx="26" cy="26" r="5" fill="#11121A" stroke="#4B4E63" stroke-width="1.5" />
+    <line x1="23" y1="26" x2="29" y2="26" stroke="#4B4E63" stroke-width="1.5" />
+    <circle cx="514" cy="26" r="5" fill="#11121A" stroke="#4B4E63" stroke-width="1.5" />
+    <line x1="511" y1="26" x2="517" y2="26" stroke="#4B4E63" stroke-width="1.5" />
+    <circle cx="26" cy="434" r="5" fill="#11121A" stroke="#4B4E63" stroke-width="1.5" />
+    <line x1="23" y1="434" x2="29" y2="434" stroke="#4B4E63" stroke-width="1.5" />
+    <circle cx="514" cy="434" r="5" fill="#11121A" stroke="#4B4E63" stroke-width="1.5" />
+    <line x1="511" y1="434" x2="517" y2="434" stroke="#4B4E63" stroke-width="1.5" />
+
+    <!-- Top Status Header of Bezel -->
+    <rect x="180" y="16" width="180" height="18" rx="9" fill="#0A0B10" stroke="#252736" stroke-width="1.5" />
+    <circle cx="196" cy="25" r="4" fill="#00FFA3" />
+    <text x="210" y="29" fill="#94A3B8" font-family="'Courier New', monospace" font-size="10" font-weight="bold" letter-spacing="1">BUILD//26 OS</text>
+
+    <!-- Inner CRT Screen (Dark Glass with Green Tint) -->
+    <rect x="28" y="46" width="484" height="364" rx="22" fill="#080C14" stroke="#000000" stroke-width="4" />
+    <!-- CRT Curved Inner Border -->
+    <rect x="30" y="48" width="480" height="360" rx="20" fill="none" stroke="#1E293B" stroke-width="2" />
+    <!-- Scanlines Overlay on Screen -->
+    <rect x="30" y="48" width="480" height="360" rx="20" fill="url(#scanlines)" opacity="0.4" pointer-events="none" />
+
+    <!-- Top Window Chrome Controls -->
+    <g transform="translate(48, 64)">
+      <circle cx="10" cy="10" r="5" fill="#EF4444" />
+      <circle cx="26" cy="10" r="5" fill="#F59E0B" />
+      <circle cx="42" cy="10" r="5" fill="#10B981" />
+      <text x="70" y="14" fill="#64748B" font-family="monospace" font-size="11" font-weight="bold">terminal@build26: ~ /sprint</text>
+      <line x1="0" y1="24" x2="444" y2="24" stroke="#1E293B" stroke-width="1.5" />
+    </g>
+
+    <!-- Screen Content: Official BUILD//26 Brand Mark -->
+    <g transform="translate(145, 120)">
+      <!-- Official Smooth-Cornered Square Badge with // -->
+      <rect x="0" y="0" width="68" height="68" rx="18" fill="#000000" stroke="#00FFA3" stroke-width="3" />
+      <!-- Slashes // inside badge -->
+      <text x="14" y="48" font-family="'Inter', sans-serif" font-weight="900" font-style="italic" font-size="40" fill="#FFFFFF" letter-spacing="-2">//</text>
+
+      <!-- Brand Text Beside Badge -->
+      <text x="86" y="42" font-family="'Courier New', monospace, 'Minecraft'" font-weight="900" font-size="36" fill="#FFFFFF" letter-spacing="-1">
+        BUILD<tspan fill="#6366F1">//</tspan>26
+      </text>
+      <text x="88" y="62" font-family="monospace" font-weight="bold" font-size="12" fill="#00FFA3" letter-spacing="2">
+        6-DAY ENGINEERING BOOTCAMP
+      </text>
+    </g>
+
+    <!-- Terminal Code lines inside screen -->
+    <g transform="translate(56, 222)">
+      <text x="0" y="0" fill="#00FFA3" font-family="monospace" font-size="13" font-weight="bold">&gt; INITIALIZING SPRINTER PROFILE...</text>
+      <text x="0" y="24" fill="#93C5FD" font-family="monospace" font-size="12">&gt; CONNECTING: Sona College of Technology</text>
+      <text x="0" y="46" fill="#FDE047" font-family="monospace" font-size="12">&gt; TRACK: 6-Day Rapid MVP Architecture</text>
+      <text x="0" y="68" fill="#C4B5FD" font-family="monospace" font-size="12">&gt; CONSENSUS: Consensus Voting &amp; WorkLogs ACTIVE</text>
+      <text x="0" y="90" fill="#34D399" font-family="monospace" font-size="12">&gt; STATUS: Awaiting Builder Authentication_</text>
+
+      <!-- Blinking Cursor -->
+      <rect x="312" y="78" width="8" height="14" fill="#00FFA3" opacity="0.9" />
+    </g>
+
+    <!-- Screen Bottom Status Bar -->
+    <g transform="translate(48, 360)">
+      <rect x="0" y="0" width="444" height="34" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1.5" />
+      <circle cx="18" cy="17" r="4" fill="#00FFA3" />
+      <text x="32" y="21" fill="#E2E8F0" font-family="monospace" font-size="11" font-weight="bold">SECURE GATEWAY: AUTH PROTOCOL v2.6</text>
+      <rect x="340" y="7" width="90" height="20" rx="5" fill="#00D285" />
+      <text x="354" y="21" fill="#000000" font-family="monospace" font-size="10" font-weight="900">READY ⚡</text>
+    </g>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- FLOATING RETRO FEATURE CARDS (LEFT & RIGHT WINGS)         -->
+  <!-- ========================================================= -->
+
+  <!-- Left Floating Badge: DAY 01 IDEATE -->
+  <g transform="translate(70, 600)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="190" height="88" rx="16" fill="#000000" />
+    <!-- Card Body -->
+    <rect x="0" y="0" width="190" height="88" rx="16" fill="#181824" stroke="#6366F1" stroke-width="2.5" />
+    <rect x="14" y="14" width="36" height="36" rx="10" fill="#312E81" />
+    <text x="23" y="38" font-size="18">💡</text>
+    <text x="58" y="28" fill="#818CF8" font-family="monospace" font-size="10" font-weight="bold">DAY 01</text>
+    <text x="58" y="44" fill="#FFFFFF" font-family="'Courier New', monospace" font-size="13" font-weight="bold">TEAM &amp; IDEATE</text>
+    <text x="14" y="72" fill="#94A3B8" font-family="monospace" font-size="10">Lock Problem Statement</text>
+  </g>
+
+  <!-- Center Floating Badge: 96 HRS DEV -->
+  <g transform="translate(290, 615)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="220" height="92" rx="16" fill="#000000" />
+    <!-- Card Body -->
+    <rect x="0" y="0" width="220" height="92" rx="16" fill="#121622" stroke="#00D285" stroke-width="2.5" />
+    <rect x="14" y="16" width="36" height="36" rx="10" fill="#064E3B" />
+    <text x="23" y="40" font-size="18">⚡</text>
+    <text x="58" y="30" fill="#00FFA3" font-family="monospace" font-size="10" font-weight="bold">RAPID PRODUCTION</text>
+    <text x="58" y="46" fill="#FFFFFF" font-family="'Courier New', monospace" font-size="13" font-weight="bold">96 HRS FULL DEV</text>
+    <text x="14" y="74" fill="#A7F3D0" font-family="monospace" font-size="10">Next.js • Prisma • REST APIs</text>
+  </g>
+
+  <!-- Right Floating Badge: DAY 06 SHIP -->
+  <g transform="translate(540, 600)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="190" height="88" rx="16" fill="#000000" />
+    <!-- Card Body -->
+    <rect x="0" y="0" width="190" height="88" rx="16" fill="#181824" stroke="#F59E0B" stroke-width="2.5" />
+    <rect x="14" y="14" width="36" height="36" rx="10" fill="#78350F" />
+    <text x="23" y="38" font-size="18">🚀</text>
+    <text x="58" y="28" fill="#FDE047" font-family="monospace" font-size="10" font-weight="bold">DAY 06</text>
+    <text x="58" y="44" fill="#FFFFFF" font-family="'Courier New', monospace" font-size="13" font-weight="bold">LIVE JURY DEMO</text>
+    <text x="14" y="72" fill="#94A3B8" font-family="monospace" font-size="10">Ship Live URL &amp; Pitch</text>
+  </g>
+
+  <!-- Bottom Hardware Keycaps Accent -->
+  <g transform="translate(250, 770)">
+    <!-- Keycap 1 [ESC] -->
+    <rect x="0" y="4" width="80" height="48" rx="8" fill="#0D0E15" />
+    <rect x="0" y="0" width="80" height="44" rx="8" fill="#252736" stroke="#43465D" stroke-width="2" />
+    <text x="26" y="26" fill="#94A3B8" font-family="monospace" font-size="12" font-weight="bold">ESC</text>
+
+    <!-- Keycap 2 [B26] -->
+    <rect x="100" y="4" width="100" height="48" rx="8" fill="#0D0E15" />
+    <rect x="100" y="0" width="100" height="44" rx="8" fill="#4338CA" stroke="#6366F1" stroke-width="2" />
+    <text x="124" y="26" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="900">BUILD//26</text>
+
+    <!-- Keycap 3 [ENTER ↵] -->
+    <rect x="220" y="4" width="90" height="48" rx="8" fill="#0D0E15" />
+    <rect x="220" y="0" width="90" height="44" rx="8" fill="#065F46" stroke="#00FFA3" stroke-width="2" />
+    <text x="238" y="26" fill="#00FFA3" font-family="monospace" font-size="12" font-weight="bold">ENTER ↵</text>
+  </g>
+
+  <!-- Bottom Inspiring Ribbon -->
+  <g transform="translate(200, 840)">
+    <rect x="0" y="0" width="400" height="34" rx="17" fill="#11121C" stroke="#252736" stroke-width="1.5" />
+    <circle cx="20" cy="17" r="4" fill="#00D285" />
+    <text x="36" y="21" fill="#CBD5E1" font-family="monospace" font-size="11" font-weight="bold">
+      SONA COLLEGE OF TECHNOLOGY • DEPT OF IT
+    </text>
+  </g>
+</svg>

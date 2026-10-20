@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <!-- Background Grid -->
+  <rect width="600" height="450" fill="#18181B" />
+  <defs>
+    <pattern id="grid-db" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272A" stroke-width="1" />
+    </pattern>
+    <linearGradient id="amber-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="cyl-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#grid-db)" />
+
+  <!-- Isometric Ground Shadow -->
+  <ellipse cx="300" cy="390" rx="240" ry="40" fill="#09090B" opacity="0.8" />
+
+  <!-- LEFT SERVER RACK TOWER -->
+  <g transform="translate(60, 90)">
+    <!-- Main Tower Body -->
+    <path d="M 20 40 L 140 10 L 220 50 L 100 80 Z" fill="#3F3F46" stroke="#000000" stroke-width="3" />
+    <path d="M 20 40 L 100 80 L 100 270 L 20 230 Z" fill="#27272A" stroke="#000000" stroke-width="3" />
+    <path d="M 100 80 L 220 50 L 220 240 L 100 270 Z" fill="#18181B" stroke="#000000" stroke-width="3" />
+
+    <!-- Server Rack Slots (Left Face) -->
+    <!-- Slot 1 -->
+    <rect x="28" y="70" width="64" height="18" fill="#18181B" stroke="#000" stroke-width="2" />
+    <circle cx="36" cy="79" r="3" fill="#10B981" />
+    <circle cx="44" cy="79" r="3" fill="#F59E0B" />
+    <line x1="52" y1="79" x2="84" y2="79" stroke="#71717A" stroke-width="2" stroke-dasharray="3 2" />
+
+    <!-- Slot 2 -->
+    <rect x="28" y="96" width="64" height="18" fill="#18181B" stroke="#000" stroke-width="2" />
+    <circle cx="36" cy="105" r="3" fill="#10B981" />
+    <circle cx="44" cy="105" r="3" fill="#10B981" />
+    <line x1="52" y1="105" x2="84" y2="105" stroke="#71717A" stroke-width="2" stroke-dasharray="3 2" />
+
+    <!-- Slot 3 -->
+    <rect x="28" y="122" width="64" height="18" fill="#18181B" stroke="#000" stroke-width="2" />
+    <circle cx="36" cy="131" r="3" fill="#EF4444" />
+    <circle cx="44" cy="131" r="3" fill="#F59E0B" />
+    <line x1="52" y1="131" x2="84" y2="131" stroke="#71717A" stroke-width="2" stroke-dasharray="3 2" />
+
+    <!-- Slot 4 -->
+    <rect x="28" y="148" width="64" height="18" fill="#18181B" stroke="#000" stroke-width="2" />
+    <circle cx="36" cy="157" r="3" fill="#10B981" />
+    <circle cx="44" cy="157" r="3" fill="#10B981" />
+    <line x1="52" y1="157" x2="84" y2="157" stroke="#71717A" stroke-width="2" stroke-dasharray="3 2" />
+
+    <!-- Server Drive Bay Vent Grill (Lower) -->
+    <rect x="28" y="180" width="64" height="40" fill="#18181B" stroke="#000" stroke-width="2" />
+    <line x1="34" y1="188" x2="86" y2="188" stroke="#F59E0B" stroke-width="2" />
+    <line x1="34" y1="196" x2="86" y2="196" stroke="#F59E0B" stroke-width="2" />
+    <line x1="34" y1="204" x2="86" y2="204" stroke="#F59E0B" stroke-width="2" />
+    <line x1="34" y1="212" x2="86" y2="212" stroke="#F59E0B" stroke-width="2" />
+  </g>
+
+  <!-- CENTER FLOATING RELATIONAL DATABASE CYLINDERS -->
+  <g transform="translate(245, 120)">
+    <!-- Upper Cylinder Tier 1 -->
+    <g transform="translate(0, 0)">
+      <!-- Base & Walls -->
+      <path d="M 10 30 L 10 70 A 65 24 0 0 0 140 70 L 140 30 Z" fill="url(#cyl-grad)" stroke="#000" stroke-width="3" />
+      <ellipse cx="75" cy="30" rx="65" ry="24" fill="#FEF08A" stroke="#000" stroke-width="3" />
+      <!-- DB Disk Stripe -->
+      <path d="M 10 50 A 65 24 0 0 0 140 50" stroke="#000" stroke-width="2.5" fill="none" stroke-dasharray="8 4" />
+      <circle cx="75" cy="30" r="14" fill="#F59E0B" stroke="#000" stroke-width="2" />
+    </g>
+
+    <!-- Lower Cylinder Tier 2 -->
+    <g transform="translate(0, 75)">
+      <path d="M 10 30 L 10 70 A 65 24 0 0 0 140 70 L 140 30 Z" fill="url(#cyl-grad)" stroke="#000" stroke-width="3" />
+      <ellipse cx="75" cy="30" rx="65" ry="24" fill="#FDE047" stroke="#000" stroke-width="3" />
+      <path d="M 10 50 A 65 24 0 0 0 140 50" stroke="#000" stroke-width="2.5" fill="none" stroke-dasharray="8 4" />
+    </g>
+
+    <!-- Bottom Cylinder Tier 3 -->
+    <g transform="translate(0, 150)">
+      <path d="M 10 30 L 10 70 A 65 24 0 0 0 140 70 L 140 30 Z" fill="url(#cyl-grad)" stroke="#000" stroke-width="3" />
+      <ellipse cx="75" cy="30" rx="65" ry="24" fill="#EAB308" stroke="#000" stroke-width="3" />
+      <path d="M 10 50 A 65 24 0 0 0 140 50" stroke="#000" stroke-width="2.5" fill="none" stroke-dasharray="8 4" />
+    </g>
+  </g>
+
+  <!-- RIGHT REST API TERMINAL WINDOW -->
+  <g transform="translate(400, 70)">
+    <!-- Terminal Shadow -->
+    <rect x="8" y="8" width="160" height="190" rx="8" fill="#000" />
+    <!-- Terminal Card -->
+    <rect x="0" y="0" width="160" height="190" rx="8" fill="#18181B" stroke="#F59E0B" stroke-width="3" />
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="160" height="26" rx="8" fill="#27272A" />
+    <circle cx="14" cy="13" r="4" fill="#EF4444" />
+    <circle cx="26" cy="13" r="4" fill="#F59E0B" />
+    <circle cx="38" cy="13" r="4" fill="#10B981" />
+    <text x="60" y="16" fill="#A1A1AA" font-family="monospace" font-size="9" font-weight="bold">api.v1.json</text>
+
+    <!-- Code Contents -->
+    <text x="14" y="48" fill="#10B981" font-family="monospace" font-size="10" font-weight="bold">POST /api/sync</text>
+    <text x="14" y="66" fill="#FDE047" font-family="monospace" font-size="9">{ "status": 200,</text>
+    <text x="14" y="82" fill="#E4E4E7" font-family="monospace" font-size="9">  "auth": "JWT_OK",</text>
+    <text x="14" y="98" fill="#E4E4E7" font-family="monospace" font-size="9">  "db": "MONGODB",</text>
+    <text x="14" y="114" fill="#E4E4E7" font-family="monospace" font-size="9">  "models": [</text>
+    <text x="24" y="130" fill="#38BDF8" font-family="monospace" font-size="9">    "Users",</text>
+    <text x="24" y="146" fill="#38BDF8" font-family="monospace" font-size="9">    "Teams",</text>
+    <text x="24" y="162" fill="#38BDF8" font-family="monospace" font-size="9">    "Projects"</text>
+    <text x="14" y="178" fill="#FDE047" font-family="monospace" font-size="9">  ] }</text>
+  </g>
+
+  <!-- GLOWING DATA PIPES & PACKETS -->
+  <path d="M 160 210 C 210 210, 220 180, 255 180" stroke="#F59E0B" stroke-width="4" strokeLinecap="round" fill="none" />
+  <circle cx="200" cy="198" r="5" fill="#FEF08A" stroke="#B45309" stroke-width="1.5" />
+
+  <path d="M 385 240 C 430 240, 410 180, 440 180" stroke="#F59E0B" stroke-width="4" strokeLinecap="round" fill="none" />
+  <circle cx="410" cy="210" r="5" fill="#FEF08A" stroke="#B45309" stroke-width="1.5" />
+
+  <!-- Bottom Milestone Chip Badge -->
+  <g transform="translate(210, 360)">
+    <rect x="0" y="0" width="180" height="34" rx="17" fill="#000" stroke="#F59E0B" stroke-width="2.5" />
+    <circle cx="20" cy="17" r="6" fill="#10B981" />
+    <text x="35" y="22" fill="#FEF08A" font-family="monospace" font-size="12" font-weight="900" letter-spacing="1">FULL STACK // DB</text>
+  </g>
+</svg>

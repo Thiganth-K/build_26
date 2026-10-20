@@ -307,6 +307,19 @@
       "source_location": "L37"
     },
     {
+      "id": "types_index_submission",
+      "label": "Submission",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "code",
+      "norm_label": "submission",
+      "source_file": "types/index.ts",
+      "source_location": "L168"
+    },
+    {
       "id": "agent_skills_ui_ux_pro_max_scripts_core_bm25",
       "label": "BM25",
       "_callable": true,
@@ -339,7 +352,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "mongoosecache",
       "source_file": "lib/db.ts",
@@ -866,19 +879,6 @@
       "source_location": "L114"
     },
     {
-      "id": "types_index_submission",
-      "label": "Submission",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "types/index.ts",
-      "file_type": "code",
-      "norm_label": "submission",
-      "source_file": "types/index.ts",
-      "source_location": "L168"
-    },
-    {
       "id": "types_index_task",
       "label": "Task",
       "_callable": true,
@@ -1207,18 +1207,6 @@
       "norm_label": "forgotpasswordpage()",
       "source_file": "app/forgot-password/page.tsx",
       "source_location": "L8"
-    },
-    {
-      "id": "app_page_homepage",
-      "label": "HomePage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "homepage()",
-      "source_file": "app/page.tsx",
-      "source_location": "L18"
     },
     {
       "id": "app_participant_activity_page_teamactivitypage",
@@ -1797,12 +1785,48 @@
       "source_location": "L41"
     },
     {
+      "id": "app_api_announcements_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "announcements/route.ts",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L74"
+    },
+    {
+      "id": "app_api_announcements_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "announcements/route.ts",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_announcements_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "announcements/route.ts",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L30"
+    },
+    {
       "id": "app_api_feedback_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/feedback/route.ts",
@@ -1814,7 +1838,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/feedback/route.ts",
@@ -1826,7 +1850,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/notifications/route.ts",
@@ -1838,107 +1862,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "patch()",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L33"
-    },
-    {
-      "id": "app_api_submissions_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_submissions_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L291"
-    },
-    {
-      "id": "app_api_submissions_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L32"
-    },
-    {
-      "id": "app_api_teams_invitations_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_api_teams_invitations_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "app_api_teams_invite_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L172"
-    },
-    {
-      "id": "app_api_teams_invite_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "lib_auth_getsessionfromrequest",
-      "label": "getSessionFromRequest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "getsessionfromrequest()",
-      "source_file": "lib/auth.ts",
-      "source_location": "L39"
     },
     {
       "id": "app_login_page_logincontent",
@@ -1962,7 +1890,7 @@
       "file_type": "code",
       "norm_label": "loginpage()",
       "source_file": "app/login/page.tsx",
-      "source_location": "L629"
+      "source_location": "L759"
     },
     {
       "id": "app_signup_page_signuppage",
@@ -2565,6 +2493,42 @@
       "source_location": "L7"
     },
     {
+      "id": "app_api_participants_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_participants_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L126"
+    },
+    {
+      "id": "app_api_participants_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L44"
+    },
+    {
       "id": "app_api_teams_edit_role_route_post",
       "label": "POST()",
       "_callable": true,
@@ -2574,18 +2538,6 @@
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/teams/edit-role/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_teams_join_requests_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/join-requests/route.ts",
       "source_location": "L6"
     },
     {
@@ -2611,18 +2563,6 @@
       "norm_label": "post()",
       "source_file": "app/api/teams/route.ts",
       "source_location": "L43"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
-      "source_location": "L6"
     },
     {
       "id": "lib_auth_clearsessioncookie",
@@ -2661,16 +2601,112 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_health_route_get",
+      "id": "app_api_activities_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/health/route.ts",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_api_activities_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activities/route.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_api_activity_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_activity_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L27"
+    },
+    {
+      "id": "app_api_teams_invitations_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/teams/invitations/route.ts",
       "source_location": "L7"
+    },
+    {
+      "id": "app_api_teams_invitations_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_api_teams_invite_route_delete",
+      "label": "DELETE()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "delete()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L172"
+    },
+    {
+      "id": "app_api_teams_invite_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_join_requests_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/join-requests/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "app_api_teams_join_route_post",
@@ -2678,11 +2714,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/teams/join/route.ts",
       "source_location": "L7"
+    },
+    {
+      "id": "app_api_teams_select_problem_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/select-problem/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
+      "source_location": "L6"
     },
     {
       "id": "app_api_worklogs_route_get",
@@ -2690,7 +2750,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "app/api/worklogs/route.ts",
@@ -2702,11 +2762,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "post()",
       "source_file": "app/api/worklogs/route.ts",
       "source_location": "L44"
+    },
+    {
+      "id": "lib_auth_getsessionfromrequest",
+      "label": "getSessionFromRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "getsessionfromrequest()",
+      "source_file": "lib/auth.ts",
+      "source_location": "L39"
     },
     {
       "id": "app_api_milestones_route_get",
@@ -2781,6 +2853,18 @@
       "source_location": "L27"
     },
     {
+      "id": "app_page_homepage",
+      "label": "HomePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "homepage()",
+      "source_file": "app/page.tsx",
+      "source_location": "L147"
+    },
+    {
       "id": "components_ui_retrodemo_retrodemo",
       "label": "RetroDemo()",
       "_callable": true,
@@ -2793,7 +2877,7 @@
       "source_location": "L6"
     },
     {
-      "id": "app_api_activities_route_get",
+      "id": "app_api_health_route_get",
       "label": "GET()",
       "_callable": true,
       "_origin": "ast",
@@ -2801,80 +2885,8 @@
       "community_name": "connectToDatabase",
       "file_type": "code",
       "norm_label": "get()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "app_api_activities_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activities/route.ts",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_api_activity_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_activity_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L27"
-    },
-    {
-      "id": "app_api_announcements_route_delete",
-      "label": "DELETE()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "delete()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L74"
-    },
-    {
-      "id": "app_api_announcements_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_announcements_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L30"
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L7"
     },
     {
       "id": "app_api_mentors_route_get",
@@ -2911,42 +2923,6 @@
       "norm_label": "post()",
       "source_file": "app/api/mentors/route.ts",
       "source_location": "L21"
-    },
-    {
-      "id": "app_api_participants_route_get",
-      "label": "GET()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "get()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_api_participants_route_patch",
-      "label": "PATCH()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "patch()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L126"
-    },
-    {
-      "id": "app_api_participants_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/participants/route.ts",
-      "source_location": "L44"
     },
     {
       "id": "app_api_problem_statements_route_delete",
@@ -3043,6 +3019,42 @@
       "norm_label": "post()",
       "source_file": "app/api/schedule/route.ts",
       "source_location": "L26"
+    },
+    {
+      "id": "app_api_submissions_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_api_submissions_route_patch",
+      "label": "PATCH()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "patch()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L291"
+    },
+    {
+      "id": "app_api_submissions_route_post",
+      "label": "POST()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "post()",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L32"
     },
     {
       "id": "app_api_tasks_route_delete",
@@ -3163,18 +3175,6 @@
       "norm_label": "get()",
       "source_file": "app/api/teams/find/route.ts",
       "source_location": "L5"
-    },
-    {
-      "id": "app_api_teams_select_problem_route_post",
-      "label": "POST()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Team",
-      "file_type": "code",
-      "norm_label": "post()",
-      "source_file": "app/api/teams/select-problem/route.ts",
-      "source_location": "L6"
     },
     {
       "id": "app_api_teams_teamid_route_delete",
@@ -3465,17 +3465,6 @@
       "file_type": "code",
       "norm_label": "forgot-password/page.tsx",
       "source_file": "app/forgot-password/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_page",
-      "label": "app/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Button",
-      "file_type": "code",
-      "norm_label": "app/page.tsx",
-      "source_file": "app/page.tsx",
       "source_location": "L1"
     },
     {
@@ -4161,11 +4150,22 @@
       "source_location": "L25"
     },
     {
+      "id": "app_api_announcements_route",
+      "label": "announcements/route.ts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "announcements/route.ts",
+      "file_type": "code",
+      "norm_label": "announcements/route.ts",
+      "source_file": "app/api/announcements/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "app_api_feedback_route",
       "label": "feedback/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "feedback/route.ts",
       "source_file": "app/api/feedback/route.ts",
@@ -4176,51 +4176,29 @@
       "label": "notifications/route.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "notifications/route.ts",
       "source_file": "app/api/notifications/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "app_api_submissions_route",
-      "label": "submissions/route.ts",
+      "id": "models_index_announcement",
+      "label": "Announcement",
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
-      "norm_label": "submissions/route.ts",
-      "source_file": "app/api/submissions/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_invitations_route",
-      "label": "invitations/route.ts",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "invitations/route.ts",
-      "source_file": "app/api/teams/invitations/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_invite_route",
-      "label": "invite/route.ts",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "getSessionFromRequest",
-      "file_type": "code",
-      "norm_label": "invite/route.ts",
-      "source_file": "app/api/teams/invite/route.ts",
-      "source_location": "L1"
+      "norm_label": "announcement",
+      "source_file": "models/index.ts",
+      "source_location": "L760"
     },
     {
       "id": "models_index_feedback",
       "label": "Feedback",
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "feedback",
       "source_file": "models/index.ts",
@@ -4231,7 +4209,7 @@
       "label": "Notification",
       "_origin": "ast",
       "community": 11,
-      "community_name": "getSessionFromRequest",
+      "community_name": "announcements/route.ts",
       "file_type": "code",
       "norm_label": "notification",
       "source_file": "models/index.ts",
@@ -5159,6 +5137,18 @@
       "source_location": "L112"
     },
     {
+      "id": "readme_7_database_models_models_index_ts",
+      "label": "7. Database Models (`/models/index.ts`)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "8. Docker Setup & Operations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. database models (`/models/index.ts`)",
+      "source_file": "README.md",
+      "source_location": "L144"
+    },
+    {
       "id": "readme_8_docker_setup_operations",
       "label": "8. Docker Setup & Operations",
       "_origin": "ast",
@@ -5540,6 +5530,17 @@
       "norm_label": "seed.mjs",
       "source_file": "scripts/seed.mjs",
       "source_location": "L1"
+    },
+    {
+      "id": "ref_mongoose",
+      "label": "mongoose",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "file_type": "concept",
+      "norm_label": "mongoose",
+      "source_file": "package.json",
+      "source_location": "L19"
     },
     {
       "id": "tailwind_config",
@@ -6375,6 +6376,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_participants_route",
+      "label": "participants/route.ts",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "participants/route.ts",
+      "source_file": "app/api/participants/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "app_api_teams_edit_role_route",
       "label": "edit-role/route.ts",
       "_origin": "ast",
@@ -6386,17 +6398,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_api_teams_join_requests_route",
-      "label": "join-requests/route.ts",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "join-requests/route.ts",
-      "source_file": "app/api/teams/join-requests/route.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_api_teams_route",
       "label": "teams/route.ts",
       "_origin": "ast",
@@ -6405,17 +6406,6 @@
       "file_type": "code",
       "norm_label": "teams/route.ts",
       "source_file": "app/api/teams/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_transfer_lead_route",
-      "label": "transfer-lead/route.ts",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "transfer-lead/route.ts",
-      "source_file": "app/api/teams/transfer-lead/route.ts",
       "source_location": "L1"
     },
     {
@@ -6474,36 +6464,91 @@
       "source_location": "L20"
     },
     {
-      "id": "app_api_health_route",
-      "label": "health/route.ts",
+      "id": "app_api_activities_route",
+      "label": "activities/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
-      "norm_label": "health/route.ts",
-      "source_file": "app/api/health/route.ts",
+      "norm_label": "activities/route.ts",
+      "source_file": "app/api/activities/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "app_api_health_route_dynamic",
-      "label": "dynamic",
+      "id": "app_api_activity_route",
+      "label": "activity/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
-      "norm_label": "dynamic",
-      "source_file": "app/api/health/route.ts",
-      "source_location": "L5"
+      "norm_label": "activity/route.ts",
+      "source_file": "app/api/activity/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invitations_route",
+      "label": "invitations/route.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invitations/route.ts",
+      "source_file": "app/api/teams/invitations/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_invite_route",
+      "label": "invite/route.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "invite/route.ts",
+      "source_file": "app/api/teams/invite/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_join_requests_route",
+      "label": "join-requests/route.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "join-requests/route.ts",
+      "source_file": "app/api/teams/join-requests/route.ts",
+      "source_location": "L1"
     },
     {
       "id": "app_api_teams_join_route",
       "label": "join/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "join/route.ts",
       "source_file": "app/api/teams/join/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_select_problem_route",
+      "label": "select-problem/route.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "select-problem/route.ts",
+      "source_file": "app/api/teams/select-problem/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_api_teams_transfer_lead_route",
+      "label": "transfer-lead/route.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "transfer-lead/route.ts",
+      "source_file": "app/api/teams/transfer-lead/route.ts",
       "source_location": "L1"
     },
     {
@@ -6511,7 +6556,7 @@
       "label": "worklogs/route.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "worklogs/route.ts",
       "source_file": "app/api/worklogs/route.ts",
@@ -6522,22 +6567,22 @@
       "label": "db.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
+      "community_name": "getSessionFromRequest",
       "file_type": "code",
       "norm_label": "db.ts",
       "source_file": "lib/db.ts",
       "source_location": "L1"
     },
     {
-      "id": "ref_mongoose",
-      "label": "mongoose",
+      "id": "models_index_activity",
+      "label": "Activity",
       "_origin": "ast",
       "community": 36,
-      "community_name": "db.ts",
-      "file_type": "concept",
-      "norm_label": "mongoose",
-      "source_file": "package.json",
-      "source_location": "L19"
+      "community_name": "getSessionFromRequest",
+      "file_type": "code",
+      "norm_label": "activity",
+      "source_file": "models/index.ts",
+      "source_location": "L763"
     },
     {
       "id": "procedures_05_daily_work_logging_and_activity_flow",
@@ -7128,6 +7173,28 @@
       "source_location": "L754"
     },
     {
+      "id": "app_page",
+      "label": "app/page.tsx",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "app/page.tsx",
+      "source_file": "app/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_page_sprintstages",
+      "label": "sprintStages",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "sprintstages",
+      "source_file": "app/page.tsx",
+      "source_location": "L24"
+    },
+    {
       "id": "types_pixel_retroui_d",
       "label": "pixel-retroui.d.ts",
       "_origin": "ast",
@@ -7451,37 +7518,26 @@
       "source_location": "L83"
     },
     {
-      "id": "app_api_activities_route",
-      "label": "activities/route.ts",
+      "id": "app_api_health_route",
+      "label": "health/route.ts",
       "_origin": "ast",
       "community": 6,
       "community_name": "connectToDatabase",
       "file_type": "code",
-      "norm_label": "activities/route.ts",
-      "source_file": "app/api/activities/route.ts",
+      "norm_label": "health/route.ts",
+      "source_file": "app/api/health/route.ts",
       "source_location": "L1"
     },
     {
-      "id": "app_api_activity_route",
-      "label": "activity/route.ts",
+      "id": "app_api_health_route_dynamic",
+      "label": "dynamic",
       "_origin": "ast",
       "community": 6,
       "community_name": "connectToDatabase",
       "file_type": "code",
-      "norm_label": "activity/route.ts",
-      "source_file": "app/api/activity/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_announcements_route",
-      "label": "announcements/route.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "announcements/route.ts",
-      "source_file": "app/api/announcements/route.ts",
-      "source_location": "L1"
+      "norm_label": "dynamic",
+      "source_file": "app/api/health/route.ts",
+      "source_location": "L5"
     },
     {
       "id": "app_api_mentors_route",
@@ -7492,17 +7548,6 @@
       "file_type": "code",
       "norm_label": "mentors/route.ts",
       "source_file": "app/api/mentors/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_participants_route",
-      "label": "participants/route.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "participants/route.ts",
-      "source_file": "app/api/participants/route.ts",
       "source_location": "L1"
     },
     {
@@ -7528,6 +7573,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_api_submissions_route",
+      "label": "submissions/route.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "connectToDatabase",
+      "file_type": "code",
+      "norm_label": "submissions/route.ts",
+      "source_file": "app/api/submissions/route.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "app_api_tasks_route",
       "label": "tasks/route.ts",
       "_origin": "ast",
@@ -7537,28 +7593,6 @@
       "norm_label": "tasks/route.ts",
       "source_file": "app/api/tasks/route.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "models_index_activity",
-      "label": "Activity",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "activity",
-      "source_file": "models/index.ts",
-      "source_location": "L763"
-    },
-    {
-      "id": "models_index_announcement",
-      "label": "Announcement",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "connectToDatabase",
-      "file_type": "code",
-      "norm_label": "announcement",
-      "source_file": "models/index.ts",
-      "source_location": "L760"
     },
     {
       "id": "models_index_scheduleevent",
@@ -7624,17 +7658,6 @@
       "file_type": "code",
       "norm_label": "find/route.ts",
       "source_file": "app/api/teams/find/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_api_teams_select_problem_route",
-      "label": "select-problem/route.ts",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Team",
-      "file_type": "code",
-      "norm_label": "select-problem/route.ts",
-      "source_file": "app/api/teams/select-problem/route.ts",
       "source_location": "L1"
     },
     {
@@ -8036,18 +8059,6 @@
       "norm_label": "procedure 07: system state transitions and routing matrix",
       "source_file": "procedures/07_SYSTEM_STATE_TRANSITIONS_AND_ROUTING_MATRIX.md",
       "source_location": "L1"
-    },
-    {
-      "id": "readme_7_database_models_models_index_ts",
-      "label": "7. Database Models (`/models/index.ts`)",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "types/index.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. database models (`/models/index.ts`)",
-      "source_file": "README.md",
-      "source_location": "L144"
     },
     {
       "id": "package",
@@ -8524,6 +8535,18 @@
       "type": "external"
     },
     {
+      "id": "ref_zlib",
+      "label": "ref_zlib",
+      "_origin": "semantic",
+      "community": 20,
+      "community_name": "clean-db.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_zlib",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_child_process",
       "label": "ref_child_process",
       "_origin": "semantic",
@@ -8688,17 +8711,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "sys",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_zlib",
-      "label": "ref_zlib",
-      "community": 20,
-      "community_name": "clean-db.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_zlib",
       "source_file": "",
       "type": "external"
     }
@@ -10957,7 +10969,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/login/page.tsx",
-      "source_location": "L388",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
@@ -10969,7 +10981,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/login/page.tsx",
-      "source_location": "L632",
+      "source_location": "L762",
       "weight": 1.0
     },
     {
@@ -23224,7 +23236,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/login/page.tsx",
-      "source_location": "L629",
+      "source_location": "L759",
       "weight": 1.0
     },
     {
@@ -23235,7 +23247,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L18",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "app_page_sprintstages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -27883,5 +27906,5 @@
       "source_file": "docs/build26.png"
     }
   ],
-  "built_at_commit": "94dc0efd96dc246c2a51cc9e7067a6a7d3dafb54"
+  "built_at_commit": "b507a32b0f908aa66afa1faf6a9b98ae417bb489"
 }
